@@ -1,10 +1,10 @@
 import React, { Fragment,useState } from "react";
 import { Link } from 'react-router-dom';
 
-import  {ClientLogins}  from '../authorization/authorization';
+import  {ClientLogins}  from '../../authorization/authorization';
 
 
-      const Verify_Login_1 = () => {
+      const Verify_Login_2 = () => {
         const [formData, setFromData] = useState(
           {
              
@@ -52,11 +52,11 @@ import  {ClientLogins}  from '../authorization/authorization';
                     </div>
                 </div>
                 <input className="font_size" type="submit" className="btn btn-primary" value="Go to My Account" />
-                <Link to="/client-selection">
+                <Link to="/vendor-selection">
                   <button type="submit" className="btn btn-dark btn-lg btn-block">Submit</button>
                 </Link>
             </form>
             </Fragment>
         );
       };
-      export default Verify_Login_1;
+      export default Verify_Login_2;

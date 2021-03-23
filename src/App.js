@@ -10,20 +10,21 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import './App.css';
 import "./index.css"; 
-import "./components/welcome.css";
-import "./components/selection.css";
+import "./components/pages/welcome.css";
+import "./components/pages/selection.css";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Welcome from "./components/welcome.component";
-import Verify_Login_1 from "./components/login.component";
-import Verify_Login_2 from "./components/login2.component";
-import SignUp from "./components/signup.component";
-import Selection from "./components/selection.component";
-import Path from "./components/path.component";
-import Client_Selection from "./components/client-selection.component";
-import Signin from "./components/signin.component";
-import Contactinfo from "./components/contactinfo.component";
-import MerchentSignup from "./components/merchentregister.component";
-import MerchentAdd from "./components/merchentadd.component";
+import Welcome from "./components/pages/welcome.component";
+import Verify_Login_1 from "./components/Login/login.component";
+import Verify_Login_2 from "./components/Login/login2.component";
+import Signin from "./components/Login/signin.component";
+
+import Selection from "./components/pages/selection.component";
+import Path from "./components/pages/path.component";
+import Client_Selection from "./components/pages/client-selection.component";
+
+import Contactinfo from "./components/pages/contactinfo.component";
+//import MerchentSignup from "./components/merchentregister.component";
+import MerchentAdd from "./components/pages/merchentadd.component";
 
 import Upload from "./components/upload.component";
 import Uploading from "./upload";
@@ -41,17 +42,16 @@ import AddBoard_Jweller from "./components/AddBoard_Jweller";
 import Entertainer_upload from "./components/Entertainer_upload";
 import AddBoard_Entertainer from "./components/AddBoard_Entertainer";
 
-
-
-import Newcarousel from "./components/newcar";
+import Newcarousel from "./components/pages/newcar";
 import ClientRegister from "./components/Register/ClientReg.component";
 import VendorRegister from "./components/Register/VendorReg.component";
-import Payment from "./components/payment.component";
-import Forget from "./components/forget.component";
+import SignUp from "./components/Register/signup.component";
+import Payment from "./components/pages/payment.component";
+import Forget from "./components/pages/forget.component";
 import './custom.css'
-import Navbar from "./components/NavMenu";
-import Footer from "./components/Footer"
-import News from "./components/Testimonials";
+import Navbar from "./components/layout/NavMenu";
+import Footer from "./components/layout/Footer"
+import News from "./components/pages/Testimonials";
 //import react from 'react';
 
 /*export default class App extends Component {
@@ -79,7 +79,7 @@ function App() {
             <Route path="/register" component={Welcome} />
             <Route path="/path" component={Path} />
             <Route path="/sign-up" component={SignUp} />
-            <Route path="/sign-up-2" component={MerchentSignup}/>
+            
             <Route path="/merchentadd" component={MerchentAdd}/>
             <Route path="/verify-login" component={Verify_Login_1} />
             <Route path="/verify-login-2" component={Verify_Login_2} />
