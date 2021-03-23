@@ -26,7 +26,7 @@ function Navbar(){
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link text-white ml-5" to={"/newcar"}>About Us   </Link>
+                <Link className="nav-link text-white ml-5" to={"/aboutus"}>About Us   </Link>
               </li>
             
 
