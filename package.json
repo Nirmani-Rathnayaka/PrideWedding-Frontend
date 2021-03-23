@@ -52,6 +52,5 @@
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.3"
-	 
   }
 }
