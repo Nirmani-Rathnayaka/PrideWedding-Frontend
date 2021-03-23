@@ -1,9 +1,9 @@
 import React, { Fragment,useState } from "react";
 import { Link } from 'react-router-dom';
 import {FacebookLoginButton} from 'react-social-login-buttons';
-import "./index.css";
+//import "./index.css";
 
-import  {ClientLogins}  from '../authorization/authorization';
+import  {ClientLogins}  from '../../authorization/authorization';
 
 
       const ClientLogin = () => {

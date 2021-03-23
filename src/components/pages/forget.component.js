@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 //import { Link } from 'react-router-dom';
 
-import "./index.css";
+//import "./index.css";
 export default class Forget extends Component {
 
     render() {
