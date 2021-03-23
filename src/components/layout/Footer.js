@@ -31,12 +31,12 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>About Us</h2>
-            <Link to='/'>How it works</Link>
-            <Link to='/newcar'>About us</Link>
-            <Link to='/'>Our services</Link>
-            <Link to='/'>Testimonials</Link>
-            <Link to='/'>Terms and conditions</Link>
-            <Link to='/'>Privacy</Link>
+            <Link to='/how-it-works'>How it works</Link>
+            <Link to='/aboutus'>About us</Link>
+            <Link to='services/'>Our services</Link>
+            <Link to='/testimonials'>Testimonials</Link>
+            <Link to='terms/'>Terms and conditions</Link>
+            <Link to='privacy/'>Privacy</Link>
             
           </div>
           <div class='footer-link-items'>
@@ -60,7 +60,7 @@ function Footer() {
       <section class='social-media'>
         <div class='social-media-wrap'>
          
-          <small class='website-rights'>Pride Wedding Planners © 2020|All rights reserved|Terms of services|Privacy</small>
+          <small class='website-rights'>Pride Wedding Planners © 2020|All rights reserved</small>
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'

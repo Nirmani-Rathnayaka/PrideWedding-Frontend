@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import './App.css';
 import "./index.css"; 
+import './custom.css'
 import "./components/pages/welcome.css";
 import "./components/pages/selection.css";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -48,10 +49,13 @@ import VendorRegister from "./components/Register/VendorReg.component";
 import SignUp from "./components/Register/signup.component";
 import Payment from "./components/pages/payment.component";
 import Forget from "./components/pages/forget.component";
-import './custom.css'
+import How_it_works from "./components/pages/how_it_works";
 import Navbar from "./components/layout/NavMenu";
 import Footer from "./components/layout/Footer"
-import News from "./components/pages/Testimonials";
+import Testimonials from "./components/pages/Testimonials";
+import Services from "./components/pages/Services";
+import Terms from "./components/pages/Terms";
+import Privacy from "./components/pages/Privacy";
 //import react from 'react';
 
 /*export default class App extends Component {
@@ -105,9 +109,13 @@ function App() {
             <Route path="/aboutus" component={Newcarousel}/>
             <Route path="/uploading" component={Uploading}/>
             <Route path="/pay" component={Payment}/>
-            <Route path="/forget-pw" component={Forget}/>
-            <Route path="/news" component={News}/>
-            
+            <Route path="/forget-pw" component={Forget}/>       
+            <Route path="/testimonials" component={Testimonials}/>
+            <Route path="/how-it-works" component={How_it_works}/>
+            <Route path="/services" component={Services}/>
+            <Route path="/terms" component={Terms}/>
+            <Route path="/privacy" component={Privacy}/>
+
             <Route path="/Client-Registration" component={ ClientRegister}/>
             <Route path="/Vendor-Registration" component={ VendorRegister}/>
           </Switch>

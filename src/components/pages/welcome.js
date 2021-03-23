@@ -1,6 +1,6 @@
 //import {render} from '../../node_modules/@testing-library/react';
 import React, { Component } from 'react';
-import { render } from "../../node_modules/@testing-library/react";
+import { render } from "@testing-library/react";
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import './welcome.css';
