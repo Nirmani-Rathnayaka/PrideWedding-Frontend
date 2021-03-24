@@ -1,43 +1,94 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState, useEffect } from 'react';
+import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './NavMenu.css';
-function Navbar(){
-  return(
+import { MdToys } from 'react-icons/md';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { IconContext } from 'react-icons/lib';
 
-      <nav className="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
-        <div className="container-fluid">
-          
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-                <Link className="nav-link text-white ml-5" to={"/selection"}>Home&nbsp;<i class="fas fa-home"></i></Link>
-              </li>
-            <li className="nav-item">
-                <Link className="nav-link text-white ml-5" to={"/contact-info"}>Contact us&nbsp;<i class="fas fa-phone"></i></Link>
-              </li>
-            
-              <li className="nav-item">
-                <Link className="nav-link text-white ml-5" to={"/sign-in"}>Sign In</Link>
-              </li>
-//////
-              <li className="nav-item">
-                <Link className="nav-link text-white ml-5" to={"/uploading"}>Uploading</Link>
-              </li>
+function Navbar() {
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
 
-              <li className="nav-item">
-                <Link className="nav-link text-white ml-5" to={"/aboutus"}>About Us   </Link>
-              </li>
-            
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
-//////
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  useEffect(() => {
+    showButton();
+    window.addEventListener('resize', showButton);
+    
+  }, []);
+
+
+  return (
+    <>
+      <IconContext.Provider value={{ color: '#fff' }}>
+        <nav className='navbar'>
+          <div className='navbar-container container'>
+            <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+              <MdToys className='navbar-icon' />
+              Pride Wedding Planners
+            </Link>
+            <div className='menu-icon' onClick={handleClick}>
+              {click ? <FaTimes /> : <FaBars />}
+            </div>
+            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+              <li className='nav-item'>
+                <Link to='/selection' className='nav-links' onClick={closeMobileMenu}>
+                  Home&nbsp;<i class="fas fa-home"></i>
+                </Link>
+              </li>
+              <li className='nav-item'>
+                <Link
+                  to='/contact-info'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  Contact Us&nbsp;<i class="fas fa-phone"></i>
+                </Link>
+              </li>
+              <li className='nav-item'>
+                <Link
+                  to='/uploading'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  Uploading
+                </Link>
+              </li>
+              <li className='nav-item'>
+                <Link
+                  to='/aboutus'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  About Us
+                </Link>
+              </li>
+              <li className='nav-item'>
+                <Link
+                  to='/sign-in'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  SIGN IN
+                </Link>
+              </li>
               <li className="nav-item dropdown">
-              <ul className="nav-link dropdown-toggle text-white ml-5" 
+              <ul className="nav-links " 
               type="button" 
               id="navbarDropdownMenuLink" 
               data-bs-toggle="dropdown"
               >
-              SignUp
+              SIGN UP
               </ul>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li>  <Link className="dropdown-item"  to={"/Client-Registration"}>SignUp as Client</Link> </li>
@@ -45,19 +96,13 @@ function Navbar(){
 
                 </ul>
               </li>
-              <form className="d-flex ml-5">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button className="btn btn-outline-primary" type="submit">Search</button>
-            </form>
-             
+              
             </ul>
           </div>
-        </div>
-      </nav>
-    
-  )
+        </nav>
+      </IconContext.Provider>
+    </>
+  );
 }
+
 export default Navbar;
-
-
-
