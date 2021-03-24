@@ -2,13 +2,13 @@ export const homeObjOne = {
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
-  topLine: 'Terms ',
+  topLine: 'Terms & Conditions ',
   headline: 'Terms & Conditions',
   description:
-    'We provide worldwide shipping to all countries. If there are any issues, just issue a refund and we will process your request',
-  buttonLabel: 'Shop Now',
+    'The first version of the application does not offer any premium features therefore the initial users don’t allow money transactions. All the users are required to have an account in order to do purchases. The users can read the articles without logging in but in order to perform any other task, they are required to log in or sign up. Notifications are given to all users about the updates, new offers, and other specifications.',
+  buttonLabel: 'Learn More',
   imgStart: '',
-  img: 'images/svg-4.svg',
+  img: 'images/cake.jfif',
   alt: 'Credit Card'
 };
 
@@ -16,40 +16,15 @@ export const homeObjTwo = {
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
-  topLine: '100% SECURE',
-  headline: 'Stay protected 24/7 anywhere anytime',
+  topLine: '',
+  headline: 'Terms & Conditions',
   description:
-    'We have you covered no matter where you are located. Over 140 locations worldwide to ensure you have access anytime',
+    'Users (service providers or clients) are able to report any unusual activity of another user anonymously to a moderator (internal user). The moderators receive this notification and can check and perform necessary actions such as blocking, undo the action made by the user, make warnings to the user and request to remove the user. The request to remove the user is inspected by other moderators and if they agree, the user account will be closed. This is applicable even for the moderators as well. This method will be used to regulate the content of the website.',
   buttonLabel: 'Learn More',
-  imgStart: '',
-  img: 'images/svg-5.svg',
+  imgStart: 'start',
+  img: 'images/ring.jfif',
   alt: 'Vault'
 };
 
-export const homeObjThree = {
-  lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
-  topLine: 'EASY SETUP',
-  headline: 'Super fast and simple onboarding process',
-  description:
-    "Get everything set up and ready in under 10 minutes. All you need to do is add your information and you're ready to go.",
-  buttonLabel: 'Start Now',
-  imgStart: 'start',
-  img: 'images/svg-7.svg',
-  alt: 'Vault'
-};
 
-export const homeObjFour = {
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
-  topLine: 'DATA ANALYTICS',
-  headline: 'Every transaction is stored on our secure cloud database',
-  description:
-    'Never ever have to worry again about saved reciepts. We store your data, so you can access it anytime.',
-  buttonLabel: 'Sign Up Now',
-  imgStart: 'start',
-  img: 'images/svg-8.svg',
-  alt: 'Vault'
-};
+
