@@ -2,41 +2,28 @@ export const homeObjOne = {
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
-  topLine: 'Our Services',
-  headline: 'Unlimited Transactions with zero fees',
+  topLine: 'Anyone Who wishes to plan a wedding',
+  headline: 'Our Services',
   description:
-    'Get access to our exclusive diamond card that allows you to  send unlimited transactions without getting charged any fees',
+    'With our eye for detail, Pride Wedding Planners in Sri Lanka will look after every requirement that counts for a picture-perfect wedding. From consultation to complete wedding planning, we provide a function of any size, scheduled to take place in any location. Clients are capable of choosing their needs under our offered categories according to their wish as well as concerning about their budget. Here our website facilitates a filtering process under cost of packages, service providing area (location based), and also the rating gained by the vendors.',
   buttonLabel: 'Get Started',
   imgStart: '',
   img: 'images/svg-1.svg',
   alt: 'Credit Card'
 };
 
-export const homeObjTwo = {
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
-  topLine: '100% SECURE',
-  headline: 'Stay protected 24/7 anywhere anytime',
-  description:
-    'We have you covered no matter where you are located. Over 140 locations worldwide to ensure you have access anytime',
-  buttonLabel: 'Learn More',
-  imgStart: '',
-  img: 'images/svg-5.svg',
-  alt: 'Vault'
-};
 
 export const homeObjThree = {
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
-  topLine: 'EASY SETUP',
-  headline: 'Super fast and simple onboarding process',
+  topLine: 'Anyone who wishes to sell your wedding services',
+  headline: 'Our Services',
   description:
-    "Get everything set up and ready in under 10 minutes. All you need to do is add your information and you're ready to go.",
+    "With our eye for detail, Pride Wedding Planners in Sri Lanka will look after every requirement that counts for a picture-perfect wedding. From consultation to complete wedding planning, we provide a function of any size, scheduled to take place in any location. We offer you a platform to sell your services at a good pricing.As well you can advertise your services and products in this website",
   buttonLabel: 'Start Now',
   imgStart: 'start',
-  img: 'images/svg-7.svg',
+  img: './images/couple3.PNG',
   alt: 'Vault'
 };
 
