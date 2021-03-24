@@ -21,7 +21,7 @@ function Footer() {
               type='email'
               placeholder='Your Email'
             />
-            <Link to="/news">
+            <Link to="/sign-up">
             <Button buttonStyle='btn--outline'>Subscribe</Button>
             </Link>
           </form>

@@ -46,7 +46,7 @@ export default class Employee extends Component {
                    <h2 className="testClass5"> CAPTURE  YOUR  DREAM  WEDDING </h2>
                  
                  <div> 
-                    <Link to='/sign-up'>
+                    <Link to='/path'>
                      <button className="testClass4" onclick={this.addEmployee}>REGISTER NOW</button>
                     </Link>
                  </div> 
