@@ -49,13 +49,16 @@ import VendorRegister from "./components/Register/VendorReg.component";
 import SignUp from "./components/Register/signup.component";
 import Payment from "./components/pages/payment.component";
 import Forget from "./components/pages/forget.component";
-import How_it_works from "./components/pages/how_it_works";
+import How_it_works from "./components/pages/how_it_works/how_it_works";
 import Navbar from "./components/layout/NavMenu";
 import Footer from "./components/layout/Footer"
 import Testimonials from "./components/pages/Testimonials";
-import Services from "./components/pages/Services";
-import Terms from "./components/pages/Terms";
-import Privacy from "./components/pages/Privacy";
+import Services from "./components/pages/Services/Services";
+import Terms from './components/pages/Terms/Terms';
+import Privacy from "./components/pages/Privacy/Privacy";
+
+
+
 //import react from 'react';
 
 /*export default class App extends Component {
@@ -118,6 +121,8 @@ function App() {
 
             <Route path="/Client-Registration" component={ ClientRegister}/>
             <Route path="/Vendor-Registration" component={ VendorRegister}/>
+
+            
           </Switch>
           </div> </div> 
           <Footer/>
