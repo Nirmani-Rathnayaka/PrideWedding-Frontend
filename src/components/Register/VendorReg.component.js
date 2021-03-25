@@ -51,24 +51,23 @@ const VendorRegister = () => {
 
         <div className="form-group">
         <label>Company Category   
-        <select >
-            <option >Hotel and Catering</option>
-            <option >Saloon</option>
-            <option >Photography</option>
-            <option >Jwelleries</option>
-            <option >Decorations</option>
-            <option >Entertainment</option>
+        <select className="form-control"
+        
+        placeholder="Company Category"
+        name="CompanyCategory"
+        value={CompanyCategory}
+        onChange={e => onChange(e)}>
+            <option value="Hotel and Catering" >Hotel and Catering</option>
+            <option value="Saloon">Saloon</option>
+            <option value="Photography" >Photography</option>
+            <option value="Jwelleries" >Jwelleries</option>
+            <option value="Decorations">Decorations</option>
+            <option value="Entertainment">Entertainment</option>
           </select>
         </label>
-          <input className="form-control"
-            type="text"
-            placeholder="Company Category"
-            name="CompanyCategory"
-            value={CompanyCategory}
-            onChange={e => onChange(e)}
-          >
+     
             
-          </input>
+
       
         </div>
         <div className="form-group">

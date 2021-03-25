@@ -42,9 +42,12 @@ const ClientRegister = () => {
         <label>Client NIC No</label>
           <input className="Form-control"
             type="text"
-            placeholder="Client NIC"
             name="ClientNIC"
-            value={ClientNIC}
+            placeholder="Client NIC No"
+            value={ClientNIC} pattern="(?=.*\d).{9,12,}" title="Must enter Your 9 digit Old NIC Number (without V or X) or 12 digit New NIC Number"
+            required
+            minLength="9"
+            maxLength="12"
             onChange={e => onChange(e)}
           />
         </div>
@@ -56,6 +59,7 @@ const ClientRegister = () => {
             placeholder="First Name"
             name="FirstName"
             value={FirstName}
+            required
             onChange={e => onChange(e)}
           />
         </div>
@@ -66,6 +70,7 @@ const ClientRegister = () => {
             placeholder="Last Name"
             name="LastName"
             value={LastName}
+            required
             onChange={e => onChange(e)}
           />
           <small className="font_size"></small>
@@ -77,6 +82,7 @@ const ClientRegister = () => {
             placeholder="Address"
             name="Address"
             value={Address}
+            required
             onChange={e => onChange(e)}
           />
           <small className="font_size"></small>
@@ -89,6 +95,8 @@ const ClientRegister = () => {
             placeholder="UserName"
             name="UserName"
             value={UserName}
+            required
+            minLength="3" 
             onChange={e => onChange(e)}
           />
           <small className="font_size"></small>
@@ -101,6 +109,7 @@ const ClientRegister = () => {
             placeholder="Email"
             name="Email"
             value={Email}
+            required
             onChange={e => onChange(e)}
           />
           <small className="font_size"></small>
@@ -110,9 +119,12 @@ const ClientRegister = () => {
           <label>Mobile No</label>
           <input className="Form-control"
             type="text"
-            placeholder="MobileNo"
+            placeholder="MobileNo"  pattern="(?=.*\d).{10,}" title="Must enter Your 10 digit Mobile Number"
             name="MobileNo"
             value={MobileNo}
+            pattern="(?=.*\d).{10,}" title="Must enter Your 10 digit Mobile Number"
+            required
+            maxLength ="10"
             onChange={e => onChange(e)}
           />
           <small className="font_size"></small>
@@ -127,6 +139,7 @@ const ClientRegister = () => {
             placeholder="Password"
             name="Password"
             value={Password}
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 3 or more characters" required
             onChange={e => onChange(e)}
           />
         </div>
@@ -137,11 +150,10 @@ const ClientRegister = () => {
             placeholder="Confirm Your Password"
             name="ConfirmPassword"
             value={ConfirmPassword}
+            required
             onChange={e => onChange(e)}
           />
         </div>
-        
-      <input type="submit" className="btn btn-primary" value="ClientRegistration" />
 
         <input type="submit" className="btn btn-primary" value="Register As Client" />
 
