@@ -50,14 +50,26 @@ const VendorRegister = () => {
         </div>
 
         <div className="form-group">
-        <label>Company Category</label>
+        <label>Company Category   
+        <select >
+            <option >Hotel and Catering</option>
+            <option >Saloon</option>
+            <option >Photography</option>
+            <option >Jwelleries</option>
+            <option >Decorations</option>
+            <option >Entertainment</option>
+          </select>
+        </label>
           <input className="form-control"
             type="text"
             placeholder="Company Category"
             name="CompanyCategory"
             value={CompanyCategory}
             onChange={e => onChange(e)}
-          />
+          >
+            
+          </input>
+      
         </div>
         <div className="form-group">
         <label>Telephone No</label>
@@ -127,7 +139,6 @@ const VendorRegister = () => {
            <p className="forgot-password text-right">Already registered <a href="#">log in?</a></p>
          </Link>        
      </form>
-  
     </Fragment>
   );
 };

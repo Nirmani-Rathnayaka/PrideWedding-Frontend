@@ -48,11 +48,11 @@ function Navbar() {
               </li>
               <li className='nav-item'>
                 <Link
-                  to='/contact-info'
+                  to='/services'
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  Contact Us&nbsp;<i class="fas fa-phone"></i>
+                  Our Services
                 </Link>
               </li>
               <li className='nav-item'>
