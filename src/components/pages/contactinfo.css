@@ -38,6 +38,7 @@
     text-align: center;
     font-size: large;
     font-weight: bolder;
+    margin-top: 10px
   }
   .bg-image{
   background-image: url("./images/couple3.PNG");
