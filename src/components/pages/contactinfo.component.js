@@ -3,6 +3,7 @@ import React, { Component } from "react";
 
 import "./index.css";
 import "./contactinfo.css";
+import emailjs from 'emailjs-com';
 import logo from './images/couple3.PNG';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,9 +17,9 @@ export default class Contactinfo extends Component {
         return (
           
             <form>
-                <div className="heading">
-                 <h2 className="testClass">Contact us on</h2>
-                </div>
+               
+                <h3 className="testClass">See Us on</h3>
+               
               <img src={logo} alt="Logo" />;
                 <div className="social-container">
                 <h4>@prideweddingplanners</h4>

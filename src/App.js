@@ -24,6 +24,7 @@ import Path from "./components/pages/path.component";
 import Client_Selection from "./components/pages/client-selection.component";
 
 import Contactinfo from "./components/pages/contactinfo.component";
+import ContactUs from "./components/pages/contacform";
 //import MerchentSignup from "./components/merchentregister.component";
 import MerchentAdd from "./components/pages/merchentadd.component";
 
@@ -93,6 +94,7 @@ function App() {
             <Route path="/client-selection" component={Client_Selection} />
             <Route path="/sign-in" component={Signin}/>
             <Route path="/contact-info" component={Contactinfo}/>
+            <Route path="/contact-form" component={ContactUs}/>
             <Route path="/upload" component={Upload}/>
 			
 			      <Route path="/saloon_upload" component={Saloon_upload}/>
