@@ -44,12 +44,35 @@ export const ClientRegistration = async (ClientNIC, FirstName, LastName, Address
 
 
         try {
-            await axois.post("https://localhost:5001/api/ClientRegistrations", body, config);
-            alert("Your Have Successfully Registered ");
-            console.log("Client Registration is Successful")
-           
+            await axois.post("https://localhost:5001/api/Clients/Register", body, config).then((res)=>{
+                
+                console.log(res);
+                if(res.status===201)
+                {
+                    alert("Your Have Successfully Registered ");
+                    console.log("Client Registration is Successful")
+                }
+                else
+                {
+                    alert("This Email is found in the database. Please enter different Email or use Sign in instead ");
+                   // alert("Please Check Your Information again ");
+                   console.log("Duplicate Email was found"); 
+                   console.log("Client Registration is Unsuccessful");
+                    
+                    
+                }
+            
+            }).catch((err)=>{
+                alert("Unable to Connect to Database Server");
+                console.log(err);
+                console.error(err);
+                console.log("There is an error in Client Registration ")
+            })
+           // alert("Your Have Successfully Registered ");
+            //console.log("Client Registration is Successful")
+                   
         } catch (error) {
-            alert("Please Check Your Information again ");
+            alert("Unable to Connect to Database Server");
             console.log("Client Registration is Unsuccessful");
             console.log(error);
             
