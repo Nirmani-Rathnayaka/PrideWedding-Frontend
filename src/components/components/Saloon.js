@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react'
 const defaultImageSrc = '/img/add2.gif'
 
 const initialFieldValues = {
-    employeeID: 0,
-    employeeName: '',
-    occupation:'Saloon',
-    located_distric: '',
-    located_province:'',
+    companyID: 0,
+    companyName: '',
+    companyCategory:'Saloon',
+    locatedDistrict: '',
+    locatedProvince:'',
     min_package:'',
     mid_package:'',
     max_package:'',
@@ -64,8 +64,8 @@ export default function Saloon(props) {
 
     const validate = () => {
         let temp = {}
-        temp.employeeName = values.employeeName == "" ? false : true;
-        temp.occupation = values.occupation == "" ? false : true;
+        temp.companyName = values.companyName == "" ? false : true;
+        temp.companyCategory = values.companyCategory == "" ? false : true;
         temp.imageSrc = values.imageSrc == defaultImageSrc ? false : true;
         setErrors(temp)
         return Object.values(temp).every(x => x == true)
@@ -81,11 +81,11 @@ export default function Saloon(props) {
         e.preventDefault()
         if (validate()) {
             const formData = new FormData()
-            formData.append('employeeID', values.employeeID)
-            formData.append('employeeName', values.employeeName)
-            formData.append('occupation', values.occupation)
-            formData.append('located_distric', values.located_distric)
-            formData.append('located_province', values.located_province)
+            formData.append('companyID', values.companyID)
+            formData.append('companyName', values.companyName)
+            formData.append('companyCategory', values.companyCategory)
+            formData.append('locatedDistrict', values.locatedDistrict)
+            formData.append('locatedProvince', values.locatedProvince)
             formData.append('min_package', values.min_package)
             formData.append('max_package', values.max_package)
             formData.append('telephoneNumber', values.telephoneNumber)
@@ -112,25 +112,25 @@ export default function Saloon(props) {
                                 onChange={showPreview} id="image-uploader" />
                         </div>
                         <div className="form-group">
-                            <input className={"form-control" + applyErrorClass('employeeName')} placeholder="Company Name" name="employeeName"
-                                value={values.employeeName}
+                            <input className={"form-control" + applyErrorClass('companyName')} placeholder="Company Name" name="companyName"
+                                value={values.companyName}
                                 onChange={handleInputChange} />
                         </div>
                         <div className="form-group">
-                            <input className={"form-control" + applyErrorClass('occupation')} placeholder="Company Category" name="occupation"
-                                value={values.occupation}
+                            <input className={"form-control" + applyErrorClass('companyCategory')} placeholder="Company Category" name="companyCategory"
+                                value={values.companyCategory}
                                 onChange={handleInputChange} />
                         </div>
 
                         
                         <div className="form-group">
-                            <input className="form-control" placeholder="Located Distric" name="located_distric"
-                                value={values.located_distric}
+                            <input className="form-control" placeholder="Located Distric" name="locatedDistrict"
+                                value={values.locatedDistrict}
                                 onChange={handleInputChange} />
                         </div>
                         <div className="form-group">
-                            <input className="form-control" placeholder="Located Province" name="located_province"
-                                value={values.located_province}
+                            <input className="form-control" placeholder="Located Province" name="locatedProvince"
+                                value={values.locatedProvince}
                                 onChange={handleInputChange} />
                         </div>
 
