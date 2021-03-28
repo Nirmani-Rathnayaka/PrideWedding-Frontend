@@ -30,7 +30,7 @@ export default function AddBoard_Entertainer() {
     }
 
     const addOrEdit = (formData, onSuccess) => {
-        if (formData.get('employeeID') == "0")
+        if (formData.get('companyID') == "0")
             employeeAPI().create(formData)
                 .then(res => {
                     onSuccess();
@@ -38,7 +38,7 @@ export default function AddBoard_Entertainer() {
                 })
                 .catch(err => console.log(err))
         else
-            employeeAPI().update(formData.get('employeeID'), formData)
+            employeeAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
                     refreshEntertainerList();
@@ -58,10 +58,10 @@ export default function AddBoard_Entertainer() {
             <img src={data.imageSrc} className="card-img-top-responsive" width="250" height="250" />
             <div className="card-body">
 
-            <h2><span class="badge badge-danger">{data.employeeName}</span></h2>
+            <h2><span class="badge badge-danger">{data.companyName}</span></h2>
  
-                <span>{data.located_distric} Distric</span> <br />
-                <span>{data.located_province} Province</span> <br />
+                <span>{data.locatedDistrict} Distric</span> <br />
+                <span>{data.locatedProvince} Province</span> <br />
                 <span className="center">Min Package - {data.min_package}Rs</span> <br />
                 <span>Mid Package -{data.mid_package}Rs</span> <br />
                 <span>Max Package -{data.max_package}Rs</span> <br />

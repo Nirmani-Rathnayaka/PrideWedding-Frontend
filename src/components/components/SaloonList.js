@@ -28,7 +28,7 @@ export default function SaloonList() {
     }
 
     const addOrEdit = (formData, onSuccess) => {
-        if (formData.get('employeeID') == "0")
+        if (formData.get('companyID') == "0")
             employeeAPI().create(formData)
                 .then(res => {
                     onSuccess();
@@ -36,7 +36,7 @@ export default function SaloonList() {
                 })
                 .catch(err => console.log(err))
         else
-            employeeAPI().update(formData.get('employeeID'), formData)
+            employeeAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
                     refreshSaloonList();
@@ -61,8 +61,8 @@ export default function SaloonList() {
         <div className="card"onClick={() => { showRecordDetails(data) }}>
             <img src={data.imageSrc} className="card-img-top-responsive" width="170" height="170" />
             <div className="card-body ">
-                <h5>{data.employeeName}</h5>
-                <button className="btn btn-light delete-button" onClick={e => onDelete(e, parseInt(data.employeeID))}>
+                <h5>{data.companyName}</h5>
+                <button className="btn btn-light delete-button" onClick={e => onDelete(e, parseInt(data.companyID))}>
                     <i className="far fa-trash-alt"></i>
                 </button>
             </div>
