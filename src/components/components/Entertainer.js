@@ -9,7 +9,7 @@ const initialFieldValues = {
     locatedDictrict: '',
     locatedProvince:'',
     min_package:'',
-    mid_package:'',
+    
     max_package:'',
     telephoneNumber:'',
 	companyWebsite:'',
@@ -86,7 +86,7 @@ export default function Entertainer(props) {
             formData.append('locatedDictrict', values.locatedDictrict)
             formData.append('locatedProvince', values.locatedProvince)
             formData.append('min_package', values.min_package)
-            formData.append('mid_package', values.mid_package)
+         
             formData.append('max_package', values.max_package)
             formData.append('telephoneNumber', values.telephoneNumber)
         

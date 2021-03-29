@@ -79,13 +79,13 @@ export default function HotelList() {
                     </div>
                 </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-6">
                 <Hotel
                     addOrEdit={addOrEdit}
                     recordForEdit={recordForEdit}
                 />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-6">
             <h1 className="lead">List of Addvertisments records</h1>
                 <table>
                     <tbody>
@@ -95,7 +95,7 @@ export default function HotelList() {
                                 <tr key={i}>
                                     <td>{imageCard(hotelList[3 * i])}</td>
                                     <td>{hotelList[3 * i + 1] ? imageCard(hotelList[3 * i + 1]) : null}</td>
-                                    <td>{hotelList[3 * i + 2] ? imageCard(hotelList[3 * i + 2]) : null}</td>
+                                   
                                 </tr>
                             )
                         }

@@ -62,9 +62,8 @@ export default function AddBoard_Entertainer() {
  
                 <span>{data.locatedDistrict} Distric</span> <br />
                 <span>{data.locatedProvince} Province</span> <br />
-                <span className="center">Min Package - {data.min_package}Rs</span> <br />
-                <span>Mid Package -{data.mid_package}Rs</span> <br />
-                <span>Max Package -{data.max_package}Rs</span> <br />
+                <span className="center">Min Package - {data.min_package}</span> <br />
+                <span>Max Package -{data.max_package}</span> <br />
                 <span>Telephone-{data.telephoneNumber}</span> <br />
                 <span>See Our Website-{data.companyWebsite}</span> <br />
             </div>
