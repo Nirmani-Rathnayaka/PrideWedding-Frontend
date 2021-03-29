@@ -79,13 +79,13 @@ export default function SaloonList() {
                     </div>
                 </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-6">
                 <Saloon
                     addOrEdit={addOrEdit}
                     recordForEdit={recordForEdit}
                 />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-6">
             <h1 className="lead">List of Addvertisments records</h1>
                 <table>
                     <tbody>
@@ -95,7 +95,7 @@ export default function SaloonList() {
                                 <tr key={i}>
                                     <td>{imageCard(saloonList[3 * i])}</td>
                                     <td>{saloonList[3 * i + 1] ? imageCard(saloonList[3 * i + 1]) : null}</td>
-                                    <td>{saloonList[3 * i + 2] ? imageCard(saloonList[3 * i + 2]) : null}</td>
+                                   
                                 </tr>
                             )
                         }

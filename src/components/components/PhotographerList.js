@@ -79,13 +79,13 @@ export default function PhotographerList() {
                     </div>
                 </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-6">
                 <Photographer
                     addOrEdit={addOrEdit}
                     recordForEdit={recordForEdit}
                 />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-6">
             <h1 className="lead">List of Addvertisments records</h1>
                 <table>
                     <tbody>

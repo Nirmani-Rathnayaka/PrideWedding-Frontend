@@ -32,7 +32,7 @@ body, html, .App, #root, .outer {
 }
 
 .inner {
-  width: 900px;
+  width: 1000px;
   
   margin: auto;
   background: #ffffff;

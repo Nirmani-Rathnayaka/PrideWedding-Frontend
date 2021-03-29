@@ -9,7 +9,6 @@ const initialFieldValues = {
     locatedDistrict: '',
     locatedProvince:'',
     min_package:'',
-    mid_package:'',
     max_package:'',
     telephoneNumber:'',
 	companyWebsite:'',

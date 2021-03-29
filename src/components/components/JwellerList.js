@@ -79,14 +79,14 @@ export default function JwellerList() {
                     </div>
                 </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-5">
                 <Jweller
                     addOrEdit={addOrEdit}
                     recordForEdit={recordForEdit}
                 />
             </div>
-            <div className="col-md-8">
-            <h1 className="lead">List of Addvertisments records</h1>
+            <div className="col-md-7">
+            <h1 className="lead text-center">List of Addvertisments records</h1>
                 <table>
                     <tbody>
                         {
