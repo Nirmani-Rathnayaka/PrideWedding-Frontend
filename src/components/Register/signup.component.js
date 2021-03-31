@@ -22,11 +22,8 @@ export default class SignUp extends Component {
                     <label >Email</label>
                     <input type="email" className="form-control" placeholder="Enter email" />
                 </div>
-
-
-                <Link to="/verify-login">
                     <button type="submit" className="btn btn-dark btn-lg btn-block">Subscribe</button>
-                </Link>
+               
                 
             </form>
          
