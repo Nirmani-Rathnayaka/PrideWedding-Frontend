@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
-import {useHistory} from 'react-router-dom';
+
 import  {ClientRegistration}  from '../../authorization/authorization';
 
 
@@ -32,14 +32,8 @@ const ClientRegister = () => {
 
 
 };
-function HomeButton(){
-  let history = useHistory();
 
-function handleClick(){
-  history.push("./saloon_upload");
-}
-return handleClick
-}
+
 
   return (
     <Fragment>
@@ -166,7 +160,7 @@ return handleClick
           />
         </div>
         
-        <input type="submit" className="btn btn-primary" value="Register As Client" onClick={HomeButton} />
+        <input type="submit" className="btn btn-primary" value="Register As Client" />
 
       <Link to="/verify-login">
            < button type="submit" className="btn btn-dark btn-lg btn-block">Next</button>

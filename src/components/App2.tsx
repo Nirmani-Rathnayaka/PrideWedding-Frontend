@@ -42,12 +42,6 @@ const getProducts = async (): Promise<CartItemType[]> =>
 
 
 
-
-
-
-
-
-
 const App2 = () => {
 
   const [cartOpen, setCartOpen] = useState(false);
