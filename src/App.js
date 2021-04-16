@@ -7,6 +7,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 //import { Home } from './components/Home';
 //import { FetchData } from './components/FetchData';
 //import { Counter } from './components/Counter';
+import Addcart from "./components/Addcart";
+import Addcart2 from "./components/Addcart2";
+import Sum from "./components/Sum";
+
 
 import './App.css';
 import "./index.css"; 
@@ -87,6 +91,9 @@ function App() {
             <Route path="/register" component={Welcome} />
             <Route path="/path" component={Path} />
             <Route path="/sign-up" component={SignUp} />
+            <Route path="/addcart" component={Addcart} />
+            <Route path="/addcart2" component={Addcart2} />
+            <Route path="/sum" component={Sum} />
             
             <Route path="/merchentadd" component={MerchentAdd}/>
             <Route path="/verify-login" component={Verify_Login_1} />

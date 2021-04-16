@@ -28,9 +28,12 @@ export default function Saloon(props) {
 
 
     useEffect(() => {
+  
         if (recordForEdit != null)
             setValues(recordForEdit);
     }, [recordForEdit])
+
+    
 
     const handleInputChange = e => {
         const { name, value } = e.target;
@@ -92,10 +95,16 @@ export default function Saloon(props) {
 			formData.append('companyWebsite', values.companyWebsite)
             formData.append('imageFile', values.imageFile)
             addOrEdit(formData, resetForm)
+
         }
     }
 
     const applyErrorClass = field => ((field in errors && errors[field] == false) ? ' invalid-field' : '')
+   
+  
+   
+        
+       
 
     return (
      
@@ -108,23 +117,25 @@ export default function Saloon(props) {
                     <img src={values.imageSrc} className="card-img-top" />
                     <div className="card-body">
                         <div className="form-group">
-                            <input type="file" accept="image/*" className={"form-control-file" + applyErrorClass('imageSrc')}
+                            <input  type="file" accept="image/*" className={"form-control-file" + applyErrorClass('imageSrc')}
                                 onChange={showPreview} id="image-uploader" />
                         </div>
                         <div className="form-group">
-                            <input className={"form-control" + applyErrorClass('companyName')} placeholder="Company Name" name="companyName"
+                            <input name="companyName"  className={"form-control" + applyErrorClass('companyName')} placeholder="Company Name" name="companyName"
                                 value={values.companyName}
                                 onChange={handleInputChange} />
                         </div>
                         <div className="form-group">
-                            <input className={"form-control" + applyErrorClass('companyCategory')} placeholder="Company Category" name="companyCategory"
+                            <input  className={"form-control" + applyErrorClass('companyCategory')} placeholder="Company Category" name="companyCategory"
                                 value={values.companyCategory}
                                 onChange={handleInputChange} />
                         </div>
 
                         
                         <div className="form-group">
+
                             <select className="form-control" placeholder="Located District" name="locatedDistrict"
+
                                 value={values.locatedDistrict}
                                 onChange={handleInputChange} >
   
@@ -157,7 +168,9 @@ export default function Saloon(props) {
         
                         </div>
                         <div className="form-group">
+
                             <select className="form-control" placeholder="Located Province" name="locatedProvince"
+
                                 value={values.locatedProvince}
                                 onChange={handleInputChange} >
                                 <option>Central</option>
@@ -174,7 +187,7 @@ export default function Saloon(props) {
                         </div>
 
                         <div className="form-group">
-                            <input className="form-control" placeholder=" Min Package" name="min_package"
+                            <input name='min_package' className="form-control" placeholder=" Min Package" name="min_package"
                                 value={values.min_package}
                                 onChange={handleInputChange} />
                         </div>
@@ -192,14 +205,14 @@ export default function Saloon(props) {
                         </div>
 						
 						 <div className="form-group">
-                            <input className="form-control" placeholder="Web-URL" name="companyWebsite"
+                            <input  className="form-control" placeholder="Web-URL" name="companyWebsite"
                                 value={values.companyWebsite}
                                 onChange={handleInputChange} />
                         </div>
 
 
                         <div className="form-group text-center">
-                            <button type="submit" className="btn btn-light">Submit</button>
+                            <button  type="submit" className="btn btn-light">Submit</button>
                         </div>
                     </div>
                 </div>
