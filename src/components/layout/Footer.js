@@ -15,12 +15,7 @@ function Footer() {
         </p>
         <div className='input-areas'>
           <form>
-            <input
-              className='footer-input'
-              name='email'
-              type='email'
-              placeholder='Your Email'
-            />
+
             <Link to="/sign-up">
             <Button buttonStyle='btn--outline'>Subscribe</Button>
             </Link>
@@ -63,44 +58,37 @@ function Footer() {
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'
-              to='/'
-              target='_blank'
+              to='/contact-info'
+             
               aria-label='Facebook'
             >
               <i class='fab fa-facebook-f' />
             </Link>
             <Link
               class='social-icon-link instagram'
-              to='/'
-              target='_blank'
+              to='/contact-info'
+              
               aria-label='Instagram'
             >
               <i class='fab fa-instagram' />
             </Link>
             <Link
               class='social-icon-link youtube'
-              to='/'
-              target='_blank'
+              to='/contact-info'
+             
               aria-label='Youtube'
             >
               <i class='fab fa-youtube' />
             </Link>
             <Link
               class='social-icon-link twitter'
-              to='/'
-              target='_blank'
+              to='/contact-info'
+              
               aria-label='Twitter'
             >
               <i class='fab fa-twitter' />
             </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <i class='fab fa-linkedin' />
-            </Link>
+           
           </div>
         </div>
       </section>

@@ -130,14 +130,53 @@ export default function Photographer(props) {
 
                         
                         <div className="form-group">
-                            <input className="form-control" placeholder="Located Distric" name="locatedDistrict"
+                            <select className="form-control" placeholder="Located District" name="locatedDistrict"
                                 value={values.locatedDistrict}
-                                onChange={handleInputChange} />
+                                onChange={handleInputChange} >
+  
+                                <option>Ampara</option>
+                                <option>Anuradhapura</option>
+                                <option>Badulla</option>
+                                <option>Batticaloa</option>
+                                <option>Colombo</option>
+                                <option>Galle</option>
+                                <option>Gampaha</option>
+                                <option>Hambantota</option>
+                                <option>Jaffna</option>
+                                <option>Kalutara</option>
+                                <option>Kandy</option>
+                                <option>Kegalle</option>
+                                <option>Kilinochchi</option>
+                                <option>Kurunagala</option>
+                                <option>Mannar</option>
+                                <option>Matale</option>
+                                <option>Matara</option>
+                                <option>Monaragala</option>
+                                <option>Mullaitivu</option>
+                                <option>Nuwara Eliya</option>
+                                <option>Polonnaruwa</option>
+                                <option>Puttalam</option>
+                                <option>Ratnapura</option>
+                                <option>Trincomalee</option>
+                                <option>Vavuniya</option>
+                            </select>
+        
                         </div>
                         <div className="form-group">
-                            <input className="form-control" placeholder="Located Province" name="locatedProvince"
+                            <select className="form-control" placeholder="Located Province" name="locatedProvince"
                                 value={values.locatedProvince}
-                                onChange={handleInputChange} />
+                                onChange={handleInputChange} >
+                                <option>Central</option>
+                                <option>Eastern</option>
+                                <option> North Central</option>
+                                <option>Northern</option>
+                                <option> North Western</option>
+                                <option>Sabaragamuwa</option>
+                                <option>Southern</option>
+                                <option>Uva</option>
+                                <option> Western</option>
+
+                                </select>
                         </div>
 
                         <div className="form-group">
