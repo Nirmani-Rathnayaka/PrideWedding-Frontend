@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 //import { FetchData } from './components/FetchData';
 //import { Counter } from './components/Counter';
 import Addcart from "./components/Addcart";
+import Cart_upload from "./components/Cart_upload";
 import Addcart2 from "./components/Addcart2";
 import Sum from "./components/Sum";
 
@@ -91,7 +92,7 @@ function App() {
             <Route path="/register" component={Welcome} />
             <Route path="/path" component={Path} />
             <Route path="/sign-up" component={SignUp} />
-            <Route path="/addcart" component={Addcart} />
+           
             <Route path="/addcart2" component={Addcart2} />
             <Route path="/sum" component={Sum} />
             
@@ -103,7 +104,12 @@ function App() {
             <Route path="/contact-info" component={Contactinfo}/>
             <Route path="/contact-form" component={ContactUs}/>
             <Route path="/upload" component={Upload}/>
-			
+			     
+            
+			      <Route path="/cart_upload" component={Cart_upload}/>
+            <Route path="/addcart" component={Addcart} />
+
+
 			      <Route path="/saloon_upload" component={Saloon_upload}/>
             <Route path="/saloons" component={AddBoard_Saloon}/>
 		        <Route path="/hotel_upload" component={Hotel_upload}/>
