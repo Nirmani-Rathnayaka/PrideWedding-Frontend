@@ -20,6 +20,7 @@ const Item: React.FC<Props> = ({ item, handleAddToCart }) => (
       <h3>{item.companyName}</h3>
      
       <h3>{item.min_package}$</h3>
+      <h4>{item.companyWebsite}</h4>
     </div>
     <Button onClick={() => handleAddToCart(item)}>Add to cart</Button>
   </Wrapper>
