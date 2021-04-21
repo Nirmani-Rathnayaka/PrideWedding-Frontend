@@ -11,6 +11,7 @@ import Addcart from "./components/Addcart";
 import Cart_upload from "./components/Cart_upload";
 import Addcart2 from "./components/Addcart2";
 import Sum from "./components/Sum";
+import Table from "./Table";
 
 
 import './App.css';
@@ -108,6 +109,7 @@ function App() {
             
 			      <Route path="/cart_upload" component={Cart_upload}/>
             <Route path="/addcart" component={Addcart} />
+            <Route path="/table" component={Table} />
 
 
 			      <Route path="/saloon_upload" component={Saloon_upload}/>

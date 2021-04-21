@@ -15,6 +15,7 @@ export type CartItemType = {
   companyID: number;
   companyName:string;
   companyCategory: string;
+  companyWebsite: string;
   imageSrc:string;
   locatedDistric: string;
   locatedProvince: string;
