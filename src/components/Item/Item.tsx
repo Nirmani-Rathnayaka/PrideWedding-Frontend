@@ -16,8 +16,8 @@ const Item: React.FC<Props> = ({ item, handleAddToCart }) => (
     
     <img src={item.imageSrc} alt={item.companyName}/>
     <div>
-      <h2>{item.companyCategory}</h2>
-      <h3>{item.companyName}</h3>
+      <h3>{item.companyCategory}</h3>
+      <h4>{item.companyName}</h4>
      
       <h3>{item.min_package}$</h3>
       <h4>{item.companyWebsite}</h4>
