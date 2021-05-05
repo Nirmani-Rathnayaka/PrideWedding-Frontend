@@ -10,7 +10,7 @@ export default function UseApp() {
   const [searchColumns,setSearchColumns] = useState(["companyName","locatedDistrict"]);
 
   useEffect(()=>{
-    fetch("https://localhost:5001/api/HotelVendors")
+    fetch("https://localhost:5001/api/AddingCarts")
     .then(response=>response.json())
     .then((json) => setData(json))
 

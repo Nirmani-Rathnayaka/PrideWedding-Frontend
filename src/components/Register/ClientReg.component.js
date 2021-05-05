@@ -5,7 +5,7 @@ import  {ClientRegistration}  from '../../authorization/authorization';
 
 
 const ClientRegister = () => {
-
+  
 
   const [formData, setFromData] = useState(
     {
@@ -26,20 +26,13 @@ const ClientRegister = () => {
 
  const onSubmit = async e => {
   e.preventDefault();
+  await fetch(`http://localhost:3000/addcart`);
   console.log("On Submit Function is working")
    ClientRegistration (ClientNIC, FirstName, LastName, Address, UserName,Email,MobileNo,Password, ConfirmPassword);
-    
-
+  
 
 };
-function HomeButton(){
-  let history = useHistory();
 
-function handleClick(){
-  history.push("./saloon_upload");
-}
-return handleClick
-}
 
   return (
     <Fragment>
@@ -166,7 +159,7 @@ return handleClick
           />
         </div>
         
-        <input type="submit" className="btn btn-primary" value="Register As Client" onClick={HomeButton} />
+        <input type="submit" className="btn btn-primary" value="Register As Client" />
 
       <Link to="/verify-login">
            < button type="submit" className="btn btn-dark btn-lg btn-block">Next</button>

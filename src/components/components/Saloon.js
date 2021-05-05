@@ -126,16 +126,23 @@ export default function Saloon(props) {
                                 onChange={handleInputChange} />
                         </div>
                         <div className="form-group">
-                            <input  className={"form-control" + applyErrorClass('companyCategory')} placeholder="Company Category" name="companyCategory"
+                            <select className={"form-control" + applyErrorClass('companyCategory')} placeholder="Company Category" name="companyCategory"
                                 value={values.companyCategory}
-                                onChange={handleInputChange} />
+                                onChange={handleInputChange} >
+
+
+                                <option>Hotel & Catering</option>
+                                <option>Saloon</option>
+                                <option>Jwellers</option>
+                                <option>Entertainment</option>
+                                <option>Decoration</option>
+                                <option>Photography</option>
+                                </select>
                         </div>
 
                         
                         <div className="form-group">
-
                             <select className="form-control" placeholder="Located District" name="locatedDistrict"
-
                                 value={values.locatedDistrict}
                                 onChange={handleInputChange} >
   
@@ -166,6 +173,22 @@ export default function Saloon(props) {
                                 <option>Vavuniya</option>
                             </select>
         
+                        </div>
+                        <div className="form-group">
+                            <select className="form-control" placeholder="Located Province" name="locatedProvince"
+                                value={values.locatedProvince}
+                                onChange={handleInputChange} >
+                                <option>Central</option>
+                                <option>Eastern</option>
+                                <option> North Central</option>
+                                <option>Northern</option>
+                                <option> North Western</option>
+                                <option>Sabaragamuwa</option>
+                                <option>Southern</option>
+                                <option>Uva</option>
+                                <option> Western</option>
+
+                                </select>
                         </div>
                         <div className="form-group">
 
