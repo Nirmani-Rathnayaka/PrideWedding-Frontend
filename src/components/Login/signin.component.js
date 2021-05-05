@@ -1,4 +1,4 @@
-import React, { Fragment,useState } from "react";
+import React, { Fragment,useState,useForm } from "react";
 import { Link } from 'react-router-dom';
 import {FacebookLoginButton} from 'react-social-login-buttons';
 //import "./index.css";
@@ -18,8 +18,9 @@ import  {ClientLogins}  from '../../authorization/authorization';
         const { UserName,Password } = formData;
       
         const onChange = e => setFromData({ ...formData, [e.target.name]: e.target.value })
-      
+       
        const onSubmit = async e => {
+        await fetch(`http://localhost:3000/addcart`);
         e.preventDefault();
         console.log("Login On Submit function is Working")
         ClientLogins (UserName,Password);

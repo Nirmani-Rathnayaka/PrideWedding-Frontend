@@ -123,9 +123,18 @@ export default function Photographer(props) {
                                 onChange={handleInputChange} />
                         </div>
                         <div className="form-group">
-                            <input className={"form-control" + applyErrorClass('companyCategory')} placeholder="Company Category" name="companyCategory"
+                            <select className={"form-control" + applyErrorClass('companyCategory')} placeholder="Company Category" name="companyCategory"
                                 value={values.companyCategory}
-                                onChange={handleInputChange} />
+                                onChange={handleInputChange} >
+
+
+                                <option>Hotel & Catering</option>
+                                <option>Saloon</option>
+                                <option>Jwellers</option>
+                                <option>Entertainment</option>
+                                <option>Decoration</option>
+                                <option>Photography</option>
+                                </select>
                         </div>
 
                         
