@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import Cart from './Cart'
+import Newcart from './Newcart'
 import axios from "axios";
 
-export default function CartList() {
-    const [cartList, setCartList] = useState([])
+export default function NewcartList() {
+    const [hotelList, setHotelList] = useState([])
     const [recordForEdit, setRecordForEdit] = useState(null)
 
     useEffect(() => {
-        refreshCartList();
+        refreshHotelList();
     }, [])
 
     const employeeAPI = (url = 'http://localhost:5000/api/AddingCarts/') => {
@@ -19,10 +19,10 @@ export default function CartList() {
         }
     }
 
-    function refreshCartList() {
+    function refreshHotelList() {
         employeeAPI().fetchAll()
             .then(res => {
-                setCartList(res.data)
+                setHotelList(res.data)
             })
             .catch(err => console.log(err))
     }
@@ -32,14 +32,14 @@ export default function CartList() {
             employeeAPI().create(formData)
                 .then(res => {
                     onSuccess();
-                    refreshCartList();
+                    refreshHotelList();
                 })
                 .catch(err => console.log(err))
         else
             employeeAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
-                    refreshCartList();
+                    refreshHotelList();
                 })
                 .catch(err => console.log(err))
 
@@ -53,7 +53,7 @@ export default function CartList() {
         e.stopPropagation();
         if (window.confirm('Are you sure to delete this record?'))
             employeeAPI().delete(id)
-                .then(res => refreshCartList())
+                .then(res => refreshHotelList())
                 .catch(err => console.log(err))
     }
 
@@ -75,26 +75,26 @@ export default function CartList() {
             <div className="col-md-12">
                 <div className="jumbotron jumbotron-fluid py-4">
                     <div className="container text-center">
-                        <h1 className="display-4">Adding packages to cart</h1>
+                        <h1 className="display-4">publish Addvertisments</h1>
                     </div>
                 </div>
             </div>
             <div className="col-md-6">
-                <Cart
+                <Newcart
                     addOrEdit={addOrEdit}
                     recordForEdit={recordForEdit}
                 />
             </div>
             <div className="col-md-6">
-            <h1 className="lead">Packages</h1>
+            <h1 className="lead">List of Addvertisments records</h1>
                 <table>
                     <tbody>
                         {
                             //tr > 3 td
-                            [...Array(Math.ceil(cartList.length / 3))].map((e, i) =>
+                            [...Array(Math.ceil(hotelList.length / 3))].map((e, i) =>
                                 <tr key={i}>
-                                    <td>{imageCard(cartList[3 * i])}</td>
-                                    <td>{cartList[3 * i + 1] ? imageCard(cartList[3 * i + 1]) : null}</td>
+                                    <td>{imageCard(hotelList[3 * i])}</td>
+                                    <td>{hotelList[3 * i + 1] ? imageCard(hotelList[3 * i + 1]) : null}</td>
                                    
                                 </tr>
                             )

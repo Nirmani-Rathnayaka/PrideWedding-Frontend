@@ -10,7 +10,7 @@ export default function HotelList() {
         refreshHotelList();
     }, [])
 
-    const employeeAPI = (url = 'https://localhost:5001/api/HotelVendors/') => {
+    const employeeAPI = (url = 'http://localhost:5000/api/HotelVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),

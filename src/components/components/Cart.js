@@ -9,7 +9,6 @@ const initialFieldValues = {
     locatedDistrict: '',
     locatedProvince:'',
     min_package:'',
-   
     max_package:'',
     telephoneNumber:'',
 	companyWebsite:'',
@@ -109,125 +108,120 @@ export default function Cart(props) {
     return (
      
         <>
-          <div className="container text-center">
-                <p className="lead">Your Package</p>
-           
-            <form autoComplete="off" noValidate onSubmit={handleFormSubmit}>
-                <div className="card">
-                    <img src={values.imageSrc} className="card-img-top" />
-                    <div className="card-body">
-                        <div className="form-group">
-                            <input  type="file" accept="image/*" className={"form-control-file" + applyErrorClass('imageSrc')}
-                                onChange={showPreview} id="image-uploader" />
-                        </div>
-                        <div className="form-group">
-                            <input name="companyName"  className={"form-control" + applyErrorClass('companyName')} placeholder="Company Name" name="companyName"
-                                value={values.companyName}
-                                onChange={handleInputChange} />
-                        </div>
-                        <div className="form-group">
-                            <select  className={"form-control" + applyErrorClass('companyCategory')} placeholder="Company Category" name="companyCategory"
-                                value={values.companyCategory}
-                                onChange={handleInputChange} >
+        <div className="container text-center">
+              <p className="lead">An Addvertisment</p>
+         
+          <form autoComplete="off" noValidate onSubmit={handleFormSubmit}>
+              <div className="card">
+                  <img src={values.imageSrc} className="card-img-top" />
+                  <div className="card-body">
+                      <div className="form-group">
+                          <input type="file" accept="image/*" className={"form-control-file" + applyErrorClass('imageSrc')}
+                              onChange={showPreview} id="image-uploader" />
+                      </div>
+                      <div className="form-group">
+                          <input className={"form-control" + applyErrorClass('companyName')} placeholder="Company Name" name="companyName"
+                              value={values.companyName}
+                              onChange={handleInputChange} />
+                      </div>
+                      <div className="form-group">
+                          <select className={"form-control" + applyErrorClass('companyCategory')} placeholder="Company Category" name="companyCategory"
+                              value={values.companyCategory}
+                              onChange={handleInputChange} >
 
 
-                                <option>Hotel & Catering</option>
-                                <option>Saloon</option>
-                                <option>Jwellers</option>
-                                <option>Entertainment</option>
-                                <option>Decoration</option>
-                                <option>Photography</option>
+                              <option>Hotel & Catering</option>
+                              <option>Saloon</option>
+                              <option>Jwellers</option>
+                              <option>Entertainment</option>
+                              <option>Decoration</option>
+                              <option>Photography</option>
+                              </select>
+                      </div>
 
-                            </select>
-                        </div>
+                      
+                      <div className="form-group">
+                          <select className="form-control" placeholder="Located District" name="locatedDistrict"
+                              value={values.locatedDistrict}
+                              onChange={handleInputChange} >
 
-                        
-                        <div className="form-group">
+                              <option>Ampara</option>
+                              <option>Anuradhapura</option>
+                              <option>Badulla</option>
+                              <option>Batticaloa</option>
+                              <option>Colombo</option>
+                              <option>Galle</option>
+                              <option>Gampaha</option>
+                              <option>Hambantota</option>
+                              <option>Jaffna</option>
+                              <option>Kalutara</option>
+                              <option>Kandy</option>
+                              <option>Kegalle</option>
+                              <option>Kilinochchi</option>
+                              <option>Kurunagala</option>
+                              <option>Mannar</option>
+                              <option>Matale</option>
+                              <option>Matara</option>
+                              <option>Monaragala</option>
+                              <option>Mullaitivu</option>
+                              <option>Nuwara Eliya</option>
+                              <option>Polonnaruwa</option>
+                              <option>Puttalam</option>
+                              <option>Ratnapura</option>
+                              <option>Trincomalee</option>
+                              <option>Vavuniya</option>
+                          </select>
+      
+                      </div>
+                      <div className="form-group">
+                          <select className="form-control" placeholder="Located Province" name="locatedProvince"
+                              value={values.locatedProvince}
+                              onChange={handleInputChange} >
+                              <option>Central</option>
+                              <option>Eastern</option>
+                              <option> North Central</option>
+                              <option>Northern</option>
+                              <option> North Western</option>
+                              <option>Sabaragamuwa</option>
+                              <option>Southern</option>
+                              <option>Uva</option>
+                              <option> Western</option>
 
-                            <select className="form-control" placeholder="Located District" name="locatedDistrict"
+                              </select>
+                      </div>
 
-                                value={values.locatedDistrict}
-                                onChange={handleInputChange} >
-  
-                                <option>Ampara</option>
-                                <option>Anuradhapura</option>
-                                <option>Badulla</option>
-                                <option>Batticaloa</option>
-                                <option>Colombo</option>
-                                <option>Galle</option>
-                                <option>Gampaha</option>
-                                <option>Hambantota</option>
-                                <option>Jaffna</option>
-                                <option>Kalutara</option>
-                                <option>Kandy</option>
-                                <option>Kegalle</option>
-                                <option>Kilinochchi</option>
-                                <option>Kurunagala</option>
-                                <option>Mannar</option>
-                                <option>Matale</option>
-                                <option>Matara</option>
-                                <option>Monaragala</option>
-                                <option>Mullaitivu</option>
-                                <option>Nuwara Eliya</option>
-                                <option>Polonnaruwa</option>
-                                <option>Puttalam</option>
-                                <option>Ratnapura</option>
-                                <option>Trincomalee</option>
-                                <option>Vavuniya</option>
-                            </select>
-        
-                        </div>
-                        <div className="form-group">
+                      <div className="form-group">
+                          <input className="form-control" placeholder=" Min Package" name="min_package"
+                              value={values.min_package}
+                              onChange={handleInputChange} />
+                      </div>
 
-                            <select className="form-control" placeholder="Located Province" name="locatedProvince"
+                     
+                      <div className="form-group">
+                          <input className="form-control" placeholder=" Max Package" name="max_package"
+                              value={values.max_package}
+                              onChange={handleInputChange} />
+                      </div>
 
-                                value={values.locatedProvince}
-                                onChange={handleInputChange} >
-                                <option>Central</option>
-                                <option>Eastern</option>
-                                <option> North Central</option>
-                                <option>Northern</option>
-                                <option> North Western</option>
-                                <option>Sabaragamuwa</option>
-                                <option>Southern</option>
-                                <option>Uva</option>
-                                <option> Western</option>
-
-                                </select>
-                        </div>
-
-                        <div className="form-group">
-                            <input name='min_package' className="form-control" placeholder=" Min Package" name="min_package"
-                                value={values.min_package}
-                                onChange={handleInputChange} />
-                        </div>
-
-                        <div className="form-group">
-                            <input className="form-control" placeholder=" Max Package" name="max_package"
-                                value={values.max_package}
-                                onChange={handleInputChange} />
-                        </div>
-
-                        <div className="form-group">
-                            <input className="form-control" placeholder=" TelephoneNumber" name="telephoneNumber"
-                                value={values.telephoneNumber}
-                                onChange={handleInputChange} />
-                        </div>
-						
-						 <div className="form-group">
-                            <input  className="form-control" placeholder="Web-URL" name="companyWebsite"
-                                value={values.companyWebsite}
-                                onChange={handleInputChange} />
-                        </div>
+                      <div className="form-group">
+                          <input className="form-control" placeholder=" TelephoneNumber" name="telephoneNumber"
+                              value={values.telephoneNumber}
+                              onChange={handleInputChange} />
+                      </div>
+                       <div className="form-group">
+                          <input className="form-control" placeholder="Web-URL" name="companyWebsite"
+                              value={values.companyWebsite}
+                              onChange={handleInputChange} />
+                      </div>
 
 
-                        <div className="form-group text-center">
-                            <button  type="submit" className="btn btn-light">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            </div>
+                      <div className="form-group text-center">
+                          <button type="submit" className="btn btn-light">Submit</button>
+                      </div>
+                  </div>
+              </div>
+          </form>
+          </div>
         </>
        
     )

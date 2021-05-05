@@ -10,7 +10,7 @@ export default function SaloonList() {
         refreshSaloonList();
     }, [])
 
-    const employeeAPI = (url = 'https://localhost:5001/api/SaloonVendors/') => {
+    const employeeAPI = (url = 'http://localhost:5000/api/SaloonVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
