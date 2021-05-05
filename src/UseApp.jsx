@@ -10,7 +10,7 @@ export default function UseApp() {
   const [searchColumns,setSearchColumns] = useState(["companyName","locatedDistrict"]);
 
   useEffect(()=>{
-    fetch("https://localhost:5001/api/AddingCarts")
+    fetch("http://localhost:5000/api/HotelVendors")
     .then(response=>response.json())
     .then((json) => setData(json))
 
@@ -30,31 +30,21 @@ export default function UseApp() {
   const columns = data[0] && Object.keys(data[0])
 
   return(
-  <div>
+  <>
   
-    <div><input type="text" value={q} on onChange={(e)=>setQ(e.target.value)}/>
-    {
-      columns && columns.map(column => <lable>
-        <input type="checkbox" checked={searchColumns.includes(column)}
-         onChange={(e) =>{
-           const checked =searchColumns.includes(column)
-           setSearchColumns(prev=>checked
-            ? prev.filter(sc => sc !== column)
-            :[...prev,column])
-          }
-        }/>
-        {column}
-      </lable>)
-    }
+    <div><input placeholder="Search" type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off" type="text" value={q} on onChange={(e)=>setQ(e.target.value)}/>
+    
 
     </div>
+    <div>Here you can search details of hotels by company name location and packages</div>
+
     <div>
       
       <Datatable data={search(data)}/> 
     </div>
 
 
-  </div>
+  </>
   
   );
 }
