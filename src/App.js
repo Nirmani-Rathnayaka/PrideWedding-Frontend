@@ -11,7 +11,7 @@ import Addcart from "./components/Addcart";
 import Cart_upload from "./components/Cart_upload";
 import Addcart2 from "./components/Addcart2";
 import Sum from "./components/Sum";
-import Table from "./Table";
+import Table from "./table/Table";
 
 
 import './App.css';

@@ -31,14 +31,27 @@ export default function UseApp() {
 
   return(
   <>
+   <div>Here you can search details of hotels by company name location and packages</div>
   
     <div><input placeholder="Search" type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off" type="text" value={q} on onChange={(e)=>setQ(e.target.value)}/>
-    
+     {
+      columns && columns.map(column => <lable class="custom-control custom-checkbox">
+        <input type="checkbox" checked={searchColumns.includes(column)}
+         onChange={(e) =>{
+           const checked =searchColumns.includes(column)
+           setSearchColumns(prev=>checked
+            ? prev.filter(sc => sc !== column)
+            :[...prev,column])
+          }
+        }/>
+        {column}
+      </lable>)
+    }
 
     </div>
-    <div>Here you can search details of hotels by company name location and packages</div>
+    
 
-    <div>
+    <div >
       
       <Datatable data={search(data)}/> 
     </div>
