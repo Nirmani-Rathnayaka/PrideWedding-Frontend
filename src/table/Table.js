@@ -7,12 +7,20 @@ import "./index2.css";
 
 export default function Table(){
   return(
+  
+
   <React.StrictMode>
-    <div className="container">
-      <div className="paper">
+
+    <div> 
+    <div  className="testClass">
+    DISCOVER HOTELS
+    </div>
+   
+      <div>
         <UseApp />
       </div>
-    </div>
+      </div>
+ 
   </React.StrictMode>
   
   
