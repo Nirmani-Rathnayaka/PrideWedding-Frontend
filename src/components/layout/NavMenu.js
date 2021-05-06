@@ -35,7 +35,7 @@ function Navbar() {
           <div className='navbar-container container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
               <MdToys className='navbar-icon' />
-              Pride Wedding Planners
+              Pride Wedding Service Providers
             </Link>
             <div className='menu-icon' onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
@@ -79,7 +79,7 @@ function Navbar() {
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  SIGN IN
+                  Sign In
                 </Link>
               </li>
               <li className="nav-item dropdown">
@@ -88,7 +88,7 @@ function Navbar() {
               id="navbarDropdownMenuLink" 
               data-bs-toggle="dropdown"
               >
-              SIGN UP
+              Sign Up
               </ul>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li>  <Link className="dropdown-item"  to={"/Client-Registration"}>SignUp as Client</Link> </li>

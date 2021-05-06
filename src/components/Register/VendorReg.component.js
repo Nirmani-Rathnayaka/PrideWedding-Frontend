@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
-
+import './VenderReg.css';
 
 
 import  {VendorRegistration}  from '../../authorization/authorization';
