@@ -27,22 +27,22 @@ export default class Contactinfo extends Component {
                    href="https://www.youtube.com/c/jamesqquick"
                     className="youtube social"
                 >
-        <FontAwesomeIcon icon={faYoutube} size="5x"  />
+        <FontAwesomeIcon icon={faYoutube} size="4x"  />
       </a>
       <a
         href="https://www.facebook.com/Pride-Wedding-Planners-100516545407395"
         className="facebook social"
       >
-        <FontAwesomeIcon icon={faFacebook} size="5x" />
+        <FontAwesomeIcon icon={faFacebook} size="4x" />
       </a>
       <a href="https://twitter.com/PlannersPride" className="twitter social">
-        <FontAwesomeIcon icon={faTwitter} size="5x" />
+        <FontAwesomeIcon icon={faTwitter} size="4x" />
       </a>
       <a
         href="https://www.instagram.com/learnbuildteach"
         className="instagram social"
       >
-        <FontAwesomeIcon icon={faInstagram} size="5x"  />
+        <FontAwesomeIcon icon={faInstagram} size="4x"  />
       </a>
     </div>
             </form>

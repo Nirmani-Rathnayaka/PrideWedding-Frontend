@@ -36,10 +36,11 @@ function Pay() {
   />
         
   <form  onSubmit={e => onSubmit(e)}>
-      <div className="heading">
+
+  <div className="form">
+  <div className="heading">
   <h3 >Payments</h3>
   </div>
-  <div className="form">
   <label>Card Number</label>
     <input className="input-text" 
      type='tel' 
