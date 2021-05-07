@@ -87,7 +87,7 @@ export default function CartList() {
             </div>
             <div className="col-md-6">
             <h1 className="lead">Packages</h1>
-                <table>
+                <table >
                     <tbody>
                         {
                             //tr > 3 td

@@ -108,7 +108,7 @@ export default function Decoration(props) {
                     <img src={values.imageSrc} className="card-img-top" />
                     <div className="card-body">
                         <div className="form-group">
-                            <input type="file" accept="image/*" className={"form-control-file" + applyErrorClass('imageSrc')}
+                            <input type="file" accept="image/x-png,image/gif,image/jpeg" className={"form-control-file" + applyErrorClass('imageSrc')}
                                 onChange={showPreview} id="image-uploader" />
                         </div>
                         <div className="form-group">

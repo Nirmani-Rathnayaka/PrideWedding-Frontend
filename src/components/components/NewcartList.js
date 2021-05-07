@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Newcart from './Newcart'
 import axios from "axios";
+import  './Default.css';
 
 export default function NewcartList() {
     const [hotelList, setHotelList] = useState([])
@@ -10,7 +11,7 @@ export default function NewcartList() {
         refreshHotelList();
     }, [])
 
-    const employeeAPI = (url = 'http://localhost:5000/api/AddingCarts/') => {
+    const employeeAPI = (url = window.$API_URL+'/api/AddingCarts/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -87,7 +88,7 @@ export default function NewcartList() {
             </div>
             <div className="col-md-6">
             <h1 className="lead">List of Addvertisments records</h1>
-                <table>
+                <table  >
                     <tbody>
                         {
                             //tr > 3 td

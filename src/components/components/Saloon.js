@@ -117,7 +117,7 @@ export default function Saloon(props) {
                     <img src={values.imageSrc} className="card-img-top" />
                     <div className="card-body">
                         <div className="form-group">
-                            <input  type="file" accept="image/*" className={"form-control-file" + applyErrorClass('imageSrc')}
+                            <input  type="file" accept="image/x-png,image/gif,image/jpeg" className={"form-control-file" + applyErrorClass('imageSrc')}
                                 onChange={showPreview} id="image-uploader" />
                         </div>
                         <div className="form-group">
@@ -190,24 +190,7 @@ export default function Saloon(props) {
 
                                 </select>
                         </div>
-                        <div className="form-group">
-
-                            <select className="form-control" placeholder="Located Province" name="locatedProvince"
-
-                                value={values.locatedProvince}
-                                onChange={handleInputChange} >
-                                <option>Central</option>
-                                <option>Eastern</option>
-                                <option> North Central</option>
-                                <option>Northern</option>
-                                <option> North Western</option>
-                                <option>Sabaragamuwa</option>
-                                <option>Southern</option>
-                                <option>Uva</option>
-                                <option> Western</option>
-
-                                </select>
-                        </div>
+                    
 
                         <div className="form-group">
                             <input name='min_package' className="form-control" placeholder=" Min Package" name="min_package"
