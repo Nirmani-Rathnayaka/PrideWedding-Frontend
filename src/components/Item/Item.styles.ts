@@ -21,8 +21,29 @@ export const Wrapper = styled.div`
 
   div {
     font-family: Arial, Helvetica, sans-serif;
-    padding: 1rem;
-    height: 100%;
+    padding: 0.5rem;
+    height:100%;
+    
   }
   
+  h3{
+    font-size:x-large
+  }
+  h4{
+    font-size:large
+  }
+
+  .button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+
 `;

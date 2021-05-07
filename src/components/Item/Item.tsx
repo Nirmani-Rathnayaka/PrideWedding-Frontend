@@ -12,9 +12,9 @@ type Props = {
 const Item: React.FC<Props> = ({ item, handleAddToCart }) => (
   <Wrapper>
    
-      
+      <div className="card text-center">
     
-    <img src={item.imageSrc} alt={item.companyName}/>
+    <img className="card-img-top-responsive-center" width="250" height="250" src={item.imageSrc} alt={item.companyName}/>
     <div>
       <h3>{item.companyCategory}</h3>
       <h4>{item.companyName}</h4>
@@ -23,6 +23,7 @@ const Item: React.FC<Props> = ({ item, handleAddToCart }) => (
       <h4>{item.companyWebsite}</h4>
     </div>
     <Button onClick={() => handleAddToCart(item)}>Add to cart</Button>
+    </div>
   </Wrapper>
 );
 
