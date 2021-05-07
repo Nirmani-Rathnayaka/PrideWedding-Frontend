@@ -6,7 +6,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 
-
+window.$API_URL = 'http://localhost:5000';
 
 
 //const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');

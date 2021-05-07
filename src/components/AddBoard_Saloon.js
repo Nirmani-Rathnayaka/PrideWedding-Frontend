@@ -14,7 +14,7 @@ export default function AddBoard_Saloon() {
         refreshSaloonList();
     }, [])
 
-    const employeeAPI = (url = 'https://localhost:5001/api/SaloonVendors/') => {
+    const employeeAPI = (url = 'http://localhost:5000/api/SaloonVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -64,9 +64,9 @@ export default function AddBoard_Saloon() {
  
                 <span>{data.locatedDistrict} Distric</span> <br />
                 <span>{data.locatedProvince} Province</span> <br />
-                <span className="center">Min Package - {data.min_package}</span> <br />
+                <span className="center">Min Package - {data.min_package}$</span> <br />
                
-                <span>Max Package -{data.max_package}</span> <br />
+                <span>Max Package -{data.max_package}$</span> <br />
                 <span>Telephone-{data.telephoneNumber}</span> <br />
 				<span>See Our Website-{data.companyWebsite}</span> <br />
                

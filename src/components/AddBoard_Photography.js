@@ -56,8 +56,8 @@ export default function AddBoard_Photography() {
     
 
     const imageCard = data => (
-        <div className="card" onClick={() => { showRecordDetails(data) }}>
-            <img src={data.imageSrc} className="card-img-top-responsive" width="280" height="280" />
+        <div className="card text-center" onClick={() => { showRecordDetails(data) }}>
+            <img src={data.imageSrc} className="card-img-top-responsive-center" width="250" height="250" />
             <div className="card-body">
 
             <h2><span class="badge badge-danger">{data.companyName}</span></h2>
@@ -67,9 +67,9 @@ export default function AddBoard_Photography() {
                 
                 
                 } Province</span> <br />
-                <span className="center">Min Package - {data.min_package}</span> <br />
+                <span className="center">Min Package - {data.min_package}$</span> <br />
               
-                <span>Max Package -{data.max_package}</span> <br />
+                <span>Max Package -{data.max_package}$</span> <br />
                 <span>Telephone-{data.telephoneNumber}</span> <br />
                 <span>See Our Website-{data.companyWebsite}</span> <br />
             </div>
