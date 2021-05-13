@@ -99,7 +99,7 @@ function App() {
             
             <Route path="/merchentadd" component={MerchentAdd}/>
             <Route path="/verify-login" component={Verify_Login_1} />
-            <Route path="/verify-login-2" component={Verify_Login_2} />
+            <Route path="/sign-in-vendor" component={Verify_Login_2} />
             <Route path="/client-selection" component={Client_Selection} />
             <Route path="/sign-in" component={Signin}/>
             <Route path="/contact-info" component={Contactinfo}/>

@@ -46,15 +46,7 @@ function Navbar() {
                   Home&nbsp;<i class="fas fa-home"></i>
                 </Link>
               </li>
-              <li className='nav-item'>
-                <Link
-                  to='/services'
-                  className='nav-links'
-                  onClick={closeMobileMenu}
-                >
-                  Our Services
-                </Link>
-              </li>
+
               <li className='nav-item'>
                 <Link
                   to='/contact-form'
@@ -88,15 +80,21 @@ function Navbar() {
 
                 </ul>
               </li>
-              <li className='nav-item'>
-                <Link
-                  to='/sign-in'
-                  className='nav-links'
-                  onClick={closeMobileMenu}
-                >
-                  Sign In
-                </Link>
+              <li className="nav-item dropdown">
+              <ul className="nav-links " 
+              type="button" 
+              id="navbarDropdownMenuLink" 
+              data-bs-toggle="dropdown"
+              >
+              Sign Ip
+              </ul>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li>  <Link className="dropdown-item"  to={"/sign-in"}>SignIn as Client</Link> </li>
+                  <li>  <Link className="dropdown-item"  to={"/sign-in-vendor"}>SignIn as Vendor</Link> </li>
+
+                </ul>
               </li>
+             
             </ul>
           </div>
         </nav>
