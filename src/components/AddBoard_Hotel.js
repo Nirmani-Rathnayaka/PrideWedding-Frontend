@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react'
-
+import { Link } from 'react-router-dom';
 import axios from "axios";
 
 
@@ -87,12 +87,16 @@ export default function AddBoard_Hotel() {
         <div className="col-md-12">
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
-                    <h1 className="display-4">List of Addvertisments</h1>
+                    <h1 className="display-4">Hotel Addvertisments</h1>
                 </div>
             </div>
         </div>
         <div >
-           
+        <div class="flex-parent jc-center">
+                      <Link to="/table1">
+                        <button  class="magenta">SEARCH</button>
+                      </Link>
+                 </div> 
         </div>
         <div >
             <table>

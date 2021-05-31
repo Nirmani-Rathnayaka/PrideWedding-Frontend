@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react'
-
+import { Link } from 'react-router-dom';
 import axios from "axios";
 
 
@@ -96,7 +96,11 @@ export default function AddBoard_Photography() {
             </div>
         </div>
         <div >
-           
+        <div class="flex-parent jc-center">
+                      <Link to="/table4">
+                        <button  class="magenta">SEARCH</button>
+                      </Link>
+                 </div> 
         </div>
         <div >
             <table>

@@ -13,7 +13,7 @@ export default function Table(){
 
     <div> 
     <div  className="testClass">
-    DISCOVER SALOONS
+    DISCOVER YOUR WEDDING SALOONS
     </div>
    
       <div>
