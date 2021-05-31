@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react'
-
+import { Link } from 'react-router-dom';
 import axios from "axios";
 
 
@@ -90,7 +90,11 @@ export default function AddBoard_Entertainer() {
             </div>
         </div>
         <div >
-           
+        <div class="flex-parent jc-center">
+                      <Link to="/table6">
+                        <button  class="magenta">SEARCH</button>
+                      </Link>
+                 </div> 
         </div>
         <div >
             <table>

@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react'
-
+import { Link } from 'react-router-dom';
 import axios from "axios";
 
 
@@ -94,7 +94,11 @@ export default function AddBoard_Saloon() {
             </div>
         </div>
         <div >
-           
+        <div class="flex-parent jc-center">
+                      <Link to="/table2">
+                        <button  class="magenta">SEARCH</button>
+                      </Link>
+                 </div> 
         </div>
         <div className="center-align">
             <table>
