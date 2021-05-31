@@ -11,8 +11,12 @@ import Addcart from "./components/Addcart";
 import Cart_upload from "./components/Cart_upload";
 import Addcart2 from "./components/Addcart2";
 import Sum from "./components/Sum";
-import Table from "./components/table/Table";
-
+import Table1 from "./components/Table_Hotels/Table";
+import Table2 from "./components/Table_Saloons/Table";
+import Table3 from "./components/Table_Decoraters/Table";
+import Table4 from "./components/Table_Photographers/Table";
+import Table5 from "./components/Table_Jwellers/Table";
+import Table6 from "./components/Table_Entertainers/Table";
 
 import './App.css';
 import "./index.css"; 
@@ -109,7 +113,14 @@ function App() {
             
 			      <Route path="/cart_upload" component={Cart_upload}/>
             <Route path="/addcart" component={Addcart} />
-            <Route path="/table" component={Table} />
+
+            <Route path="/table1" component={Table1} />
+            <Route path="/table2" component={Table2} />
+            <Route path="/table3" component={Table3} /> 
+            <Route path="/table4" component={Table4} />
+            <Route path="/table5" component={Table5} />
+            <Route path="/table6" component={Table6} />
+
 
 
 			      <Route path="/saloon_upload" component={Saloon_upload}/>
