@@ -86,7 +86,7 @@ function Navbar() {
               id="navbarDropdownMenuLink" 
               data-bs-toggle="dropdown"
               >
-              Sign Ip
+              Sign In
               </ul>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li>  <Link className="dropdown-item"  to={"/sign-in"}>SignIn as Client</Link> </li>

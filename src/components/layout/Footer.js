@@ -28,9 +28,9 @@ function Footer() {
             <h2>About Us</h2>
             <Link to='/how-it-works'>How it works</Link>
             <Link to='/aboutus'>About us</Link>
-            <Link to='services/'>Our services</Link>
-            <Link to='terms/'>Terms and conditions</Link>
-            <Link to='privacy/'>Privacy</Link>
+            <Link to='/services'>Our services</Link>
+            <Link to='/terms'>Terms and conditions</Link>
+            <Link to='/privacy'>Privacy</Link>
             
           </div>
           <div class='footer-link-items'>
