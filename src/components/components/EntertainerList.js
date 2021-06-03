@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react'
-import Entertainer from './Entertainer'
+import Hotel from './Hotel'
 import axios from "axios";
 
-export default function EntertainerList() {
-    const [entertainerList, setEntertainerList] = useState([])
+export default function HotelList() {
+    const [entertainmentList, setEntertainmentList] = useState([])
     const [recordForEdit, setRecordForEdit] = useState(null)
 
     useEffect(() => {
-        refreshEntertainerList();
+        refreshEntertainmentList();
     }, [])
 
-    const employeeAPI = (url = 'https://localhost:5001/api/EntertainmentVendors/') => {
+    const employeeAPI = (url = 'http://localhost:5000/api/EntertainmentVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -19,10 +19,10 @@ export default function EntertainerList() {
         }
     }
 
-    function refreshEntertainerList() {
+    function refreshEntertainmentList() {
         employeeAPI().fetchAll()
             .then(res => {
-                setEntertainerList(res.data)
+                setEntertainmentList(res.data)
             })
             .catch(err => console.log(err))
     }
@@ -32,14 +32,14 @@ export default function EntertainerList() {
             employeeAPI().create(formData)
                 .then(res => {
                     onSuccess();
-                    refreshEntertainerList();
+                    refreshEntertainmentList();
                 })
                 .catch(err => console.log(err))
         else
             employeeAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
-                    refreshEntertainerList();
+                    refreshEntertainmentList();
                 })
                 .catch(err => console.log(err))
 
@@ -53,7 +53,7 @@ export default function EntertainerList() {
         e.stopPropagation();
         if (window.confirm('Are you sure to delete this record?'))
             employeeAPI().delete(id)
-                .then(res => refreshEntertainerList())
+                .then(res => refreshEntertainmentList())
                 .catch(err => console.log(err))
     }
 
@@ -75,27 +75,27 @@ export default function EntertainerList() {
             <div className="col-md-12">
                 <div className="jumbotron jumbotron-fluid py-4">
                     <div className="container text-center">
-                        <h1 className="display-4">publish Addvertisments</h1>
+                        <h1 className="display-4">Publish Entertainment Addvertisments</h1>
                     </div>
                 </div>
             </div>
-            <div className="col-md-4">
-                <Entertainer
+            <div className="col-md-6">
+                <Hotel
                     addOrEdit={addOrEdit}
                     recordForEdit={recordForEdit}
                 />
             </div>
-            <div className="col-md-8">
-            <h1 className="lead">List of Addvertisments records</h1>
+            <div className="col-md-6">
+            <h1 className="lead">Available Addvertisments</h1>
                 <table>
                     <tbody>
                         {
                             //tr > 3 td
-                            [...Array(Math.ceil(entertainerList.length / 3))].map((e, i) =>
+                            [...Array(Math.ceil(entertainmentList.length / 3))].map((e, i) =>
                                 <tr key={i}>
-                                    <td>{imageCard(entertainerList[3 * i])}</td>
-                                    <td>{entertainerList[3 * i + 1] ? imageCard(entertainerList[3 * i + 1]) : null}</td>
-                                    <td>{entertainerList[3 * i + 2] ? imageCard(entertainerList[3 * i + 2]) : null}</td>
+                                    <td>{imageCard(entertainmentList[3 * i])}</td>
+                                    <td>{entertainmentList[3 * i + 1] ? imageCard(entertainmentList[3 * i + 1]) : null}</td>
+                                   
                                 </tr>
                             )
                         }

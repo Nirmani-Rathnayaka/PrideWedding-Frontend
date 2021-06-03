@@ -69,24 +69,23 @@ export default function DecorationList() {
         </div>
     )
 
-
     return (
         <div className="row">
             <div className="col-md-12">
                 <div className="jumbotron jumbotron-fluid py-4">
                     <div className="container text-center">
-                        <h1 className="display-4">publish Addvertisments</h1>
+                        <h1 className="display-4">Publish Decoration Addvertisments</h1>
                     </div>
                 </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-6">
                 <Decoration
                     addOrEdit={addOrEdit}
                     recordForEdit={recordForEdit}
                 />
             </div>
-            <div className="col-md-8">
-            <h1 className="lead">List of Addvertisments records</h1>
+            <div className="col-md-6">
+            <h1 className="lead">Available Addvertisments</h1>
                 <table>
                     <tbody>
                         {
@@ -95,7 +94,7 @@ export default function DecorationList() {
                                 <tr key={i}>
                                     <td>{imageCard(decorationList[3 * i])}</td>
                                     <td>{decorationList[3 * i + 1] ? imageCard(decorationList[3 * i + 1]) : null}</td>
-                                    <td>{decorationList[3 * i + 2] ? imageCard(decorationList[3 * i + 2]) : null}</td>
+                                   
                                 </tr>
                             )
                         }
@@ -105,3 +104,5 @@ export default function DecorationList() {
         </div>
     )
 }
+
+   

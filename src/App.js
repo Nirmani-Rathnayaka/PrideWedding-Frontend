@@ -31,7 +31,7 @@ import Signin from "./components/Login/signin.component";
 
 import Selection from "./components/pages/selection.component";
 import Path from "./components/pages/path.component";
-import Client_Selection from "./components/pages/client-selection.component";
+import Client_Selection_2 from "./components/pages/Client-add-catogories";
 
 import Contactinfo from "./components/pages/contactinfo.component";
 import ContactUs from "./components/pages/contacform";
@@ -104,7 +104,7 @@ function App() {
             <Route path="/merchentadd" component={MerchentAdd}/>
             <Route path="/verify-login" component={Verify_Login_1} />
             <Route path="/sign-in-vendor" component={Verify_Login_2} />
-            <Route path="/client-selection" component={Client_Selection} />
+            <Route path="/client-selection-2" component={Client_Selection_2} />
             <Route path="/sign-in" component={Signin}/>
             <Route path="/contact-info" component={Contactinfo}/>
             <Route path="/contact-form" component={ContactUs}/>

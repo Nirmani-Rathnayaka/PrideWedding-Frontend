@@ -75,7 +75,7 @@ export default function HotelList() {
             <div className="col-md-12">
                 <div className="jumbotron jumbotron-fluid py-4">
                     <div className="container text-center">
-                        <h1 className="display-4">publish Addvertisments</h1>
+                        <h1 className="display-4">Publish Hotel Addvertisments</h1>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@ export default function HotelList() {
                 />
             </div>
             <div className="col-md-6">
-            <h1 className="lead">List of Addvertisments records</h1>
+            <h1 className="lead">Available Addvertisments</h1>
                 <table>
                     <tbody>
                         {
