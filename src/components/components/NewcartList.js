@@ -76,7 +76,7 @@ export default function NewcartList() {
             <div className="col-md-12">
                 <div className="jumbotron jumbotron-fluid py-4">
                     <div className="container text-center">
-                        <h1 className="display-4">publish Addvertisments</h1>
+                        <h1 className="display-4">Add to Cart</h1>
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@ export default function NewcartList() {
                 />
             </div>
             <div className="col-md-6">
-            <h1 className="lead">List of Addvertisments records</h1>
+            <h1 className="lead">Available CartItems</h1>
                 <table  >
                     <tbody>
                         {

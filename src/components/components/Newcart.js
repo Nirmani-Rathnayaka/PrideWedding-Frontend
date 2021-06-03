@@ -101,7 +101,7 @@ export default function Newcart(props) {
      
         <>
           <div className="container text-center">
-                <p className="lead">An Addvertisment</p>
+                <p className="lead">Your CartItem</p>
            
             <form autoComplete="off" noValidate onSubmit={handleFormSubmit}>
                 <div className="card">

@@ -1,7 +1,7 @@
 
 
 
-
+import { Link } from 'react-router-dom';
 
 import React, { useState, useEffect } from 'react'
 
@@ -107,7 +107,7 @@ export default function Photographer(props) {
      
         <>
           <div className="container text-center">
-                <p className="lead">An Addvertisment</p>
+                <p className="lead">Your Addvertisment</p>
            
             <form autoComplete="off" noValidate onSubmit={handleFormSubmit}>
                 <div className="card">
@@ -216,6 +216,11 @@ export default function Photographer(props) {
                         <div className="form-group text-center">
                             <button type="submit" className="btn btn-light">Submit</button>
                         </div>
+                        <div class="flex-parent jc-center">
+                      <Link to="cart_upload">
+                        <button  class="magenta">Add to cart</button>
+                      </Link>
+                 </div> 
                     </div>
                 </div>
             </form>

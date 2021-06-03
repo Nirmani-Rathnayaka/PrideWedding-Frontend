@@ -31,7 +31,7 @@ export default function UseApp() {
 
   return(
   <>
-   <div>Here you can search details of hotels by company name location and packages</div>
+   <div>Here you can search details of photographers by company name location and packages</div>
   
     <div><input placeholder="Search" type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off" type="text" value={q} on onChange={(e)=>setQ(e.target.value)}/>
      {

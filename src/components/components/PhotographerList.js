@@ -75,7 +75,7 @@ export default function PhotographerList() {
             <div className="col-md-12">
                 <div className="jumbotron jumbotron-fluid py-4">
                     <div className="container text-center">
-                        <h1 className="display-4">publish Addvertisments</h1>
+                        <h1 className="display-4">Publish Photography Addvertisments</h1>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@ export default function PhotographerList() {
                 />
             </div>
             <div className="col-md-6">
-            <h1 className="lead">List of Addvertisments records</h1>
+            <h1 className="lead">Available Addvertisments </h1>
                 <table>
                     <tbody>
                         {
