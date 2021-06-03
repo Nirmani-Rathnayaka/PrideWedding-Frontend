@@ -11,8 +11,12 @@ import Addcart from "./components/Addcart";
 import Cart_upload from "./components/Cart_upload";
 import Addcart2 from "./components/Addcart2";
 import Sum from "./components/Sum";
-import Table from "./components/table/Table";
-
+import Table1 from "./components/Table_Hotels/Table";
+import Table2 from "./components/Table_Saloons/Table";
+import Table3 from "./components/Table_Decoraters/Table";
+import Table4 from "./components/Table_Photographers/Table";
+import Table5 from "./components/Table_Jwellers/Table";
+import Table6 from "./components/Table_Entertainers/Table";
 
 import './App.css';
 import "./index.css"; 
@@ -22,12 +26,13 @@ import "./components/pages/selection.css";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Welcome from "./components/pages/welcome.component";
 import Verify_Login_1 from "./components/Login/login.component";
-import Login_vendor from "./components/Login/login2.component";
+import Verify_Login_2 from "./components/Login/login2.component";
 import Signin from "./components/Login/signin.component";
 
 import Selection from "./components/pages/selection.component";
 import Path from "./components/pages/path.component";
-import Client_Selection from "./components/pages/client-selection.component";
+import Client_Selection_2 from "./components/pages/Client-add-catogories";
+import Client_Selection_1 from "./components/pages/Client-choice";
 
 import Contactinfo from "./components/pages/contactinfo.component";
 import ContactUs from "./components/pages/contacform";
@@ -99,8 +104,9 @@ function App() {
             
             <Route path="/merchentadd" component={MerchentAdd}/>
             <Route path="/verify-login" component={Verify_Login_1} />
-            <Route path="/sign-in-vendor" component={Login_vendor} />
-            <Route path="/client-selection" component={Client_Selection} />
+            <Route path="/sign-in-vendor" component={Verify_Login_2} />
+            <Route path="/client-selection-1" component={Client_Selection_1} />
+            <Route path="/client-selection-2" component={Client_Selection_2} />
             <Route path="/sign-in" component={Signin}/>
             <Route path="/contact-info" component={Contactinfo}/>
             <Route path="/contact-form" component={ContactUs}/>
@@ -109,7 +115,12 @@ function App() {
             
 			      <Route path="/cart_upload" component={Cart_upload}/>
             <Route path="/addcart" component={Addcart} />
-            <Route path="/table" component={Table} />
+            <Route path="/table1" component={Table1} />
+            <Route path="/table2" component={Table2} />
+            <Route path="/table3" component={Table3} /> 
+            <Route path="/table4" component={Table4} />
+            <Route path="/table5" component={Table5} />
+            <Route path="/table6" component={Table6} />
 
 
 			      <Route path="/saloon_upload" component={Saloon_upload}/>
