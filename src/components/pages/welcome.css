@@ -140,7 +140,23 @@ code {
   background-position: center;
   
 }
-
+.testClass9{
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  border: 3px solid rgb(131, 19, 38);
+  border-radius: 5px;
+  border-style: groove;
+  border-color: coral;
+  border-width: 7px;
+  background-image: url("./images/giphy.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  
+}
 .green {
   background-color: green;
 }
