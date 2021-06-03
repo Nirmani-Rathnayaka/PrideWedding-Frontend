@@ -31,8 +31,8 @@ export default function ContactUs() {
         <input type="subject" className="form-control" placeholder="Subject" name="subject" />
      </div>
      <div className="form-group">
-        <textarea className="form-control" id="" cols="30" rows="8" placeholder="Your Massage" name="massage" />
-        <input type="submit" className="btn btn-info" value="Send Massage" />
+        <textarea className="form-control" id="" cols="30" rows="8" placeholder="Your Message" name="message" />
+        <input type="submit" className="btn btn-info" value="Send Message" />
       </div>  
       </form>
       </div>
