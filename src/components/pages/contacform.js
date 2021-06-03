@@ -20,13 +20,16 @@ export default function ContactUs() {
     return (
         <div>
       <form  onSubmit={sendEmail}>
-      <h3>Contact Form</h3>
+      <h3>Contact Us</h3>
+      <h4>Your Details</h4>
       <div className="form-group">
         <input type="text" className="form-control" placeholder="Name" name="name" />
      </div>
      <div className="form-group">
         <input type="email" className="form-control" placeholder="Email" name="email" />
      </div>
+     <h4>How Can We Help You?</h4>
+     <h6>Direct Your Questions or simply leave a Comment</h6>
      <div className="form-group">
         <input type="subject" className="form-control" placeholder="Subject" name="subject" />
      </div>
