@@ -131,10 +131,10 @@ const VendorRegister = () => {
         
          <input className="font_size" type="submit" className="btn btn-primary" value="Register as a Vendor" />
 
-         <Link to="/verify-login-2">
+         <Link to="/sign-in-vendor">
            < button type="submit" className="btn btn-dark btn-lg btn-block">Next</button>
          </Link>
-         <Link to="/sign-in">
+         <Link to="/sign-in-vendor">
            <p className="forgot-password text-right">Already registered <a href="#">log in?</a></p>
          </Link>        
      </form>
