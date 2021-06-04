@@ -5,7 +5,7 @@ import './VenderReg.css';
 
 import  {VendorRegistration}  from '../../authorization/authorization';
 
-const VendorRegister = () => {
+const VendorRegister = (props) => {
   const [formData, setFromData] = useState(
     {
         CompanyName: '',
@@ -24,7 +24,7 @@ const VendorRegister = () => {
  const onSubmit = async e => {
   e.preventDefault();
   console.log("Vendor On Submit function is Working")
-  VendorRegistration (CompanyName, CompanyCategory, TelephoneNo, UserName,Email,Password, ConfirmPassword);
+  VendorRegistration (CompanyName, CompanyCategory, TelephoneNo, UserName,Email,Password, ConfirmPassword, props);
     
 
 
@@ -131,10 +131,10 @@ const VendorRegister = () => {
         
          <input className="font_size" type="submit" className="btn btn-primary" value="Register as a Vendor" />
 
-         <Link to="/sign-in-vendor">
+         <Link to="/verify-login-2">
            < button type="submit" className="btn btn-dark btn-lg btn-block">Next</button>
          </Link>
-         <Link to="/sign-in-vendor">
+         <Link to="/sign-in">
            <p className="forgot-password text-right">Already registered <a href="#">log in?</a></p>
          </Link>        
      </form>

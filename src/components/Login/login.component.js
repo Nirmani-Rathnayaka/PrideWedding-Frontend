@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import  {ClientLogins}  from '../../authorization/authorization';
 
 
-      const Verify_Login_1 = () => {
+      const Verify_Login_1 = (props) => {
         const [formData, setFromData] = useState(
           {
              
@@ -20,7 +20,7 @@ import  {ClientLogins}  from '../../authorization/authorization';
        const onSubmit = async e => {
         e.preventDefault();
         console.log("Login On Submit function is Working")
-        ClientLogins (UserName,Password);
+        ClientLogins (UserName,Password, props);
        };
 
         return (

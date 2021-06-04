@@ -1,12 +1,9 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
-import {useHistory} from 'react-router-dom';
+
 import  {ClientRegistration}  from '../../authorization/authorization';
 
-
-const ClientRegister = () => {
-  
-
+const ClientRegister = (props) => {
   const [formData, setFromData] = useState(
     {
         ClientNIC: '',
@@ -26,13 +23,12 @@ const ClientRegister = () => {
 
  const onSubmit = async e => {
   e.preventDefault();
-  await fetch(`http://localhost:3000/addcart`);
   console.log("On Submit Function is working")
-   ClientRegistration (ClientNIC, FirstName, LastName, Address, UserName,Email,MobileNo,Password, ConfirmPassword);
-  
+   ClientRegistration (ClientNIC, FirstName, LastName, Address, UserName,Email,MobileNo,Password, ConfirmPassword,props);
+    
+
 
 };
-
 
   return (
     <Fragment>
@@ -158,8 +154,9 @@ const ClientRegister = () => {
             onChange={e => onChange(e)}
           />
         </div>
-        
+
         <input type="submit" className="btn btn-primary" value="Register As Client" />
+       
 
       <Link to="/sign-in">
            < button type="submit" className="btn btn-dark btn-lg btn-block">Next</button>
