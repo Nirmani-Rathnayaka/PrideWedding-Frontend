@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import {FacebookLoginButton} from 'react-social-login-buttons';
 //import "./index.css";
 
-import  {ClientLogins}  from '../../authorization/authorization';
+import  {VendorLogins}  from '../../authorization/authorization';
 
 
-      const ClientLogin = () => {
+      const VendorLogin = (props) => {
         const [formData, setFromData] = useState(
           {
              
@@ -20,10 +20,9 @@ import  {ClientLogins}  from '../../authorization/authorization';
         const onChange = e => setFromData({ ...formData, [e.target.name]: e.target.value })
        
        const onSubmit = async e => {
-        await fetch(`http://localhost:3000/addcart`);
         e.preventDefault();
         console.log("Login On Submit function is Working")
-        ClientLogins (UserName,Password);
+        VendorLogins (UserName,Password,props);
        };
 
         return (
@@ -74,4 +73,4 @@ import  {ClientLogins}  from '../../authorization/authorization';
           </Fragment>
         );
       };
-      export default ClientLogin;
+      export default VendorLogin;

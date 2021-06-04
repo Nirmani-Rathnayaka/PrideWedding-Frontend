@@ -1,35 +1,8 @@
 import axois from 'axios';
+import { Redirect } from "react-router-dom";
+//import history from '../components/components/history ';
 
-/*export const login = async (email, password) => {
-    
-    const config = {
-        headers: { "Content-Type": "application/json" }
-    };
-
-    const body = JSON.stringify({ email, password });
-
-    try {
-         await axois.post("https://localhost:5001/api/ClientRegistrations", body, config)
-         .then(res => {
-            console.log(" tra working "+res.status)
-             return res.status
-            });
-            alert(" login succes");
-        
-         
-         
-         
-    } catch (error) {
-        alert(" Check your Email or Password");
-        console.log("catworking ");
-        
-    }
-    
-
-};
-*/
-
-export const ClientRegistration = async (ClientNIC, FirstName, LastName, Address, UserName,Email,MobileNo,Password,  ConfirmPassword) => {
+export const ClientRegistration = async (ClientNIC, FirstName, LastName, Address, UserName,Email,MobileNo,Password,  ConfirmPassword,props) => {
     const config = {
         headers: { "Content-Type": "application/json" }
     };
@@ -51,6 +24,8 @@ export const ClientRegistration = async (ClientNIC, FirstName, LastName, Address
                 {
                     alert("Your Have Successfully Registered ");
                     console.log("Client Registration is Successful")
+                    props.history.push("/sign-in");
+                   
                 }
                 else
                 {
@@ -85,7 +60,7 @@ export const ClientRegistration = async (ClientNIC, FirstName, LastName, Address
 
 };
 
-export const VendorRegistration = async (CompanyName, CompanyCategory, TelephoneNo, UserName,Email, Password,  ConfirmPassword) => {
+export const VendorRegistration = async (CompanyName, CompanyCategory, TelephoneNo, UserName,Email, Password,  ConfirmPassword, props) => {
     const config = {
         headers: { "Content-Type": "application/json" }
     };
@@ -100,10 +75,11 @@ export const VendorRegistration = async (CompanyName, CompanyCategory, Telephone
 
 
         try {
-            await axois.post("https://localhost:5001/api/VendorRegistrations", body, config);
+            await axois.post("https://localhost:5001/api/Vendor/Register", body, config);
             alert("Your Have Successfully Registered ");
             
             console.log("Vendor Registration is Successful")
+            props.history.push("/sign-in-vendor");
     
         } catch (error) {
             alert("Please Check Your Information again ");
@@ -134,6 +110,7 @@ export const CardDetails = async (CardNo,CardholderName,ExpDate,CVV) => {
             await axois.post("https://localhost:5001/api/Payments", body, config);
             alert("Card is being Verified ");
             
+            
             console.log("Card Data has Successfully Recorded")
     
         } catch (error) {
@@ -147,33 +124,104 @@ export const CardDetails = async (CardNo,CardholderName,ExpDate,CVV) => {
     }
 };
 
-export const ClientLogins = async (UserName, Password) => {
+export const ClientLogins = async (Email, Password,props) => {
     
     const config = {
         headers: { "Content-Type": "application/json" }
     };
 
-    const body = JSON.stringify({ UserName, Password });
+    const body = JSON.stringify({ Email, Password });
 
-    try {
-         await axois.post("https://localhost:5001/api/ClientLogins", body, config)
-         .then(res => {
-            console.log(" loging is  working "+res.status)
-             return res.status
-            });
-            alert(" Login Success");
-        
-         
-         
-         
-    } catch (error) {
-        alert(" Check your Username or Password");
-        console.log("catworking ");
-        console.log(error)
-        
-    }
+            try {
+                await axois.post("https://localhost:5001/api/Clients/Login", body, config).then((res)=>{
+                   
+              
+                    console.log(res);
+                    if(res.status===200)
+                    {
+                    
+                        alert("Your Have Successfully Logged in ");
+                        console.log("Client Login is Successful");
+                        props.history.push("/client-selection-1");
+                    }
+                    
+                    else
+                    {
+                        alert(" Check your Email or Password");
+                        alert("Please Check Your Information again ") 
+                       console.log("Client Login is Unsuccessful");
+                        
+                        
+                    }
+                
+                }).catch((err)=>{
+                    alert(" Access Denied! Please Check your Email or Password");
+                    console.log(err);
+                    console.error(err);
+                    console.log("There is an error in Client Login ")
+                })
+               // alert("Your Have Successfully Registered ");
+                //console.log("Client Registration is Successful")
+                       
+            } 
+            catch (error) {
+                //alert(" Access Denied! Please Check your Email or Password");
+               // console.log("Client Login is Unsuccessful");
+               // console.log(error);
+                
+      }
+    };
     
-
-};
-
-
+    
+      export const VendorLogins = async (Email, Password,props) => {
+    
+        const config = {
+            headers: { "Content-Type": "application/json" }
+        };
+    
+        const body = JSON.stringify({ Email, Password });
+    
+                try {
+                    await axois.post("https://localhost:5001/api/Vendor/Login", body, config).then((res)=>{
+                       
+                  
+                        console.log(res);
+                        if(res.status===200)
+                        {
+                        
+                            alert("Your Have Successfully Logged in ");
+                            console.log("Vendor Login is Successful");
+                          //  <Redirect to="/saloons" />;;
+                            props.history.push("/merchentadd");
+                        }
+                        
+                        else
+                        {
+                            alert(" Check your Email or Password");
+                            alert("Please Check Your Information again ") 
+                           console.log("Vendor Login is Unsuccessful");
+                            
+                            
+                        }
+                    
+                    }).catch((err)=>{
+                        alert(" Access Denied! Please Check your Email or Password");
+                        console.log(err);
+                        console.error(err);
+                        console.log("There is an error in Vendor Login ")
+                    })
+                   // alert("Your Have Successfully Registered ");
+                    //console.log("Client Registration is Successful")
+                           
+                } 
+                catch (error) {
+                    //alert(" Access Denied! Please Check your Email or Password");
+                   // console.log("Client Login is Unsuccessful");
+                   // console.log(error);
+                    
+          }
+    
+    
+ };
+         
+         

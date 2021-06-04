@@ -59,7 +59,15 @@ import Newcarousel from "./components/pages/newcar";
 import ClientRegister from "./components/Register/ClientReg.component";
 import VendorRegister from "./components/Register/VendorReg.component";
 import SignUp from "./components/Register/signup.component";
+
 import Payment from "./components/pages/payment.component";
+import HotelPay from "./components/pages/Vendor_Payments/hotelpayment.component";
+import SaloonPay from "./components/pages/Vendor_Payments/saloonpay.component";
+import PhotoPay from "./components/pages/Vendor_Payments/photopay.component";
+import JwelleryPay from "./components/pages/Vendor_Payments/Jwellerypay.component";
+import DecorationPay from "./components/pages/Vendor_Payments/decorationpay.coponent";
+import EntertainmentPay from "./components/pages/Vendor_Payments/entertainmentpay.component";
+
 import Forget from "./components/pages/forget.component";
 import How_it_works from "./components/pages/how_it_works/how_it_works";
 import Navbar from "./components/layout/NavMenu";
@@ -139,7 +147,15 @@ function App() {
 			
             <Route path="/aboutus" component={Newcarousel}/>
             <Route path="/uploading" component={Uploading}/>
+            
             <Route path="/pay" component={Payment}/>
+            <Route path="/hotelpay" component={HotelPay}/>
+            <Route path="/saloonpay" component={SaloonPay}/>
+            <Route path="/photographypay" component={PhotoPay}/>
+            <Route path="/jwellerypay" component={JwelleryPay}/>
+            <Route path="/decorationpay" component={DecorationPay}/>
+            <Route path="/entertainmentpay" component={EntertainmentPay}/>
+
             <Route path="/forget-pw" component={Forget}/>       
             <Route path="/testimonials" component={Testimonials}/>
             <Route path="/how-it-works" component={How_it_works}/>

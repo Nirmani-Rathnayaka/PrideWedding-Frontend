@@ -1,4 +1,4 @@
-import React, { Fragment,useState,useForm } from "react";
+import React, { Fragment,useState } from "react";
 import { Link } from 'react-router-dom';
 import {FacebookLoginButton} from 'react-social-login-buttons';
 //import "./index.css";
@@ -6,36 +6,36 @@ import {FacebookLoginButton} from 'react-social-login-buttons';
 import  {ClientLogins}  from '../../authorization/authorization';
 
 
-      const ClientLogin = () => {
+      const ClientLogin = (props) => {
         const [formData, setFromData] = useState(
           {
              
-              UserName: '',
+              Email: '',
               Password: '',
            
           });
       
-        const { UserName,Password } = formData;
+        const { Email,Password } = formData;
       
         const onChange = e => setFromData({ ...formData, [e.target.name]: e.target.value })
-       
+      
        const onSubmit = async e => {
-        await fetch(`http://localhost:3000/addcart`);
         e.preventDefault();
         console.log("Login On Submit function is Working")
-        ClientLogins (UserName,Password);
+        ClientLogins (Email,Password,props);
        };
 
         return (
           <Fragment>
             <form onSubmit={e => onSubmit(e)} >
-            <h3 className="testClass">Client Log in</h3>
+            <h3 className="testClass">Log in</h3>
 
             <div className="form-group">
                 <label>User Name</label>
-                <input type="text" className="form-control" placeholder="UserName" 
-                name="UserName"
-                value={UserName}
+                <input type="text" className="form-control" placeholder="Email" 
+                name="Email"
+                value={Email}
+                required
                 onChange={e => onChange(e)}/>
             </div>
 
@@ -43,6 +43,7 @@ import  {ClientLogins}  from '../../authorization/authorization';
                 <label>Password</label>
                 <input type="password" className="form-control" placeholder="Enter password" name="Password"
             value={Password}
+            required
             onChange={e => onChange(e)}/>
             </div>
 
@@ -53,7 +54,7 @@ import  {ClientLogins}  from '../../authorization/authorization';
                 </div>
             </div>
             <input className="font_size" type="submit" className="btn btn-primary" value="Go to My Account" />
-            <Link to="/client-selection-1">
+            <Link to="/client-selection">
               <button type="submit" className="btn btn-dark btn-lg btn-block">Submit</button>
             </Link>
 
