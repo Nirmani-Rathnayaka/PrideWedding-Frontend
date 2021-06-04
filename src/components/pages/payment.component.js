@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { Fragment, useState} from 'react';
 import Cards from'react-credit-cards'
 //import { Link } from 'react-router-dom';
 import './index.css';
@@ -24,8 +24,8 @@ function Pay() {
      
   };
   return(
-   
-<div >
+    <Fragment> 
+<div>
 
   <Cards
   number={CardNo}
@@ -34,13 +34,11 @@ function Pay() {
   cvc={CVV}
   focused={focus}
   />
-        
+     
   <form  onSubmit={e => onSubmit(e)}>
 
-  <div className="form">
-  <div className="heading">
   <h3 >Payments</h3>
-  </div>
+  <div className="form">
   <label>Card Number</label>
     <input className="input-text" 
      type='tel' 
@@ -50,7 +48,6 @@ function Pay() {
     maxLength="16" 
     value={CardNo}
     required
-    
     onChange={e => setNumber(e.target.value)}
     onFocus={e => setFocus(e.target.name)}
     />
@@ -103,10 +100,17 @@ function Pay() {
    
     <button type="Submit" className="btn btn-dark btn-lg btn-block">Pay Now</button>
    
+    <div>
+    <h6>You won't be charged until service confirmed.</h6>
+  
+  </div>
+
      </div>  
   </form>
 
+
 </div>
+</Fragment> 
   );
 }
 
