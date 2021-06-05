@@ -5,6 +5,7 @@ import { CartItemType } from '../App2';
 import { Wrapper } from './CartItem.styles';
 
 type Props = {
+  
   item: CartItemType;
   addToCart: (clickedItem: CartItemType) => void;
   removeFromCart: (companyID: number) => void;
@@ -13,10 +14,13 @@ type Props = {
 const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart }) => (
   <Wrapper>
     <div>
-      <h3>{item.companyName}</h3>
+     
+      <h3>{item.companyCategory}</h3>
+      <h4>{item.companyName}</h4>
       <div className='information'>
-        <p>Price: ${item.min_package}</p>
-        <p>Total: ${(item.amount * item.min_package).toFixed(2)}</p>
+        
+        <p>Price: ${item.discount_package}</p>
+        <p>Total: ${(item.amount * item.discount_package).toFixed(2)}</p>
       </div>
       <div className='buttons'>
         <Button

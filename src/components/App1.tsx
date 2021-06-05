@@ -19,12 +19,12 @@ export type CartItemType = {
   imageSrc:string;
   locatedDistric: string;
   locatedProvince: string;
-  min_package: number;
+  discount_package: number;
   amount: number;
 };
 
 const getProducts = async (): Promise<CartItemType[]> =>
-  await (await fetch('https://localhost:5001/api/HotelVendors')).json();
+  await (await fetch('https://localhost:5001/api/AddingCarts')).json();
 
 const App1 = () => {
   const [cartOpen, setCartOpen] = useState(false);

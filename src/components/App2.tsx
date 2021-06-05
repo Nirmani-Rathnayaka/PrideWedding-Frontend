@@ -20,7 +20,7 @@ export type CartItemType = {
   imageSrc:string;
   locatedDistric: string;
   locatedProvince: string;
-  min_package: number;
+  discount_package: number;
   amount: number;
 };
 

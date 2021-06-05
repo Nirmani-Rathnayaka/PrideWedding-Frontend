@@ -4,11 +4,11 @@ import axios from "axios";
 import  './Default.css';
 
 export default function NewcartList() {
-    const [hotelList, setHotelList] = useState([])
+    const [cartList, setCartList] = useState([])
     const [recordForEdit, setRecordForEdit] = useState(null)
 
     useEffect(() => {
-        refreshHotelList();
+        refreshCartList();
     }, [])
 
     const employeeAPI = (url = window.$API_URL+'/api/AddingCarts/') => {
@@ -20,10 +20,10 @@ export default function NewcartList() {
         }
     }
 
-    function refreshHotelList() {
+    function refreshCartList() {
         employeeAPI().fetchAll()
             .then(res => {
-                setHotelList(res.data)
+                setCartList(res.data)
             })
             .catch(err => console.log(err))
     }
@@ -33,14 +33,14 @@ export default function NewcartList() {
             employeeAPI().create(formData)
                 .then(res => {
                     onSuccess();
-                    refreshHotelList();
+                    refreshCartList();
                 })
                 .catch(err => console.log(err))
         else
             employeeAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
-                    refreshHotelList();
+                    refreshCartList();
                 })
                 .catch(err => console.log(err))
 
@@ -54,7 +54,7 @@ export default function NewcartList() {
         e.stopPropagation();
         if (window.confirm('Are you sure to delete this record?'))
             employeeAPI().delete(id)
-                .then(res => refreshHotelList())
+                .then(res => refreshCartList())
                 .catch(err => console.log(err))
     }
 
@@ -92,10 +92,10 @@ export default function NewcartList() {
                     <tbody>
                         {
                             //tr > 3 td
-                            [...Array(Math.ceil(hotelList.length / 3))].map((e, i) =>
+                            [...Array(Math.ceil(cartList.length / 3))].map((e, i) =>
                                 <tr key={i}>
-                                    <td>{imageCard(hotelList[3 * i])}</td>
-                                    <td>{hotelList[3 * i + 1] ? imageCard(hotelList[3 * i + 1]) : null}</td>
+                                    <td>{imageCard(cartList[3 * i])}</td>
+                                    <td>{cartList[3 * i + 1] ? imageCard(cartList[3 * i + 1]) : null}</td>
                                    
                                 </tr>
                             )

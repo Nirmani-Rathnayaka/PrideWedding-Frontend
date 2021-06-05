@@ -13,7 +13,7 @@ export default class Employee extends Component {
             <div>
                  <h1 className="testClass">Welcome to Pride Wedding Service Provider </h1>
                   <h1 className="testClass9">  </h1>
-                   <Link to="/addcart">
+                   <Link to="/addtocart">
                     <h2 className="testClass5"> | CREATE YOUR WEDDING CART| </h2>
                    </Link>
                   <h3 className="testClass5">OR</h3>

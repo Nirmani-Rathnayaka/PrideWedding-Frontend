@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Addcart2 from './Addcart2';
+import Addcart2 from './Addtocart';
 import Addcart from './Addcart';
 
 

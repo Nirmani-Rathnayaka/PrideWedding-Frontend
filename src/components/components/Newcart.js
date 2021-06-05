@@ -8,8 +8,7 @@ const initialFieldValues = {
     companyCategory:'',
     locatedDistrict: '',
     locatedProvince:'',
-    min_package:'',
-    max_package:'',
+    discount_package:'',
     telephoneNumber:'',
 	companyWebsite:'',
     imageName: '',
@@ -84,8 +83,8 @@ export default function Newcart(props) {
             formData.append('companyCategory', values.companyCategory)
             formData.append('locatedDistrict', values.locatedDistrict)
             formData.append('locatedProvince', values.locatedProvince)
-            formData.append('min_package', values.min_package)
-            formData.append('max_package', values.max_package)
+            formData.append('discount_package', values.discount_package)
+      
             formData.append('telephoneNumber', values.telephoneNumber)
 			formData.append('companyWebsite', values.companyWebsite)
         
@@ -183,17 +182,13 @@ export default function Newcart(props) {
                         </div>
 
                         <div className="form-group">
-                            <input className="form-control" placeholder=" Min Package" name="min_package"
-                                value={values.min_package}
+                            <input className="form-control" placeholder=" Discount Package" name="discount_package"
+                                value={values.discount_package}
                                 onChange={handleInputChange} />
                         </div>
 
                        
-                        <div className="form-group">
-                            <input className="form-control" placeholder=" Max Package" name="max_package"
-                                value={values.max_package}
-                                onChange={handleInputChange} />
-                        </div>
+                      
 
                         <div className="form-group">
                             <input className="form-control" placeholder=" TelephoneNumber" name="telephoneNumber"

@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 //import { Counter } from './components/Counter';
 import Addcart from "./components/Addcart";
 import Cart_upload from "./components/Cart_upload";
-import Addcart2 from "./components/Addcart2";
+import Addtocart from "./components/Addtocart";
 import Sum from "./components/Sum";
 import Table1 from "./components/Table_Hotels/Table";
 import Table2 from "./components/Table_Saloons/Table";
@@ -107,7 +107,7 @@ function App() {
             <Route path="/path" component={Path} />
             <Route path="/sign-up" component={SignUp} />
            
-            <Route path="/addcart2" component={Addcart2} />
+            <Route path="/addcart" component={Addcart} />
             <Route path="/sum" component={Sum} />
             
             <Route path="/merchentadd" component={MerchentAdd}/>
@@ -122,7 +122,7 @@ function App() {
 			     
             
 			      <Route path="/cart_upload" component={Cart_upload}/>
-            <Route path="/addcart" component={Addcart} />
+            <Route path="/addtocart" component={Addtocart} />
             <Route path="/table1" component={Table1} />
             <Route path="/table2" component={Table2} />
             <Route path="/table3" component={Table3} /> 
