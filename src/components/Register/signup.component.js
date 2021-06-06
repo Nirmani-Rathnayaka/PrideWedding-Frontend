@@ -1,32 +1,92 @@
-import React, { Component } from "react";
-import { Link } from 'react-router-dom';
 
-export default class SignUp extends Component {
-    render() {
-        return (
+import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
+
+import  {NewsTeller}  from '../../authorization/authorization';
+
+const Newsteller = () => {
+  const [formData, setFromData] = useState(
+    {
+
+        FirstName: '',
+        LastName: '',
+        Email: '',
+
+    });
+
+  const { FirstName, LastName, Email} = formData;
+
+  const onChange = e => setFromData({ ...formData, [e.target.name]: e.target.value })
+
+ const onSubmit = async e => {
+  e.preventDefault();
+  console.log("On Submit Function is working")
+   NewsTeller ( FirstName, LastName, Email);
+    
+
+
+};
+
+  return (
+    <Fragment>
+
+      <form  onSubmit={e => onSubmit(e)}>
+        
      
-            <form>
-                <h3 className="testClass">Newsteller Registration</h3>
+         <h3 className="form_text">NewsTeller Registration</h3>
 
-                <div className="form-group">
-                    <label >First name</label>
-                    <input type="text" className="form-control" placeholder="First name" />
-                </div>
 
-                <div className="form-group">
-                    <label >Last name</label>
-                    <input type="text" className="form-control" placeholder="Last name" />
-                </div>
+        <div className="form-group">
+        <label>First Name</label>
+          <input className="Form-control"
+            type="text"
+            placeholder="First Name"
+            name="FirstName"
+            value={FirstName}
+            required
+            onChange={e => onChange(e)}
+          />
+        </div>
+        <div className="form-group">
+        <label>Last Name</label>
+          <input className="Form-control"
+            type="text"
+            placeholder="Last Name"
+            name="LastName"
+            value={LastName}
+            required
+            onChange={e => onChange(e)}
+          />
+          <small className="font_size"></small>
+        </div>
+ 
 
-                <div className="form-group">
-                    <label >Email</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
-                </div>
-                    <button type="submit" className="btn btn-dark btn-lg btn-block">Subscribe</button>
-               
-                
-            </form>
-         
-        );
-    }
-}
+
+        <div className="form-group">
+        <label>Email</label>
+          <input className="Form-control"
+            type="email"
+            placeholder="Email"
+            name="Email"
+            value={Email}
+            required
+            onChange={e => onChange(e)}
+          />
+          <small className="font_size"></small>
+        </div>
+
+        <input type="submit" className="btn btn-primary" value="Subscribe" />
+       
+
+      <Link to="/sign-in">
+           < button type="submit" className="btn btn-dark btn-lg btn-block">Next</button>
+      </Link>
+
+
+     </form>
+     
+    </Fragment>
+  );
+};
+
+export default Newsteller;
