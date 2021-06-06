@@ -256,49 +256,10 @@ export const ClientLogins = async (Email, Password,props) => {
 
     }
 };
-/*
-
-export const NewsTeller = async (FirstName, LastName, Email) => {
-    const config = {
-        headers: { "Content-Type": "application/json" }
-    };
-
-    const body = JSON.stringify({FirstName, LastName, Email});
-
-    if (FirstName === 'null' || LastName === 'null' || Email === 'null'  ){
-        alert("Please Fill the Section")
-    }
-  else {
-
-
-        try {
-            await axois.post("https://localhost:5001/api/Clients/Register", body, config).then((res)=>{
-                
-            console.log(res);
-
-            alert("Your Subscription is done ");
-            console.log("Newsteller Registration is Successful")
-                               
-            }).catch((err)=>{
-                alert("Unable to Connect to Database Server");
-                console.log(err);
-                console.error(err);
-                console.log("There is an error in Client Registration ")
-            })
-
-                   
-        } catch (error) {
-            alert("Unable to Connect to Database Server");
-            console.log("Client Registration is Unsuccessful");
-            console.log(error);
-            
-        }
 
 
 
 
-    }
 
-};
-         
-  */       
+
+
