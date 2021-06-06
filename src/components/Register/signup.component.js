@@ -23,8 +23,6 @@ const Newsteller = () => {
   console.log("On Submit Function is working")
    NewsTeller ( FirstName, LastName, Email);
     
-
-
 };
 
   return (
