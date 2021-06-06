@@ -8,7 +8,7 @@ import { CardDetails } from '../../authorization/authorization';
 
 
 
-function Pay() {
+function Pay(props) {
   const [CardNo, setNumber] = useState('')
   const [CardholderName, setName] = useState('')
   const [ExpDate, setExpiary] = useState('')
@@ -20,7 +20,7 @@ function Pay() {
   const onSubmit = async e => {
     e.preventDefault();
     console.log("On Submit Function is working")
-     CardDetails (CardNo,CardholderName,ExpDate,CVV);
+     CardDetails (CardNo,CardholderName,ExpDate,CVV,props);
      
   };
   return(

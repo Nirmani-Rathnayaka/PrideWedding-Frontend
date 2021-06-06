@@ -95,7 +95,7 @@ export const VendorRegistration = async (CompanyName, CompanyCategory, Telephone
 };
 
 
-export const CardDetails = async (CardNo,CardholderName,ExpDate,CVV) => {
+export const CardDetails = async (CardNo,CardholderName,ExpDate,CVV,props) => {
     const config = {
         headers: { "Content-Type": "application/json" }
     };
@@ -112,6 +112,7 @@ export const CardDetails = async (CardNo,CardholderName,ExpDate,CVV) => {
             
             
             console.log("Card Data has Successfully Recorded")
+            props.history.push("/client-selection-1");
     
         } catch (error) {
             alert("Please Check Your Information again ");
@@ -142,7 +143,7 @@ export const ClientLogins = async (Email, Password,props) => {
                     
                         alert("Your Have Successfully Logged in ");
                         console.log("Client Login is Successful");
-                        props.history.push("/client-selection-1");
+                        props.history.push("/client-services");
                     }
                     
                     else

@@ -55,7 +55,7 @@ function Footer() {
       <section class='social-media'>
         <div class='social-media-wrap'>
          
-          <small class='website-rights'>Pride Wedding Planners © 2020|All rights reserved</small>
+          <small class='website-rights'>Pride Wedding Planners © 2021|All rights reserved</small>
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'

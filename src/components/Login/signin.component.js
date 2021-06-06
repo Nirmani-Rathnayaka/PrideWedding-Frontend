@@ -54,7 +54,7 @@ import  {ClientLogins}  from '../../authorization/authorization';
                 </div>
             </div>
             <input className="font_size" type="submit" className="btn btn-primary" value="Go to My Account" />
-            <Link to="/client-selection">
+            <Link to="/client-services">
               <button type="submit" className="btn btn-dark btn-lg btn-block">Submit</button>
             </Link>
 

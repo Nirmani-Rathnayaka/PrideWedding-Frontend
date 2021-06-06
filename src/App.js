@@ -33,6 +33,7 @@ import Selection from "./components/pages/selection.component";
 import Path from "./components/pages/path.component";
 import Client_Selection_2 from "./components/pages/Client-add-catogories";
 import Client_Selection_1 from "./components/pages/Client-choice";
+import Client_Services from "./components/pages/client_services";
 
 import Contactinfo from "./components/pages/contactinfo.component";
 import ContactUs from "./components/pages/contacform";
@@ -106,6 +107,7 @@ function App() {
             <Route path="/register" component={Welcome} />
             <Route path="/path" component={Path} />
             <Route path="/sign-up" component={SignUp} />
+            <Route path="/client-services" component={Client_Services} />
            
             <Route path="/addcart" component={Addcart} />
             <Route path="/sum" component={Sum} />
