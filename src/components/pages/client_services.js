@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
 import './selection.css';
-import Wedding from "./video/wedding-c.mp4";
+import Wedding from "./video/pride_wedding-c.mp4";
 //import './client_services.css';
 
 
