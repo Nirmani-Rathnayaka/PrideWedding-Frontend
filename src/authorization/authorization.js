@@ -17,7 +17,7 @@ export const ClientRegistration = async (ClientNIC, FirstName, LastName, Address
 
 
         try {
-            await axois.post("https://localhost:5001/api/Clients/Register", body, config).then((res)=>{
+            await axois.post("https://localhost:5001/api/Accounts/ClientRegister", body, config).then((res)=>{
                 
                 console.log(res);
                 if(res.status===201)
@@ -75,7 +75,7 @@ export const VendorRegistration = async (CompanyName, CompanyCategory, Telephone
 
 
         try {
-            await axois.post("https://localhost:5001/api/Vendor/Register", body, config);
+            await axois.post("https://localhost:5001/api/Accounts/VendorRegister", body, config);
             alert("Your Have Successfully Registered ");
             
             console.log("Vendor Registration is Successful")
@@ -134,7 +134,7 @@ export const ClientLogins = async (Email, Password,props) => {
     const body = JSON.stringify({ Email, Password });
 
             try {
-                await axois.post("https://localhost:5001/api/Clients/Login", body, config).then((res)=>{
+                await axois.post("https://localhost:5001/api/Accounts/Login", body, config).then((res)=>{
                    
               
                     console.log(res);
@@ -183,7 +183,7 @@ export const ClientLogins = async (Email, Password,props) => {
         const body = JSON.stringify({ Email, Password });
     
                 try {
-                    await axois.post("https://localhost:5001/api/Vendor/Login", body, config).then((res)=>{
+                    await axois.post("https://localhost:5001/api/Accounts/Login", body, config).then((res)=>{
                        
                   
                         console.log(res);

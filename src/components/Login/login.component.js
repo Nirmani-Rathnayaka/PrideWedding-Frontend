@@ -30,7 +30,7 @@ import  {ClientLogins}  from '../../authorization/authorization';
                 <h3>Verify Log in</h3>
 
                 <div className="form-group">
-                    <label>UserName</label>
+                    <label>Email Address</label>
                     <input type="text" className="form-control" placeholder="Username"
                      name="UserName"
                      value={UserName}

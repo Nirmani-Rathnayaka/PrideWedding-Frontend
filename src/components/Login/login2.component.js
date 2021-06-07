@@ -31,8 +31,8 @@ import  {VendorLogins}  from '../../authorization/authorization';
             <h3 className="testClass">Vendor Log in</h3>
 
             <div className="form-group">
-                <label>User Name</label>
-                <input type="text" className="form-control" placeholder="UserName" 
+                <label>Email Address</label>
+                <input type="text" className="form-control" placeholder="Email" 
                 name="UserName"
                 value={UserName}
                 onChange={e => onChange(e)}/>

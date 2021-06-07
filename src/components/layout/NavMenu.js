@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './NavMenu.css';
-import { MdToys } from 'react-icons/md';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
+import { GiLinkedRings } from "react-icons/gi";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -34,7 +34,7 @@ function Navbar() {
         <nav className='navbar'>
           <div className='navbar-container container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-              <MdToys className='navbar-icon' />
+              <div> <GiLinkedRings/>&nbsp; </div>
               Pride Wedding Service Providers
             </Link>
             <div className='menu-icon' onClick={handleClick}>
@@ -53,17 +53,23 @@ function Navbar() {
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  Contact Us
+                  Contact Us&nbsp; <i class="far fa-envelope"></i>
                 </Link>
               </li>
-              <li className='nav-item'>
-                <Link
-                  to='/aboutus'
-                  className='nav-links'
-                  onClick={closeMobileMenu}
-                >
-                  About Us
-                </Link>
+
+              <li className="nav-item dropdown">
+              <ul className="nav-links " 
+              type="button" 
+              id="navbarDropdownMenuLink" 
+              data-bs-toggle="dropdown"
+              >
+              Sign In&nbsp;<i class="fas fa-sign-in-alt"></i>
+              </ul>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li>  <Link className="dropdown-item"  to={"/sign-in"}>SignIn as Client</Link> </li>
+                  <li>  <Link className="dropdown-item"  to={"/sign-in-vendor"}>SignIn as Vendor</Link> </li>
+
+                </ul>
               </li>
           
               <li className="nav-item dropdown">
@@ -72,7 +78,7 @@ function Navbar() {
               id="navbarDropdownMenuLink" 
               data-bs-toggle="dropdown"
               >
-              Sign Up
+              Sign Up&nbsp;<i class="fas fa-user-plus"></i>
               </ul>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li>  <Link className="dropdown-item"  to={"/Client-Registration"}>SignUp as Client</Link> </li>
@@ -80,20 +86,7 @@ function Navbar() {
 
                 </ul>
               </li>
-              <li className="nav-item dropdown">
-              <ul className="nav-links " 
-              type="button" 
-              id="navbarDropdownMenuLink" 
-              data-bs-toggle="dropdown"
-              >
-              Sign In
-              </ul>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li>  <Link className="dropdown-item"  to={"/sign-in"}>SignIn as Client</Link> </li>
-                  <li>  <Link className="dropdown-item"  to={"/sign-in-vendor"}>SignIn as Vendor</Link> </li>
-
-                </ul>
-              </li>
+           
              
             </ul>
           </div>

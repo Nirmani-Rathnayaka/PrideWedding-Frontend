@@ -44,7 +44,7 @@ function Footer() {
         </div>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
-            <h2>Like us</h2>
+            <h2>Follow Us</h2>
             <Link to='/contact-info'>&nbsp;<i class="fab fa-instagram"></i>  Instagram</Link>
             <Link to='/contact-info'>&nbsp;<i class="fab fa-facebook-f"></i>  Facebook</Link>
             <Link to='/contact-info'>&nbsp;<i class="fab fa-youtube"></i>  Youtube</Link>
