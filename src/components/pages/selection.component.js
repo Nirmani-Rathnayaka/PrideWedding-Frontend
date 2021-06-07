@@ -23,7 +23,7 @@ export default class Employee extends Component {
               </div>            
               <div class="position-absolute mid-left"> 
                 <Link to="/register">
-                 <button type="button" class="new3">HOTEL & CATERING</button> 
+                 <button type="button" class="new3">HOTEL AND CATERING</button> 
                 </Link>
               </div> 
               <div class="position-absolute mid-center"> 
@@ -39,7 +39,7 @@ export default class Employee extends Component {
   
               <div class="position-absolute bottom-left"> 
                 <Link to="/register">
-                 <button type="button" class="new3">JEWLERIES</button> 
+                 <button type="button" class="new3">JEWELLERY</button> 
                 </Link>
               </div> 
               <div class="position-absolute bottom-center"> 

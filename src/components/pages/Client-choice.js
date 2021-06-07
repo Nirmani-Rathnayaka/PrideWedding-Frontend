@@ -18,7 +18,7 @@ export default class Employee extends Component {
                    </Link>
                   <h3 className="testClass5">OR</h3>
                   <Link to="/client-selection-2">
-                   <h2 className="testClass5"> | WATCH WEDDING ADDVERTISMENTS| </h2>
+                   <h2 className="testClass5"> | WATCH WEDDING ADVERTISMENTS| </h2>
                   </Link>
                
            </div> 

@@ -28,10 +28,10 @@ import  {ClientLogins}  from '../../authorization/authorization';
         return (
           <Fragment>
             <form onSubmit={e => onSubmit(e)} >
-            <h3 className="testClass">Log in</h3>
+            <h3 className="testClass">Client Log in</h3>
 
             <div className="form-group">
-                <label>User Name</label>
+                <label>Email Address</label>
                 <input type="text" className="form-control" placeholder="Email" 
                 name="Email"
                 value={Email}

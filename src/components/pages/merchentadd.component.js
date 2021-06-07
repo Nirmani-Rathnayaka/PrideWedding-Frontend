@@ -38,7 +38,7 @@ export default class Employee extends Component {
   
               <div class="position-absolute bottom-left"> 
               <Link to="/jwellerypay"> 
-                 <button type="button" class="new3">JWELLERY</button>
+                 <button type="button" class="new3">JEWELLERY</button>
               </Link>
                
               </div> 
