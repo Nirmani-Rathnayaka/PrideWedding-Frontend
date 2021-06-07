@@ -14,7 +14,7 @@ export default function AddBoard_Saloon() {
         refreshSaloonList();
     }, [])
 
-    const employeeAPI = (url = 'http://localhost:5000/api/SaloonVendors/') => {
+    const employeeAPI = (url = 'http://localhost:5001/api/SaloonVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -89,7 +89,7 @@ export default function AddBoard_Saloon() {
         <div className="col-md-12">
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
-                    <h1 className="display-4">List of Addvertisments</h1>
+                    <h1 className="display-4">Saloon Addvertisements</h1>
                 </div>
             </div>
         </div>

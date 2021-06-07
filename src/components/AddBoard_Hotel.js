@@ -13,7 +13,7 @@ export default function AddBoard_Hotel() {
         refreshHotelList();
     }, [])
 
-    const employeeAPI = (url = 'http://localhost:5000/api/HotelVendors/') => {
+    const employeeAPI = (url = 'http://localhost:5001/api/HotelVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -87,7 +87,7 @@ export default function AddBoard_Hotel() {
         <div className="col-md-12">
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
-                    <h1 className="display-4">Hotel Addvertisments</h1>
+                    <h1 className="display-4">Hotel Addvertisements</h1>
                 </div>
             </div>
         </div>

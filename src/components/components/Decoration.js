@@ -101,7 +101,7 @@ export default function Decoration(props) {
      
         <>
           <div className="container text-center">
-                <p className="lead">Your Addvertisment</p>
+                <p className="lead">Your addvertisement</p>
            
             <form autoComplete="off" noValidate onSubmit={handleFormSubmit}>
                 <div className="card">

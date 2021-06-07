@@ -39,7 +39,7 @@ const urls = [
   "https://localhost:5001/api/SaloonVendors"
 ];
 const getProducts = async (): Promise<CartItemType[]> =>
-    await (await fetch('http://localhost:5000/api/AddingCarts')).json();
+    await (await fetch('http://localhost:5001/api/AddingCarts')).json();
 
 
 
