@@ -42,9 +42,10 @@ const VendorRegister = (props) => {
         <label>Company Name</label>
           <input className="form-control"
             type="text"
-            placeholder="CompanyName"
+            placeholder="Company Name"
             name="CompanyName"
             value={CompanyName}
+            required
             onChange={e => onChange(e)}
           />
         </div>
@@ -56,11 +57,12 @@ const VendorRegister = (props) => {
         placeholder="Company Category"
         name="CompanyCategory"
         value={CompanyCategory}
+        required
         onChange={e => onChange(e)}>
             <option value="Hotel and Catering" >Hotel and Catering</option>
             <option value="Saloon">Saloon</option>
             <option value="Photography" >Photography</option>
-            <option value="Jwelleries" >Jwelleries</option>
+            <option value="Jwelleries" >Jewellery</option>
             <option value="Decorations">Decorations</option>
             <option value="Entertainment">Entertainment</option>
           </select>
@@ -71,12 +73,15 @@ const VendorRegister = (props) => {
       
         </div>
         <div className="form-group">
-        <label>Telephone No</label>
+        <label>Telephone Number</label>
           <input className="form-control"
             type="text"
-            placeholder="Telephone Number"
+            placeholder="Telephone Number" pattern="(?=.*\d).{10,}" title="Must enter Your 10 digit Mobile Number"
             name="TelephoneNo"
-            value={TelephoneNo}
+            value={TelephoneNo} 
+            pattern="(?=.*\d).{10,}" title="Must enter Your 10 digit Mobile Number"
+            required
+            maxLength ="10"
             onChange={e => onChange(e)}
           />
           <small className="font_size"></small>
@@ -86,9 +91,11 @@ const VendorRegister = (props) => {
           <label>Username</label>
           <input className="form-control"
             type="text"
-            placeholder="UserName"
+            placeholder="Username"
             name="UserName"
             value={UserName}
+            required
+            minLength="3" title="Must be contain 3 charactors"
             onChange={e => onChange(e)}
           />
           <small className="font_size"></small>
@@ -114,6 +121,7 @@ const VendorRegister = (props) => {
             placeholder="Password"
             name="Password"
             value={Password}
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 3 or more characters" required
             onChange={e => onChange(e)}
           />
         </div>

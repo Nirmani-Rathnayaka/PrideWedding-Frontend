@@ -92,11 +92,11 @@ const ClientRegister = (props) => {
         <label>Username</label>
           <input className="Form-control"
             type="text"
-            placeholder="UserName"
+            placeholder="Username"
             name="UserName"
             value={UserName}
             required
-            minLength="3" 
+            minLength="3" title="Must be contain 3 Charactors"
             onChange={e => onChange(e)}
           />
           <small className="font_size"></small>
