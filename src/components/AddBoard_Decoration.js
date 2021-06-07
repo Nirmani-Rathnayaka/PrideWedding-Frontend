@@ -88,7 +88,7 @@ export default function AddBoard_Decoration() {
         <div className="col-md-12">
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
-                    <h1 className="display-4">List of Addvertisments</h1>
+                    <h1 className="display-4">Decoration Addvertisements</h1>
                 </div>
             </div>
         </div>

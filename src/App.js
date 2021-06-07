@@ -9,8 +9,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 //import { Counter } from './components/Counter';
 import Addcart from "./components/Addcart";
 import Cart_upload from "./components/Cart_upload";
-import Addtocart from "./components/Addtocart";
-import Sum from "./components/Sum";
+
 import Table1 from "./components/Table_Hotels/Table";
 import Table2 from "./components/Table_Saloons/Table";
 import Table3 from "./components/Table_Decoraters/Table";
@@ -40,8 +39,7 @@ import ContactUs from "./components/pages/contacform";
 //import MerchentSignup from "./components/merchentregister.component";
 import MerchentAdd from "./components/pages/merchentadd.component";
 
-import Upload from "./components/upload.component";
-import Uploading from "./upload";
+
 
 import Saloon_upload from "./components/Saloon_upload";
 import AddBoard_Saloon from "./components/AddBoard_Saloon";
@@ -109,8 +107,8 @@ function App() {
             <Route path="/sign-up" component={SignUp} />
             <Route path="/client-services" component={Client_Services} />
            
-            <Route path="/addcart" component={Addcart} />
-            <Route path="/sum" component={Sum} />
+      
+           
             
             <Route path="/merchentadd" component={MerchentAdd}/>
             <Route path="/verify-login" component={Verify_Login_1} />
@@ -120,11 +118,11 @@ function App() {
             <Route path="/sign-in" component={Signin}/>
             <Route path="/contact-info" component={Contactinfo}/>
             <Route path="/contact-form" component={ContactUs}/>
-            <Route path="/upload" component={Upload}/>
+         
 			     
             
 			      <Route path="/cart_upload" component={Cart_upload}/>
-            <Route path="/addtocart" component={Addtocart} />
+            <Route path="/addcart" component={Addcart} />
             <Route path="/table1" component={Table1} />
             <Route path="/table2" component={Table2} />
             <Route path="/table3" component={Table3} /> 
@@ -148,8 +146,7 @@ function App() {
 			
 			
             <Route path="/aboutus" component={Newcarousel}/>
-            <Route path="/uploading" component={Uploading}/>
-            
+           
             <Route path="/pay" component={Payment}/>
             <Route path="/hotelpay" component={HotelPay}/>
             <Route path="/saloonpay" component={SaloonPay}/>

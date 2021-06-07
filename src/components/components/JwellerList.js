@@ -75,7 +75,7 @@ export default function JwellerList() {
             <div className="col-md-12">
                 <div className="jumbotron jumbotron-fluid py-4">
                     <div className="container text-center">
-                        <h1 className="display-4">Publish Jwellery Addvertisments</h1>
+                        <h1 className="display-4">Publish Jwellery Addvertisements</h1>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@ export default function JwellerList() {
                 />
             </div>
             <div className="col-md-7">
-            <h1 className="lead text-center">Available Addvertisments</h1>
+            <h1 className="lead text-center">Available Addvertisements</h1>
                 <table>
                     <tbody>
                         {
