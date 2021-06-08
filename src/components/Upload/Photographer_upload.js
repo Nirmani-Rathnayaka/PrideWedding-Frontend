@@ -1,5 +1,5 @@
 import React from 'react';
-import PhotographerList from './components/PhotographerList';
+import PhotographerList from '../components/PhotographerList';
 
 
 export default function Photographer_upload() {

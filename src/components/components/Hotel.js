@@ -102,7 +102,7 @@ export default function Hotel(props) {
      
         <>
           <div className="container text-center">
-                <p className="lead">Your Addvertisment</p>
+                <p className="lead">Your Addvertisement</p>
            
             <form autoComplete="off" noValidate onSubmit={handleFormSubmit}>
                 <div className="card">
@@ -184,14 +184,14 @@ export default function Hotel(props) {
                         </div>
 
                         <div className="form-group">
-                            <input className="form-control" placeholder=" Min Package" name="min_package"
+                            <input className="form-control" placeholder=" Min Package($)" name="min_package"
                                 value={values.min_package}
                                 onChange={handleInputChange} />
                         </div>
 
                        
                         <div className="form-group">
-                            <input className="form-control" placeholder=" Max Package" name="max_package"
+                            <input className="form-control" placeholder=" Max Package($)" name="max_package"
                                 value={values.max_package}
                                 onChange={handleInputChange} />
                         </div>
@@ -213,7 +213,7 @@ export default function Hotel(props) {
                         </div>
                         <div class="flex-parent jc-center">
                       <Link to="cart_upload">
-                        <button  class="magenta">Add to cart</button>
+                        <button  class="magenta">Upload to cart</button>
                       </Link>
                  </div> 
                     </div>

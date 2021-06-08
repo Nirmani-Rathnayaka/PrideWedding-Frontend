@@ -4,15 +4,16 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 
 
-export default function AddBoard_Entertainer() {
-    const [entertainerList, setEntertainerList] = useState([])
+
+export default function AddBoard_Hotel() {
+    const [hotelList, setHotelList] = useState([])
     const [recordForEdit, setRecordForEdit] = useState(null)
 
     useEffect(() => {
-        refreshEntertainerList();
+        refreshHotelList();
     }, [])
 
-    const employeeAPI = (url = 'https://localhost:5001/api/EntertainmentVendors/') => {
+    const employeeAPI = (url = 'http://localhost:5000/api/HotelVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -21,10 +22,10 @@ export default function AddBoard_Entertainer() {
         }
     }
 
-    function refreshEntertainerList() {
+    function refreshHotelList() {
         employeeAPI().fetchAll()
             .then(res => {
-                setEntertainerList(res.data)
+                setHotelList(res.data)
             })
             .catch(err => console.log(err))
     }
@@ -34,14 +35,14 @@ export default function AddBoard_Entertainer() {
             employeeAPI().create(formData)
                 .then(res => {
                     onSuccess();
-                    refreshEntertainerList();
+                    refreshHotelList();
                 })
                 .catch(err => console.log(err))
         else
             employeeAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
-                    refreshEntertainerList();
+                    refreshHotelList();
                 })
                 .catch(err => console.log(err))
 
@@ -63,7 +64,8 @@ export default function AddBoard_Entertainer() {
                 <span>{data.locatedDistrict} Distric</span> <br />
                 <span>{data.locatedProvince} Province</span> <br />
                 <span className="center">Min Package - {data.min_package}$</span> <br />
-                <span>Max Package -{data.max_package}$</span> <br />
+                
+                <span>Max Package -{data.max_package}$ </span> <br />
                 <span>Telephone-{data.telephoneNumber}</span> <br />
                 <span>See Our Website-{data.companyWebsite}</span> <br />
             </div>
@@ -85,13 +87,13 @@ export default function AddBoard_Entertainer() {
         <div className="col-md-12">
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
-                    <h1 className="display-4">List of Addvertisments</h1>
+                    <h1 className="display-4">Hotel Addvertisements</h1>
                 </div>
             </div>
         </div>
         <div >
         <div class="flex-parent jc-center">
-                      <Link to="/table6">
+                      <Link to="/table1">
                         <button  class="magenta">SEARCH</button>
                       </Link>
                  </div> 
@@ -101,11 +103,11 @@ export default function AddBoard_Entertainer() {
                 <tbody>
                     {
                         //tr > 3 td
-                        [...Array(Math.ceil(entertainerList.length / 3))].map((e, i) =>
+                        [...Array(Math.ceil(hotelList.length / 3))].map((e, i) =>
                             <tr key={i}>
-                                <td>{imageCard(entertainerList[3 * i])}</td>
-                                <td>{entertainerList[3 * i + 1] ? imageCard(entertainerList[3 * i + 1]) : null}</td>
-                                <td>{entertainerList[3 * i + 2] ? imageCard(entertainerList[3 * i + 2]) : null}</td>
+                                <td>{imageCard(hotelList[3 * i])}</td>
+                                <td>{hotelList[3 * i + 1] ? imageCard(hotelList[3 * i + 1]) : null}</td>
+                                <td>{hotelList[3 * i + 2] ? imageCard(hotelList[3 * i + 2]) : null}</td>
                             </tr>
                         )
                     }

@@ -1,14 +1,12 @@
 import React from 'react';
-import SaloonList from './components/SaloonList';
+import EntertainerList from '../components/EntertainerList';
 //import VendorList from './components/VendorList';
 
-export default function Saloon_upload() {
+export default function Entertainer_upload() {
     return (
         <div > 
-         <SaloonList/>
+         <EntertainerList/>
             
         </div>
     );
 }
-
-

@@ -1,11 +1,11 @@
 import React from 'react';
-import NewcartList from './components/NewcartList';
+import SaloonList from '../components/SaloonList';
 //import VendorList from './components/VendorList';
 
-export default function Cart_upload() {
+export default function Saloon_upload() {
     return (
         <div > 
-         <NewcartList/>
+         <SaloonList/>
             
         </div>
     );

@@ -34,9 +34,9 @@ return(
   <button type="button" onClick={handleClick}>next</button>
 )}
 const urls = [
-  "https://localhost:5001/api/SaloonVendors",
-  "https://localhost:5001/api/HotelVendors",
-  "https://localhost:5001/api/SaloonVendors"
+  "https://localhost:5000/api/SaloonVendors",
+  "https://localhost:5000/api/HotelVendors",
+  "https://localhost:5000/api/SaloonVendors"
 ];
 const getProducts = async (): Promise<CartItemType[]> =>
     await (await fetch('http://localhost:5000/api/AddingCarts')).json();

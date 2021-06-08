@@ -8,9 +8,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 //import { FetchData } from './components/FetchData';
 //import { Counter } from './components/Counter';
 import Addcart from "./components/Addcart";
-import Cart_upload from "./components/Cart_upload";
+import Cart_upload from "./components/Upload/Cart_upload";
 import Addtocart from "./components/Addtocart";
 import Sum from "./components/Sum";
+
 import Table1 from "./components/Table_Hotels/Table";
 import Table2 from "./components/Table_Saloons/Table";
 import Table3 from "./components/Table_Decoraters/Table";
@@ -37,24 +38,26 @@ import Client_Services from "./components/pages/client_services";
 
 import Contactinfo from "./components/pages/contactinfo.component";
 import ContactUs from "./components/pages/contacform";
+import Order from "./components/pages/order";
+
 //import MerchentSignup from "./components/merchentregister.component";
 import MerchentAdd from "./components/pages/merchentadd.component";
 
 import Upload from "./components/upload.component";
 import Uploading from "./upload";
 
-import Saloon_upload from "./components/Saloon_upload";
-import AddBoard_Saloon from "./components/AddBoard_Saloon";
-import Hotel_upload from "./components/Hotel_upload";
-import AddBoard_Hotel from "./components/AddBoard_Hotel";
-import Decoration_upload from "./components/Decoration_upload";
-import AddBoard_Decoration from "./components/AddBoard_Decoration";
-import Photographer_upload from "./components/Photographer_upload";
-import AddBoard_Photography from "./components/AddBoard_Photography";
-import Jweller_upload from "./components/Jweller_upload";
-import AddBoard_Jweller from "./components/AddBoard_Jweller";
-import Entertainer_upload from "./components/Entertainer_upload";
-import AddBoard_Entertainer from "./components/AddBoard_Entertainer";
+import Saloon_upload from "./components/Upload/Saloon_upload";
+import AddBoard_Saloon from "./components/Addboard/AddBoard_Saloon";
+import Hotel_upload from "./components/Upload/Hotel_upload";
+import AddBoard_Hotel from "./components/Addboard/AddBoard_Hotel";
+import Decoration_upload from "./components/Upload/Decoration_upload";
+import AddBoard_Decoration from "./components/Addboard/AddBoard_Decoration";
+import Photographer_upload from "./components/Upload/Photographer_upload";
+import AddBoard_Photography from "./components/Addboard/AddBoard_Photography";
+import Jweller_upload from "./components/Upload/Jweller_upload";
+import AddBoard_Jweller from "./components/Addboard/AddBoard_Jweller";
+import Entertainer_upload from "./components/Upload/Entertainer_upload";
+import AddBoard_Entertainer from "./components/Addboard/AddBoard_Entertainer";
 
 import Newcarousel from "./components/pages/newcar";
 import ClientRegister from "./components/Register/ClientReg.component";
@@ -120,6 +123,8 @@ function App() {
             <Route path="/sign-in" component={Signin}/>
             <Route path="/contact-info" component={Contactinfo}/>
             <Route path="/contact-form" component={ContactUs}/>
+            <Route path="/client-order" component={Order}/>
+            
             <Route path="/upload" component={Upload}/>
 			     
             

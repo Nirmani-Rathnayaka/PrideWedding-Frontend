@@ -4,17 +4,15 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 
 
-
-
-export default function AddBoard_Jweller() {
-    const [jwellerList, setJwellerList] = useState([])
+export default function AddBoard_Entertainer() {
+    const [entertainerList, setEntertainerList] = useState([])
     const [recordForEdit, setRecordForEdit] = useState(null)
 
     useEffect(() => {
-        refreshJwellerList();
+        refreshEntertainerList();
     }, [])
 
-    const employeeAPI = (url = 'https://localhost:5001/api/JwelVendors/') => {
+    const employeeAPI = (url = 'https://localhost:5000/api/EntertainmentVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -23,10 +21,10 @@ export default function AddBoard_Jweller() {
         }
     }
 
-    function refreshJwellerList() {
+    function refreshEntertainerList() {
         employeeAPI().fetchAll()
             .then(res => {
-                setJwellerList(res.data)
+                setEntertainerList(res.data)
             })
             .catch(err => console.log(err))
     }
@@ -36,14 +34,14 @@ export default function AddBoard_Jweller() {
             employeeAPI().create(formData)
                 .then(res => {
                     onSuccess();
-                    refreshJwellerList();
+                    refreshEntertainerList();
                 })
                 .catch(err => console.log(err))
         else
             employeeAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
-                    refreshJwellerList();
+                    refreshEntertainerList();
                 })
                 .catch(err => console.log(err))
 
@@ -65,7 +63,6 @@ export default function AddBoard_Jweller() {
                 <span>{data.locatedDistrict} Distric</span> <br />
                 <span>{data.locatedProvince} Province</span> <br />
                 <span className="center">Min Package - {data.min_package}$</span> <br />
-               
                 <span>Max Package -{data.max_package}$</span> <br />
                 <span>Telephone-{data.telephoneNumber}</span> <br />
                 <span>See Our Website-{data.companyWebsite}</span> <br />
@@ -88,13 +85,13 @@ export default function AddBoard_Jweller() {
         <div className="col-md-12">
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
-                    <h1 className="display-4">List of Addvertisments</h1>
+                    <h1 className="display-4">Entertainment Addvertisements</h1>
                 </div>
             </div>
         </div>
         <div >
         <div class="flex-parent jc-center">
-                      <Link to="/table5">
+                      <Link to="/table6">
                         <button  class="magenta">SEARCH</button>
                       </Link>
                  </div> 
@@ -104,11 +101,11 @@ export default function AddBoard_Jweller() {
                 <tbody>
                     {
                         //tr > 3 td
-                        [...Array(Math.ceil(jwellerList.length / 3))].map((e, i) =>
+                        [...Array(Math.ceil(entertainerList.length / 3))].map((e, i) =>
                             <tr key={i}>
-                                <td>{imageCard(jwellerList[3 * i])}</td>
-                                <td>{jwellerList[3 * i + 1] ? imageCard(jwellerList[3 * i + 1]) : null}</td>
-                                <td>{jwellerList[3 * i + 2] ? imageCard(jwellerList[3 * i + 2]) : null}</td>
+                                <td>{imageCard(entertainerList[3 * i])}</td>
+                                <td>{entertainerList[3 * i + 1] ? imageCard(entertainerList[3 * i + 1]) : null}</td>
+                                <td>{entertainerList[3 * i + 2] ? imageCard(entertainerList[3 * i + 2]) : null}</td>
                             </tr>
                         )
                     }

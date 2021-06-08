@@ -2,6 +2,23 @@
 import CartItem from '../CartItem/CartItem';
 import { Wrapper } from './Cart.styles';
 import { CartItemType } from '../App2';
+import {useHistory} from 'react-router-dom';
+
+
+
+
+
+function HomeButton(){
+  let history = useHistory();
+
+function handleClick(){
+  history.push("./client-order");
+}
+return(
+  <button type="button" onClick={handleClick}>|Order Your WeddingCart Now|</button>
+)}
+
+  
 
 type Props = {
   cartItems: CartItemType[];
@@ -26,6 +43,12 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
         />
       ))}
       <h2>Total: ${calculateTotal(cartItems).toFixed(2)}</h2>
+      
+      <div>
+      <HomeButton/>
+      </div>
+      
+    
     </Wrapper>
   );
 };
