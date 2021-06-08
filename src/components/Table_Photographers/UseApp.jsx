@@ -10,7 +10,7 @@ export default function UseApp() {
   const [searchColumns,setSearchColumns] = useState(["companyName","locatedDistrict"]);
 
   useEffect(()=>{
-    fetch("http://localhost:5001/api/PhotographyVendors")
+    fetch("http://localhost:5000/api/PhotographyVendors")
     .then(response=>response.json())
     .then((json) => setData(json))
 

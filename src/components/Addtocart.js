@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App2 from './App2';
 
+import App1 from './App1';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import Sum from './Sum';
 
 const client = new QueryClient();
 
-export default function Addcart(){
+export default function Addtocart(){
   return(
     <div>
    <QueryClientProvider client={client}>
-    <App2/>
+    
+    <App1/>
+    
+
+
     
   </QueryClientProvider>
   </div>
