@@ -10,7 +10,7 @@ export default function UseApp() {
   const [searchColumns,setSearchColumns] = useState(["companyName","locatedDistrict"]);
 
   useEffect(()=>{
-    fetch("http://localhost:5000/api/DecorationVendors")
+    fetch("https://prideweddingapi.azurewebsites.net/api/DecorationVendors")
     .then(response=>response.json())
     .then((json) => setData(json))
 

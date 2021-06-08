@@ -17,7 +17,7 @@ export const ClientRegistration = async (ClientNIC, FirstName, LastName, Address
 
 
         try {
-            await axois.post("https://localhost:5001/api/Accounts/ClientRegister", body, config).then((res)=>{
+            await axois.post("https://prideweddingapi.azurewebsites.net/api/Accounts/ClientRegister", body, config).then((res)=>{
                 
                 console.log(res);
                 if(res.status===201)
@@ -75,7 +75,7 @@ export const VendorRegistration = async (CompanyName, CompanyCategory, Telephone
 
 
         try {
-            await axois.post("https://localhost:5001/api/Accounts/VendorRegister", body, config);
+            await axois.post("https://prideweddingapi.azurewebsites.net/api/Accounts/VendorRegister", body, config);
             alert("Your Have Successfully Registered ");
             
             console.log("Vendor Registration is Successful")
@@ -107,7 +107,7 @@ export const CardDetails = async (CardNo,CardholderName,ExpDate,CVV,props) => {
     
     else {
         try {
-            await axois.post("https://localhost:5001/api/Payments", body, config);
+            await axois.post("https://prideweddingapi.azurewebsites.net/api/Payments", body, config);
             alert("Card is being Verified ");
             
             
@@ -134,7 +134,7 @@ export const ClientLogins = async (Email, Password,props) => {
     const body = JSON.stringify({ Email, Password });
 
             try {
-                await axois.post("https://localhost:5001/api/Accounts/Login", body, config).then((res)=>{
+                await axois.post("https://prideweddingapi.azurewebsites.net/api/Accounts/Login", body, config).then((res)=>{
                    
               
                     console.log(res);
@@ -183,7 +183,7 @@ export const ClientLogins = async (Email, Password,props) => {
         const body = JSON.stringify({ Email, Password });
     
                 try {
-                    await axois.post("https://localhost:5001/api/Accounts/Login", body, config).then((res)=>{
+                    await axois.post("https://prideweddingapi.azurewebsites.net/api/Accounts/Login", body, config).then((res)=>{
                        
                   
                         console.log(res);
@@ -227,7 +227,7 @@ export const ClientLogins = async (Email, Password,props) => {
 
 
 
- export const NewsTeller = async (FirstName,LastName,Email) => {
+ export const NewsTeller = async (FirstName,LastName,Email,props) => {
     const config = {
         headers: { "Content-Type": "application/json" }
     };
@@ -239,12 +239,12 @@ export const ClientLogins = async (Email, Password,props) => {
     
     else {
         try {
-            await axois.post("https://localhost:5001/api/NewsTellers", body, config);
+            await axois.post("https://prideweddingapi.azurewebsites.net/api/NewsTellers", body, config);
             alert("Details being Verified ");
             
             
             console.log("Your Subscription is Done")
-           
+            props.history.push("/selection");
     
         } catch (error) {
             alert("Please Check Your Information again ");

@@ -14,7 +14,7 @@ export default function AddBoard_Decoration() {
         refreshDecorationList();
     }, [])
 
-    const employeeAPI = (url = 'https://localhost:5000/api/DecorationVendors/') => {
+    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/DecorationVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -88,7 +88,7 @@ export default function AddBoard_Decoration() {
         <div className="col-md-12">
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
-                    <h1 className="display-4">Decoration Addvertisements</h1>
+                    <h1 className="display-4">Decoration Advertisements</h1>
                 </div>
             </div>
         </div>

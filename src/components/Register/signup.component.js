@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import  {NewsTeller}  from '../../authorization/authorization';
 
-const Newsteller = () => {
+const Newsteller = (props) => {
   const [formData, setFromData] = useState(
     {
 
@@ -21,7 +21,7 @@ const Newsteller = () => {
  const onSubmit = async e => {
   e.preventDefault();
   console.log("On Submit Function is working")
-   NewsTeller ( FirstName, LastName, Email);
+   NewsTeller ( FirstName, LastName, Email, props);
     
 };
 

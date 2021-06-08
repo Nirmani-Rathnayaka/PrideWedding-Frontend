@@ -10,7 +10,7 @@ export default function SaloonList() {
         refreshSaloonList();
     }, [])
 
-    const employeeAPI = (url = 'http://localhost:5000/api/SaloonVendors/') => {
+    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/SaloonVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),

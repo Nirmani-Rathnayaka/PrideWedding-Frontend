@@ -10,7 +10,7 @@ export default function PhotographerList() {
         refreshPhotographerList();
     }, [])
 
-    const employeeAPI = (url = 'https://localhost:5001/api/PhotographyVendors/') => {
+    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/PhotographyVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -75,7 +75,7 @@ export default function PhotographerList() {
             <div className="col-md-12">
                 <div className="jumbotron jumbotron-fluid py-4">
                     <div className="container text-center">
-                        <h1 className="display-4">Publish Photography Addvertisements</h1>
+                        <h1 className="display-4">Publish Photography Advertisements</h1>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@ export default function PhotographerList() {
                 />
             </div>
             <div className="col-md-6">
-            <h1 className="lead">Available Addvertisements </h1>
+            <h1 className="lead">Available Advertisements </h1>
                 <table>
                     <tbody>
                         {

@@ -111,7 +111,7 @@ export default function Saloon(props) {
      
         <>
           <div className="container text-center">
-                <p className="lead">Your Addvertisement</p>
+                <p className="lead">Your Advertisement</p>
            
             <form autoComplete="off" noValidate onSubmit={handleFormSubmit}>
                 <div className="card">
@@ -134,7 +134,7 @@ export default function Saloon(props) {
 
                                 <option>Hotel & Catering</option>
                                 <option>Saloon</option>
-                                <option>Jwellers</option>
+                                <option>Jewellers</option>
                                 <option>Entertainment</option>
                                 <option>Decoration</option>
                                 <option>Photography</option>
