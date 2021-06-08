@@ -1,9 +1,7 @@
-import { BrowserRouter as Router, Redirect, Link, Route, Switch } from 'react-router-dom'
+
 import CartItem from '../CartItem/CartItem';
 import { Wrapper } from './Cart.styles';
 import { CartItemType } from '../App2';
-import ContactUs from '../pages/contacform';
-
 
 type Props = {
   cartItems: CartItemType[];
@@ -28,16 +26,6 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
         />
       ))}
       <h2>Total: ${calculateTotal(cartItems).toFixed(2)}</h2>
-      <div>If you want to order your wedding cart contact us</div>
-      <Router>
-                <div>
-                             
-                    <Switch>
-                       
-                        <Route path="/contact-form" component={ContactUs} />               
-                    </Switch>
-                </div>
-            </Router>
     </Wrapper>
   );
 };

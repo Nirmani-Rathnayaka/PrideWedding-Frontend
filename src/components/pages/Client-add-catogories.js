@@ -15,7 +15,7 @@ export default class Employee extends Component {
             <div>
               <div class="position-absolute top-left"> 
                  <p class="new2"> **** WELL DONE! **** </p> 
-                  <p class="new2">Addvertisement CATEGORIES </p> 
+                  <p class="new2">ADDVERTISMENT CATEGORIES </p> 
               </div> 
               <h1 className="testClassNull">  </h1>
   

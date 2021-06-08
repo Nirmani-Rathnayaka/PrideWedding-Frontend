@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useQuery } from 'react-query';
-import {useHistory} from 'react-router-dom';
 // Components
 import Item from './Item/Item';
 import Cart from './Cart/Cart';
@@ -24,45 +23,19 @@ export type CartItemType = {
   amount: number;
 };
 
-function HomeButton(){
-  let history = useHistory();
-
-function handleClick(){
-  history.push("./addcart2");
-}
-return(
-  <button type="button" onClick={handleClick}>next</button>
-)}
-const urls = [
-  "https://localhost:5001/api/SaloonVendors",
-  "https://localhost:5001/api/HotelVendors",
-  "https://localhost:5001/api/SaloonVendors"
-];
 const getProducts = async (): Promise<CartItemType[]> =>
-    await (await fetch('http://localhost:5000/api/AddingCarts')).json();
+  await (await fetch('https://localhost:5001/api/AddingCarts')).json();
 
-
-
-
-
-
-
-
-
-const App2 = () => {
-
+const App1 = () => {
   const [cartOpen, setCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([] as CartItemType[]);
   const { data, isLoading, error } = useQuery<CartItemType[]>(
     'products',
     getProducts
-
   );
-
   console.log(data);
 
-
-
+  
 
   const getTotalItems = (items: CartItemType[]) =>
     items.reduce((ack: number, item) => ack + item.amount, 0);
@@ -101,7 +74,6 @@ const App2 = () => {
   if (error) return <div>Something went wrong ...</div>;
 
   return (
-    
     <Wrapper>
       <Drawer anchor='right' open={cartOpen} onClose={() => setCartOpen(false)}>
         <Cart
@@ -122,12 +94,8 @@ const App2 = () => {
           </Grid>
         ))}
       </Grid>
-      
     </Wrapper>
-    
-    
-    
   );
 };
 
-export default App2 ;
+export default App1;
