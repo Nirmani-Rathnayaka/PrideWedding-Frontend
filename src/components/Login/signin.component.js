@@ -1,7 +1,6 @@
 import React, { Fragment,useState } from "react";
 import { Link } from 'react-router-dom';
-import {FacebookLoginButton} from 'react-social-login-buttons';
-//import "./index.css";
+
 
 import  {ClientLogins}  from '../../authorization/authorization';
 
@@ -53,17 +52,12 @@ import  {ClientLogins}  from '../../authorization/authorization';
                     <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
                 </div>
             </div>
-            <input className="font_size" type="submit" className="btn btn-primary" value="Go to My Account" />
-            <Link to="/client-services">
-              <button type="submit" className="btn btn-dark btn-lg btn-block">Submit</button>
-            </Link>
+            <input className="font_size" type="submit" className="btn btn-dark btn-lg btn-block" value="Go to My Account" />
 
-               <div className="form-group">
-                Or continue with your social account
-              </div>
-              <FacebookLoginButton classname="mt-1 mb-1"/>
+
+              
               <div className="forgot-password text-right">
-              <Link to="/path">
+              <Link to="/Client-Registration">
               sign up
                 </Link>
                 <span className="p-2">|</span>

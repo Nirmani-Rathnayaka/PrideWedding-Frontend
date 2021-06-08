@@ -73,12 +73,10 @@ const Newsteller = () => {
           <small className="font_size"></small>
         </div>
 
-        <input type="submit" className="btn btn-primary" value="Subscribe" />
+        <input type="submit" className="btn btn-dark btn-lg btn-block" value="Subscribe" />
        
 
-      <Link to="/sign-in">
-           < button type="submit" className="btn btn-dark btn-lg btn-block">Next</button>
-      </Link>
+
 
 
      </form>

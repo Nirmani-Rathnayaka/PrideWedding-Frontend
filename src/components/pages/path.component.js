@@ -29,7 +29,7 @@ export default class Employee extends Component {
 
                  <div class="flex-parent jc-center">
                       <Link to="/Vendor-Registration">
-                        <button  class="magenta">Merchent</button>
+                        <button  class="magenta">Vendor</button>
                       </Link>
                  </div>
            </div> 

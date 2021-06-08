@@ -36,10 +36,10 @@ function Footer() {
           </div>
           <div class='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link to='/'>&nbsp;<i class="fas fa-phone"></i>  Call us +94702826664</Link>
-            <Link to='/'>&nbsp;<i class="fab fa-skype"></i>  Skype</Link>
-            <Link to='/'>&nbsp;<i class="fab fa-whatsapp"></i>  Whatsapp</Link>
-            <Link to='/'>&nbsp;<i class="fas fa-map-marker-alt"></i>  No 123, Hapugala, Galle</Link>
+            <p className="paralink">&nbsp;<i class="fas fa-phone"></i>  Call us +94702826664</p>
+            <p className="paralink">&nbsp;<i class="fab fa-skype"></i>  Skype</p>
+            <p className="paralink">&nbsp;<i class="fab fa-whatsapp"></i>  Whatsapp</p>
+            <p className="paralink">&nbsp;<i class="fas fa-map-marker-alt"></i>  No 123, Hapugala, Galle</p>
           </div>
         </div>
         <div className='footer-link-wrapper'>

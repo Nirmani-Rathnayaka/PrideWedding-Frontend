@@ -155,12 +155,10 @@ const ClientRegister = (props) => {
           />
         </div>
 
-        <input type="submit" className="btn btn-primary" value="Register As Client" />
+        <input type="submit" className="btn btn-dark btn-lg btn-block"value="Register As Client" />
        
 
-      <Link to="/sign-in">
-           < button type="submit" className="btn btn-dark btn-lg btn-block">Next</button>
-      </Link>
+
       <Link to="/sign-in">
          <p className="forgot-password text-right">Already registered <a href="#">log in?</a></p>
       </Link>

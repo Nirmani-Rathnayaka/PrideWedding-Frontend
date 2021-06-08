@@ -24,7 +24,7 @@ export default class Contactinfo extends Component {
                 <div className="social-container">
                 <h4>@prideweddingplanners</h4>
                 <a
-                   href="https://www.youtube.com/c/jamesqquick"
+                   href="https://www.youtube.com/channel/UCR4UhNm7WoWAoIh1_fZ3dwA"
                     className="youtube social"
                 >
         <FontAwesomeIcon icon={faYoutube} size="4x"  />
