@@ -111,7 +111,7 @@ export default function Saloon(props) {
      
         <>
           <div className="container text-center">
-                <p className="lead">Your Addvertisment</p>
+                <p className="lead">Your Addvertisement</p>
            
             <form autoComplete="off" noValidate onSubmit={handleFormSubmit}>
                 <div className="card">
@@ -194,13 +194,13 @@ export default function Saloon(props) {
                     
 
                         <div className="form-group">
-                            <input name='min_package' className="form-control" placeholder=" Min Package" name="min_package"
+                            <input name='min_package' className="form-control" placeholder=" Min Package($)" name="min_package"
                                 value={values.min_package}
                                 onChange={handleInputChange} />
                         </div>
 
                         <div className="form-group">
-                            <input className="form-control" placeholder=" Max Package" name="max_package"
+                            <input className="form-control" placeholder=" Max Package($) " name="max_package"
                                 value={values.max_package}
                                 onChange={handleInputChange} />
                         </div>
@@ -224,7 +224,7 @@ export default function Saloon(props) {
                     </div>
                     <div class="flex-parent jc-center">
                       <Link to="cart_upload">
-                        <button  class="magenta">Add to cart</button>
+                        <button  class="magenta">Upload to cart</button>
                       </Link>
                  </div> 
                 </div>

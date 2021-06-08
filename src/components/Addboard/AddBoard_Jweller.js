@@ -6,15 +6,15 @@ import axios from "axios";
 
 
 
-export default function AddBoard_Decoration() {
-    const [decorationList, setDecorationList] = useState([])
+export default function AddBoard_Jweller() {
+    const [jwellerList, setJwellerList] = useState([])
     const [recordForEdit, setRecordForEdit] = useState(null)
 
     useEffect(() => {
-        refreshDecorationList();
+        refreshJwellerList();
     }, [])
 
-    const employeeAPI = (url = 'https://localhost:5001/api/DecorationVendors/') => {
+    const employeeAPI = (url = 'https://localhost:5000/api/JwelVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -23,10 +23,10 @@ export default function AddBoard_Decoration() {
         }
     }
 
-    function refreshDecorationList() {
+    function refreshJwellerList() {
         employeeAPI().fetchAll()
             .then(res => {
-                setDecorationList(res.data)
+                setJwellerList(res.data)
             })
             .catch(err => console.log(err))
     }
@@ -36,14 +36,14 @@ export default function AddBoard_Decoration() {
             employeeAPI().create(formData)
                 .then(res => {
                     onSuccess();
-                    refreshDecorationList();
+                    refreshJwellerList();
                 })
                 .catch(err => console.log(err))
         else
             employeeAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
-                    refreshDecorationList();
+                    refreshJwellerList();
                 })
                 .catch(err => console.log(err))
 
@@ -64,9 +64,9 @@ export default function AddBoard_Decoration() {
  
                 <span>{data.locatedDistrict} Distric</span> <br />
                 <span>{data.locatedProvince} Province</span> <br />
-                <span className="center">Min Package - {data.min_package} $</span> <br />
-        
-                <span>Max Package -{data.max_package} $</span> <br />
+                <span className="center">Min Package - {data.min_package}$</span> <br />
+               
+                <span>Max Package -{data.max_package}$</span> <br />
                 <span>Telephone-{data.telephoneNumber}</span> <br />
                 <span>See Our Website-{data.companyWebsite}</span> <br />
             </div>
@@ -88,13 +88,13 @@ export default function AddBoard_Decoration() {
         <div className="col-md-12">
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
-                    <h1 className="display-4">List of Addvertisments</h1>
+                    <h1 className="display-4">Jweller Addvertisements</h1>
                 </div>
             </div>
         </div>
         <div >
         <div class="flex-parent jc-center">
-                      <Link to="/table3">
+                      <Link to="/table5">
                         <button  class="magenta">SEARCH</button>
                       </Link>
                  </div> 
@@ -104,11 +104,11 @@ export default function AddBoard_Decoration() {
                 <tbody>
                     {
                         //tr > 3 td
-                        [...Array(Math.ceil(decorationList.length / 3))].map((e, i) =>
+                        [...Array(Math.ceil(jwellerList.length / 3))].map((e, i) =>
                             <tr key={i}>
-                                <td>{imageCard(decorationList[3 * i])}</td>
-                                <td>{decorationList[3 * i + 1] ? imageCard(decorationList[3 * i + 1]) : null}</td>
-                                <td>{decorationList[3 * i + 2] ? imageCard(decorationList[3 * i + 2]) : null}</td>
+                                <td>{imageCard(jwellerList[3 * i])}</td>
+                                <td>{jwellerList[3 * i + 1] ? imageCard(jwellerList[3 * i + 1]) : null}</td>
+                                <td>{jwellerList[3 * i + 2] ? imageCard(jwellerList[3 * i + 2]) : null}</td>
                             </tr>
                         )
                     }

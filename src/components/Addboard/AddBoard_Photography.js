@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 
 
-//import VendorList from './components/VendorList';
 
-export default function AddBoard_Saloon() {
-    const [saloonList, setSaloonList] = useState([])
+
+export default function AddBoard_Photography() {
+    const [photographerList, setPhotographerList] = useState([])
     const [recordForEdit, setRecordForEdit] = useState(null)
 
     useEffect(() => {
-        refreshSaloonList();
+        refreshPhotographerList();
     }, [])
 
-    const employeeAPI = (url = 'http://localhost:5000/api/SaloonVendors/') => {
+    const employeeAPI = (url = 'https://localhost:5000/api/PhotographyVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -23,10 +23,10 @@ export default function AddBoard_Saloon() {
         }
     }
 
-    function refreshSaloonList() {
+    function refreshPhotographerList() {
         employeeAPI().fetchAll()
             .then(res => {
-                setSaloonList(res.data)
+                setPhotographerList(res.data)
             })
             .catch(err => console.log(err))
     }
@@ -36,14 +36,14 @@ export default function AddBoard_Saloon() {
             employeeAPI().create(formData)
                 .then(res => {
                     onSuccess();
-                    refreshSaloonList();
+                    refreshPhotographerList();
                 })
                 .catch(err => console.log(err))
         else
             employeeAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
-                    refreshSaloonList();
+                    refreshPhotographerList();
                 })
                 .catch(err => console.log(err))
 
@@ -63,13 +63,15 @@ export default function AddBoard_Saloon() {
             <h2><span class="badge badge-danger">{data.companyName}</span></h2>
  
                 <span>{data.locatedDistrict} Distric</span> <br />
-                <span>{data.locatedProvince} Province</span> <br />
+                <span>{data.locatedProvince
+                
+                
+                } Province</span> <br />
                 <span className="center">Min Package - {data.min_package}$</span> <br />
-               
+              
                 <span>Max Package -{data.max_package}$</span> <br />
                 <span>Telephone-{data.telephoneNumber}</span> <br />
-				<span>See Our Website-{data.companyWebsite}</span> <br />
-               
+                <span>See Our Website-{data.companyWebsite}</span> <br />
             </div>
         </div>
     )
@@ -89,27 +91,27 @@ export default function AddBoard_Saloon() {
         <div className="col-md-12">
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
-                    <h1 className="display-4">List of Addvertisments</h1>
+                    <h1 className="display-4">Photography Addvertisements</h1>
                 </div>
             </div>
         </div>
         <div >
         <div class="flex-parent jc-center">
-                      <Link to="/table2">
+                      <Link to="/table4">
                         <button  class="magenta">SEARCH</button>
                       </Link>
                  </div> 
         </div>
-        <div className="center-align">
+        <div >
             <table>
                 <tbody>
                     {
                         //tr > 3 td
-                        [...Array(Math.ceil(saloonList.length / 3))].map((e, i) =>
+                        [...Array(Math.ceil(photographerList.length / 3))].map((e, i) =>
                             <tr key={i}>
-                                <td>{imageCard(saloonList[3 * i])}</td>
-                                <td>{saloonList[3 * i + 1] ? imageCard(saloonList[3 * i + 1]) : null}</td>
-                                <td>{saloonList[3 * i + 2] ? imageCard(saloonList[3 * i + 2]) : null}</td>
+                                <td>{imageCard(photographerList[3 * i])}</td>
+                                <td>{photographerList[3 * i + 1] ? imageCard(photographerList[3 * i + 1]) : null}</td>
+                                <td>{photographerList[3 * i + 2] ? imageCard(photographerList[3 * i + 2]) : null}</td>
                             </tr>
                         )
                     }

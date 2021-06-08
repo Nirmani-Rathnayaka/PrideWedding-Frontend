@@ -6,15 +6,15 @@ import axios from "axios";
 
 
 
-export default function AddBoard_Photography() {
-    const [photographerList, setPhotographerList] = useState([])
+export default function AddBoard_Decoration() {
+    const [decorationList, setDecorationList] = useState([])
     const [recordForEdit, setRecordForEdit] = useState(null)
 
     useEffect(() => {
-        refreshPhotographerList();
+        refreshDecorationList();
     }, [])
 
-    const employeeAPI = (url = 'https://localhost:5001/api/PhotographyVendors/') => {
+    const employeeAPI = (url = 'https://localhost:5000/api/DecorationVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -23,10 +23,10 @@ export default function AddBoard_Photography() {
         }
     }
 
-    function refreshPhotographerList() {
+    function refreshDecorationList() {
         employeeAPI().fetchAll()
             .then(res => {
-                setPhotographerList(res.data)
+                setDecorationList(res.data)
             })
             .catch(err => console.log(err))
     }
@@ -36,14 +36,14 @@ export default function AddBoard_Photography() {
             employeeAPI().create(formData)
                 .then(res => {
                     onSuccess();
-                    refreshPhotographerList();
+                    refreshDecorationList();
                 })
                 .catch(err => console.log(err))
         else
             employeeAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
-                    refreshPhotographerList();
+                    refreshDecorationList();
                 })
                 .catch(err => console.log(err))
 
@@ -63,13 +63,10 @@ export default function AddBoard_Photography() {
             <h2><span class="badge badge-danger">{data.companyName}</span></h2>
  
                 <span>{data.locatedDistrict} Distric</span> <br />
-                <span>{data.locatedProvince
-                
-                
-                } Province</span> <br />
-                <span className="center">Min Package - {data.min_package}$</span> <br />
-              
-                <span>Max Package -{data.max_package}$</span> <br />
+                <span>{data.locatedProvince} Province</span> <br />
+                <span className="center">Min Package - {data.min_package} $</span> <br />
+        
+                <span>Max Package -{data.max_package} $</span> <br />
                 <span>Telephone-{data.telephoneNumber}</span> <br />
                 <span>See Our Website-{data.companyWebsite}</span> <br />
             </div>
@@ -91,13 +88,13 @@ export default function AddBoard_Photography() {
         <div className="col-md-12">
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
-                    <h1 className="display-4">List of Addvertisments</h1>
+                    <h1 className="display-4">Decoration Addvertisements</h1>
                 </div>
             </div>
         </div>
         <div >
         <div class="flex-parent jc-center">
-                      <Link to="/table4">
+                      <Link to="/table3">
                         <button  class="magenta">SEARCH</button>
                       </Link>
                  </div> 
@@ -107,11 +104,11 @@ export default function AddBoard_Photography() {
                 <tbody>
                     {
                         //tr > 3 td
-                        [...Array(Math.ceil(photographerList.length / 3))].map((e, i) =>
+                        [...Array(Math.ceil(decorationList.length / 3))].map((e, i) =>
                             <tr key={i}>
-                                <td>{imageCard(photographerList[3 * i])}</td>
-                                <td>{photographerList[3 * i + 1] ? imageCard(photographerList[3 * i + 1]) : null}</td>
-                                <td>{photographerList[3 * i + 2] ? imageCard(photographerList[3 * i + 2]) : null}</td>
+                                <td>{imageCard(decorationList[3 * i])}</td>
+                                <td>{decorationList[3 * i + 1] ? imageCard(decorationList[3 * i + 1]) : null}</td>
+                                <td>{decorationList[3 * i + 2] ? imageCard(decorationList[3 * i + 2]) : null}</td>
                             </tr>
                         )
                     }

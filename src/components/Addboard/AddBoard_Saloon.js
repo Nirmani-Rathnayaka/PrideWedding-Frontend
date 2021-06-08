@@ -4,16 +4,17 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 
 
+//import VendorList from './components/VendorList';
 
-export default function AddBoard_Hotel() {
-    const [hotelList, setHotelList] = useState([])
+export default function AddBoard_Saloon() {
+    const [saloonList, setSaloonList] = useState([])
     const [recordForEdit, setRecordForEdit] = useState(null)
 
     useEffect(() => {
-        refreshHotelList();
+        refreshSaloonList();
     }, [])
 
-    const employeeAPI = (url = 'http://localhost:5000/api/HotelVendors/') => {
+    const employeeAPI = (url = 'http://localhost:5000/api/SaloonVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -22,10 +23,10 @@ export default function AddBoard_Hotel() {
         }
     }
 
-    function refreshHotelList() {
+    function refreshSaloonList() {
         employeeAPI().fetchAll()
             .then(res => {
-                setHotelList(res.data)
+                setSaloonList(res.data)
             })
             .catch(err => console.log(err))
     }
@@ -35,14 +36,14 @@ export default function AddBoard_Hotel() {
             employeeAPI().create(formData)
                 .then(res => {
                     onSuccess();
-                    refreshHotelList();
+                    refreshSaloonList();
                 })
                 .catch(err => console.log(err))
         else
             employeeAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
-                    refreshHotelList();
+                    refreshSaloonList();
                 })
                 .catch(err => console.log(err))
 
@@ -64,10 +65,11 @@ export default function AddBoard_Hotel() {
                 <span>{data.locatedDistrict} Distric</span> <br />
                 <span>{data.locatedProvince} Province</span> <br />
                 <span className="center">Min Package - {data.min_package}$</span> <br />
-                
-                <span>Max Package -{data.max_package}$ </span> <br />
+               
+                <span>Max Package -{data.max_package}$</span> <br />
                 <span>Telephone-{data.telephoneNumber}</span> <br />
-                <span>See Our Website-{data.companyWebsite}</span> <br />
+				<span>See Our Website-{data.companyWebsite}</span> <br />
+               
             </div>
         </div>
     )
@@ -87,27 +89,27 @@ export default function AddBoard_Hotel() {
         <div className="col-md-12">
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
-                    <h1 className="display-4">Hotel Addvertisments</h1>
+                    <h1 className="display-4">Saloon Addvertisements</h1>
                 </div>
             </div>
         </div>
         <div >
         <div class="flex-parent jc-center">
-                      <Link to="/table1">
+                      <Link to="/table2">
                         <button  class="magenta">SEARCH</button>
                       </Link>
                  </div> 
         </div>
-        <div >
+        <div className="center-align">
             <table>
                 <tbody>
                     {
                         //tr > 3 td
-                        [...Array(Math.ceil(hotelList.length / 3))].map((e, i) =>
+                        [...Array(Math.ceil(saloonList.length / 3))].map((e, i) =>
                             <tr key={i}>
-                                <td>{imageCard(hotelList[3 * i])}</td>
-                                <td>{hotelList[3 * i + 1] ? imageCard(hotelList[3 * i + 1]) : null}</td>
-                                <td>{hotelList[3 * i + 2] ? imageCard(hotelList[3 * i + 2]) : null}</td>
+                                <td>{imageCard(saloonList[3 * i])}</td>
+                                <td>{saloonList[3 * i + 1] ? imageCard(saloonList[3 * i + 1]) : null}</td>
+                                <td>{saloonList[3 * i + 2] ? imageCard(saloonList[3 * i + 2]) : null}</td>
                             </tr>
                         )
                     }

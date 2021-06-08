@@ -182,7 +182,7 @@ export default function Newcart(props) {
                         </div>
 
                         <div className="form-group">
-                            <input className="form-control" placeholder=" Discount Package" name="discount_package"
+                            <input className="form-control" placeholder=" Discount Package($)" name="discount_package"
                                 value={values.discount_package}
                                 onChange={handleInputChange} />
                         </div>

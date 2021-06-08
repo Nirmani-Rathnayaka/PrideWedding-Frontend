@@ -1,12 +1,14 @@
 import React from 'react';
-import DecorationList from './components/DecorationList';
+import NewcartList from '../components/NewcartList';
 //import VendorList from './components/VendorList';
 
-export default function Decoration_upload() {
+export default function Cart_upload() {
     return (
         <div > 
-         <DecorationList/>
+         <NewcartList/>
             
         </div>
     );
 }
+
+
