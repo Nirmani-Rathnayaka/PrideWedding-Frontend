@@ -132,7 +132,7 @@ export default function Cart(props) {
 
                               <option>Hotel & Catering</option>
                               <option>Saloon</option>
-                              <option>Jwellers</option>
+                              <option>Jewellers</option>
                               <option>Entertainment</option>
                               <option>Decoration</option>
                               <option>Photography</option>

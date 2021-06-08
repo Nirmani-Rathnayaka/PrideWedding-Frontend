@@ -10,7 +10,7 @@ export default function CartList() {
         refreshCartList();
     }, [])
 
-    const employeeAPI = (url = 'http://localhost:5000/api/AddingCarts/') => {
+    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/AddingCarts/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),

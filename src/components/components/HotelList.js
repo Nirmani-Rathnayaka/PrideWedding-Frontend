@@ -10,7 +10,7 @@ export default function HotelList() {
         refreshHotelList();
     }, [])
 
-    const employeeAPI = (url = 'http://localhost:5000/api/HotelVendors/') => {
+    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/HotelVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -75,7 +75,7 @@ export default function HotelList() {
             <div className="col-md-12">
                 <div className="jumbotron jumbotron-fluid py-4">
                     <div className="container text-center">
-                        <h1 className="display-4">Publish Hotel Addvertisements</h1>
+                        <h1 className="display-4">Publish Hotel Advertisements</h1>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@ export default function HotelList() {
                 />
             </div>
             <div className="col-md-6">
-            <h1 className="lead">Available Addvertisements</h1>
+            <h1 className="lead">Available Advertisements</h1>
                 <table>
                     <tbody>
                         {

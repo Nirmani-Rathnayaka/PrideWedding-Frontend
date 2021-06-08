@@ -11,7 +11,7 @@ export default function NewcartList() {
         refreshCartList();
     }, [])
 
-    const employeeAPI = (url = window.$API_URL+'/api/AddingCarts/') => {
+    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net//api/AddingCarts/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),

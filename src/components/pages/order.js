@@ -31,12 +31,12 @@ export default function ContactUs() {
      <h4>Your CartItems Details</h4>
      
      <div className="form-group">
-        <input type="subject" className="form-control" placeholder="Selected CartItems" name="subject" />
+        <input type="subject" className="form-control" placeholder="Your Request" name="subject" />
         
+
      </div>
      <div className="form-group">
-      <h6>Enter your proposed wedding dates and additional details.</h6>
-        <textarea className="form-control" id="" cols="30" rows="8" placeholder="Your Description" name="message" />
+        <textarea className="form-control" id="" cols="30" rows="8" placeholder="Enter your proposed wedding dates and selected cart items " name="message" />
         <input type="submit" className="btn btn-info" value="Send Message" />
       </div>  
       </form>

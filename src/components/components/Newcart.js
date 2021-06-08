@@ -123,7 +123,7 @@ export default function Newcart(props) {
 
                                 <option>Hotel & Catering</option>
                                 <option>Saloon</option>
-                                <option>Jwellers</option>
+                                <option>Jewellers</option>
                                 <option>Entertainers</option>
                                 <option>Decorators</option>
                                 <option>Photographers</option>

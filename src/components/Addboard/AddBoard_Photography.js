@@ -14,7 +14,7 @@ export default function AddBoard_Photography() {
         refreshPhotographerList();
     }, [])
 
-    const employeeAPI = (url = 'https://localhost:5000/api/PhotographyVendors/') => {
+    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/PhotographyVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -91,7 +91,7 @@ export default function AddBoard_Photography() {
         <div className="col-md-12">
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
-                    <h1 className="display-4">Photography Addvertisements</h1>
+                    <h1 className="display-4">Photography Advertisements</h1>
                 </div>
             </div>
         </div>

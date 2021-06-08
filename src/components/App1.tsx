@@ -24,7 +24,7 @@ export type CartItemType = {
 };
 
 const getProducts = async (): Promise<CartItemType[]> =>
-  await (await fetch('https://localhost:5001/api/AddingCarts')).json();
+  await (await fetch('https://prideweddingapi.azurewebsites.net/api/AddingCarts')).json();
 
 const App1 = () => {
   const [cartOpen, setCartOpen] = useState(false);

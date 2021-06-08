@@ -14,7 +14,7 @@ export const HotelCardDetails = async (CardNo,CardholderName,ExpDate,CVV,props) 
     
     else {
         try {
-            await axois.post("https://localhost:5001/api/Payments", body, config);
+            await axois.post("https://prideweddingapi.azurewebsites.net/api/Payments", body, config);
             alert("Card is being Verified ");
             props.history.push("/hotel_upload");
             
@@ -43,7 +43,7 @@ export const SaloonCardDetails = async (CardNo,CardholderName,ExpDate,CVV,props)
     
     else {
         try {
-            await axois.post("https://localhost:5001/api/Payments", body, config);
+            await axois.post("https://prideweddingapi.azurewebsites.net/api/Payments", body, config);
             alert("Card is being Verified ");
             props.history.push("/saloon_upload");
             
@@ -72,7 +72,7 @@ export const PhotoCardDetails = async (CardNo,CardholderName,ExpDate,CVV,props) 
     
     else {
         try {
-            await axois.post("https://localhost:5001/api/Payments", body, config);
+            await axois.post("https://prideweddingapi.azurewebsites.net/api/Payments", body, config);
             alert("Card is being Verified ");
             props.history.push("/photographer_upload");
             
@@ -101,7 +101,7 @@ export const JewelleryCardDetails = async (CardNo,CardholderName,ExpDate,CVV,pro
     
     else {
         try {
-            await axois.post("https://localhost:5001/api/Payments", body, config);
+            await axois.post("https://prideweddingapi.azurewebsites.net/api/Payments", body, config);
             alert("Card is being Verified ");
             props.history.push("/jweller_upload");
             
@@ -130,7 +130,7 @@ export const DecorationCardDetails = async (CardNo,CardholderName,ExpDate,CVV,pr
     
     else {
         try {
-            await axois.post("https://localhost:5001/api/Payments", body, config);
+            await axois.post("https://prideweddingapi.azurewebsites.net/api/Payments", body, config);
             alert("Card is being Verified ");
             props.history.push("/decoration_upload");
             
@@ -159,7 +159,7 @@ export const EntertainmentCardDetails = async (CardNo,CardholderName,ExpDate,CVV
     
     else {
         try {
-            await axois.post("https://localhost:5001/api/Payments", body, config);
+            await axois.post("https://prideweddingapi.azurewebsites.net/api/Payments", body, config);
             alert("Card is being Verified ");
             props.history.push("/entertainer_upload");
             

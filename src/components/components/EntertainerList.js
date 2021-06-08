@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react'
-import Hotel from './Hotel'
+import Entertainer from './Entertainer'
 import axios from "axios";
 
-export default function HotelList() {
-    const [entertainmentList, setEntertainmentList] = useState([])
+export default function EntertainerList() {
+    const [entertainerList, setEntertainerList] = useState([])
     const [recordForEdit, setRecordForEdit] = useState(null)
 
     useEffect(() => {
-        refreshEntertainmentList();
+        refreshEntertainerList();
     }, [])
 
-    const employeeAPI = (url = 'http://localhost:5000/api/EntertainmentVendors/') => {
+    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/EntertainmentVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -19,10 +19,10 @@ export default function HotelList() {
         }
     }
 
-    function refreshEntertainmentList() {
+    function refreshEntertainerList() {
         employeeAPI().fetchAll()
             .then(res => {
-                setEntertainmentList(res.data)
+                setEntertainerList(res.data)
             })
             .catch(err => console.log(err))
     }
@@ -32,14 +32,14 @@ export default function HotelList() {
             employeeAPI().create(formData)
                 .then(res => {
                     onSuccess();
-                    refreshEntertainmentList();
+                    refreshEntertainerList();
                 })
                 .catch(err => console.log(err))
         else
             employeeAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
-                    refreshEntertainmentList();
+                    refreshEntertainerList();
                 })
                 .catch(err => console.log(err))
 
@@ -53,7 +53,7 @@ export default function HotelList() {
         e.stopPropagation();
         if (window.confirm('Are you sure to delete this record?'))
             employeeAPI().delete(id)
-                .then(res => refreshEntertainmentList())
+                .then(res => refreshEntertainerList())
                 .catch(err => console.log(err))
     }
 
@@ -75,26 +75,26 @@ export default function HotelList() {
             <div className="col-md-12">
                 <div className="jumbotron jumbotron-fluid py-4">
                     <div className="container text-center">
-                        <h1 className="display-4">Publish Entertainment Addvertisements</h1>
+                        <h1 className="display-4">Publish Entertainment Advertisements</h1>
                     </div>
                 </div>
             </div>
             <div className="col-md-6">
-                <Hotel
+                <Entertainer
                     addOrEdit={addOrEdit}
                     recordForEdit={recordForEdit}
                 />
             </div>
             <div className="col-md-6">
-            <h1 className="lead">Available Addvertisements</h1>
+            <h1 className="lead">Available Advertisements</h1>
                 <table>
                     <tbody>
                         {
                             //tr > 3 td
-                            [...Array(Math.ceil(entertainmentList.length / 3))].map((e, i) =>
+                            [...Array(Math.ceil(entertainerList.length / 3))].map((e, i) =>
                                 <tr key={i}>
-                                    <td>{imageCard(entertainmentList[3 * i])}</td>
-                                    <td>{entertainmentList[3 * i + 1] ? imageCard(entertainmentList[3 * i + 1]) : null}</td>
+                                    <td>{imageCard(entertainerList[3 * i])}</td>
+                                    <td>{entertainerList[3 * i + 1] ? imageCard(entertainerList[3 * i + 1]) : null}</td>
                                    
                                 </tr>
                             )

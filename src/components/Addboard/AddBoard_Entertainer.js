@@ -12,7 +12,7 @@ export default function AddBoard_Entertainer() {
         refreshEntertainerList();
     }, [])
 
-    const employeeAPI = (url = 'https://localhost:5000/api/EntertainmentVendors/') => {
+    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/EntertainmentVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -85,7 +85,7 @@ export default function AddBoard_Entertainer() {
         <div className="col-md-12">
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
-                    <h1 className="display-4">Entertainment Addvertisements</h1>
+                    <h1 className="display-4">Entertainment Advertisements</h1>
                 </div>
             </div>
         </div>
