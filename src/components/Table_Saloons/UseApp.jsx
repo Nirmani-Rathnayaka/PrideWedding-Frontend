@@ -51,7 +51,7 @@ export default function UseApp() {
     </div>
     
 
-    <div >
+    <div width="100%" >
       
       <Datatable data={search(data)}/> 
     </div>
