@@ -16,7 +16,7 @@ export default class DemoCarousel extends Component {
         return (
             
             <Carousel >
-                <br></br>
+              
 
              <div className="card-body">
                 <div className="myb">
