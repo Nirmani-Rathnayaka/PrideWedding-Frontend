@@ -30,6 +30,7 @@ body {
   width: 300px;
   overflow-x: scroll;
   display: block;
+  table-layout: fixed
 }
 .atbody {
   overflow-y: scroll;
