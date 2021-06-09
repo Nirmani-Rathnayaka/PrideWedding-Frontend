@@ -27,7 +27,7 @@ body {
 
 .atable{
   border-collapse: collapse;
-  width: 300px;
+  width: 600px;
   overflow-x: scroll;
   display: block;
   table-layout: fixed
