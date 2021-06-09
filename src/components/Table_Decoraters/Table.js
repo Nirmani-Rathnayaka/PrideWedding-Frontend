@@ -12,7 +12,8 @@ export default function Table(){
   <React.StrictMode>
 
     <div> 
-    <div  className="testClass">
+    
+    <div  className="testClass">  
     DISCOVER YOUR WEDDING DECORATERS 
     </div>
    

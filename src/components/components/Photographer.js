@@ -107,6 +107,7 @@ export default function Photographer(props) {
      
         <>
           <div className="container text-center">
+          <br></br>
                 <p className="lead">Your Advertisement</p>
            
             <form autoComplete="off" noValidate onSubmit={handleFormSubmit}>

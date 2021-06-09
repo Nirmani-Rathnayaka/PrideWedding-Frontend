@@ -32,7 +32,7 @@ const VendorRegister = (props) => {
 
   return (
     <Fragment>
-
+      <br></br>
       <form  onSubmit={e => onSubmit(e)}>
         
         <h3  className="testClass" >VENDOR REGISTRATION </h3>

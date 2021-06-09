@@ -90,16 +90,13 @@ export default function AddBoard_Saloon() {
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
                     <h1 className="display-4">Saloon Advertisements</h1>
+                    <Link to="/table2">
+                        <button  class="magenta">SEARCH</button>
+                      </Link>
                 </div>
             </div>
         </div>
-        <div >
-        <div class="flex-parent jc-center">
-                      <Link to="/table2">
-                        <button  class="magenta">SEARCH</button>
-                      </Link>
-                 </div> 
-        </div>
+  
         <div className="center-align">
             <table>
                 <tbody>

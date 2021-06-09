@@ -14,8 +14,9 @@ import img2 from './images/giphy (1).gif';
 export default class DemoCarousel extends Component {
     render() {
         return (
-
+            
             <Carousel >
+                <br></br>
 
              <div className="card-body">
                 <div className="myb">
@@ -44,7 +45,7 @@ export default class DemoCarousel extends Component {
 
                 <div className="myb">
                 <h2>
-                  <span class="badge badge-danger"> YOUR WEDDING VENDOR SEARCH JUST GOT EASIER !!</span>
+                  <span class="badge badge-danger">YOUR WEDDING VENDOR SEARCH JUST GOT EASIER</span>
                 </h2>
                     <img src={img2} alt="img"/>
                     <div className="centered" > WE ARE PRIDE WEDDING SERVICE PROVIDER</div>     

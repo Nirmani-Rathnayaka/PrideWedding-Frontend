@@ -17,8 +17,8 @@ export default class Contactinfo extends Component {
         return (
           
             <form>
-               
-                <h3 className="testClass">See Us on</h3>
+               <br></br>
+                <h3 className="testClass">Follow Us on</h3>
                
               <img src={logo} alt="Logo" />;
                 <div className="social-container">
@@ -26,21 +26,27 @@ export default class Contactinfo extends Component {
                 <a
                    href="https://www.youtube.com/channel/UCR4UhNm7WoWAoIh1_fZ3dwA"
                     className="youtube social"
+                    target='_blank'
                 >
         <FontAwesomeIcon icon={faYoutube} size="4x"  />
       </a>
       <a
         href="https://www.facebook.com/Pride-Wedding-Planners-100516545407395"
         className="facebook social"
+        target='_blank'
       >
         <FontAwesomeIcon icon={faFacebook} size="4x" />
       </a>
-      <a href="https://twitter.com/PlannersPride" className="twitter social">
+      <a href="https://twitter.com/PlannersPride" 
+      className="twitter social"
+      target='_blank'>
+        
         <FontAwesomeIcon icon={faTwitter} size="4x" />
       </a>
       <a
         href="https://www.instagram.com/learnbuildteach"
         className="instagram social"
+        target='_blank'
       >
         <FontAwesomeIcon icon={faInstagram} size="4x"  />
       </a>

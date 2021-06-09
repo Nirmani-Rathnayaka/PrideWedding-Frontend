@@ -6,6 +6,7 @@ import { homeObjOne, homeObjTwo} from './Data';
 function Products() {
   return (
     <>
+    <br></br>
       <HeroSection {...homeObjOne} />
       <HeroSection {...homeObjTwo} />
     </>

@@ -32,15 +32,18 @@ const ClientRegister = (props) => {
 
   return (
     <Fragment>
-
+      <br></br>
       <form  onSubmit={e => onSubmit(e)}>
         
       <h3  className="testClass" >CLIENT REGISTRATION </h3>
          <h3 className="form_text">Create a new account</h3>
+         <div class="flex-parent jc-center">
+   <span>Your Account will be valied only for three months</span>
+  </div>  
 
         <div className="form-group">
         <label>Client NIC No</label>
-          <input className="Form-control"
+          <input className="form-control"
             type="text"
             name="ClientNIC"
             placeholder="Client NIC No"
@@ -54,7 +57,7 @@ const ClientRegister = (props) => {
 
         <div className="form-group">
         <label>First Name</label>
-          <input className="Form-control"
+          <input className="form-control"
             type="text"
             placeholder="First Name"
             name="FirstName"
@@ -65,7 +68,7 @@ const ClientRegister = (props) => {
         </div>
         <div className="form-group">
         <label>Last Name</label>
-          <input className="Form-control"
+          <input className="form-control"
             type="text"
             placeholder="Last Name"
             name="LastName"
@@ -77,7 +80,7 @@ const ClientRegister = (props) => {
         </div>
         <div className="form-group">
         <label>Address</label>
-          <input className="Form-control"
+          <input className="form-control"
             type="text"
             placeholder="Address"
             name="Address"
@@ -90,7 +93,7 @@ const ClientRegister = (props) => {
 
         <div className="form-group">
         <label>Username</label>
-          <input className="Form-control"
+          <input className="form-control"
             type="text"
             placeholder="Username"
             name="UserName"
@@ -104,7 +107,7 @@ const ClientRegister = (props) => {
 
         <div className="form-group">
         <label>Email</label>
-          <input className="Form-control"
+          <input className="form-control"
             type="email"
             placeholder="Email"
             name="Email"
@@ -117,7 +120,7 @@ const ClientRegister = (props) => {
 
         <div className="form-group">
           <label>Mobile No</label>
-          <input className="Form-control"
+          <input className="form-control"
             type="text"
             placeholder="MobileNo"  pattern="(?=.*\d).{10,}" title="Must enter Your 10 digit Mobile Number"
             name="MobileNo"
@@ -134,7 +137,7 @@ const ClientRegister = (props) => {
 
         <div className="form-group">
         <label>Password</label>
-          <input className="Form-control"
+          <input className="form-control"
             type="password"
             placeholder="Password"
             name="Password"
@@ -145,7 +148,7 @@ const ClientRegister = (props) => {
         </div>
         <div className="form-group">
           <label>Confirm Password</label>
-          <input className="Form-control"
+          <input className="form-control"
             type="password"
             placeholder="Confirm Your Password"
             name="ConfirmPassword"

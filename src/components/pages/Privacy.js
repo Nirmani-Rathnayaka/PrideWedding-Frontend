@@ -9,6 +9,7 @@ render() {
         <div className="outer">
         <div className="inner">
 		<form>
+        <br></br>
             <h1 position="center">Publish Information Here...</h1>
 
             <div className="form-group">
