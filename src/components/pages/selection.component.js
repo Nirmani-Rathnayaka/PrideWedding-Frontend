@@ -21,6 +21,8 @@ export default class Employee extends Component {
                   <h1 className="testClassNull">  </h1>
                   <br></br>
                   <br></br>
+                  <br></br>
+                  <br></br>
                   
               </div>            
               <div class="position-absolute mid-left"> 
