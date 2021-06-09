@@ -26,7 +26,7 @@ function Pay(props) {
   return(
     <Fragment> 
 <div>
-
+<br></br>
   <Cards
   number={CardNo}
   name={CardholderName}
@@ -37,7 +37,22 @@ function Pay(props) {
      
   <form  onSubmit={e => onSubmit(e)}>
 
-  <h3 >Payments</h3>
+  <h3 >Payment Details</h3>
+  <div class="flex-parent jc-center">
+   <span>Please make the payment to join with our service</span>
+  </div>  
+   <div>
+    <div class="flex-parent jc-center">
+     <button class="badge badge-danger">  $11.99</button>
+    </div>  
+   
+    <div class="flex-parent jc-center">
+        <span class="red margin-right">Per month</span>
+    </div>  
+    <div class="flex-parent jc-center">
+        <span  class="red margin-right">Billed monthly</span>
+    </div>
+  </div>
   <div className="form">
   <label>Card Number</label>
     <input className="input-text" 
@@ -99,13 +114,7 @@ function Pay(props) {
     <div>
    
     <button type="Submit" className="btn btn-dark btn-lg btn-block">Pay Now</button>
-   
-    <div>
-    <h6>You won't be charged until service confirmed.</h6>
-  
-  </div>
-
-     </div>  
+   </div>  
   </form>
 
 

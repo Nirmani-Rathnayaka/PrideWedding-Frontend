@@ -16,10 +16,12 @@ export default class Employee extends Component {
               
               <div class="position-absolute top-left"> 
                  <p class="new2"> PRIDE WEDDING SERVICE PROVIDERS </p> 
-                  <p class="new2"> </p> 
+                  
               </div> 
                   <h1 className="testClassNull">  </h1>
-              
+                  <br></br>
+                  <br></br>
+                  
               </div>            
               <div class="position-absolute mid-left"> 
                 <Link to="/register">

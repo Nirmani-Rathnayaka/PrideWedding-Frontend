@@ -89,16 +89,13 @@ export default function AddBoard_Jweller() {
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
                     <h1 className="display-4">Jweller Advertisements</h1>
+                    <Link to="/table5">
+                        <button  class="magenta">SEARCH</button>
+                      </Link>
                 </div>
             </div>
         </div>
-        <div >
-        <div class="flex-parent jc-center">
-                      <Link to="/table5">
-                        <button  class="magenta">SEARCH</button>
-                      </Link>
-                 </div> 
-        </div>
+
         <div >
             <table>
                 <tbody>

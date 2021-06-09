@@ -18,6 +18,8 @@ export default class Employee extends Component {
                   <p class="new2"> </p> 
               </div> 
               <h1 className="testClassNull">  </h1>
+              <br></br>
+              <br></br>
               <div class="position-absolute mid-left"> 
               <Link to="/hotelpay">  
                  <button type="button" class="new3">HOTEL AND CATERING</button> 

@@ -6,7 +6,7 @@ import Pricing from '../../Pricing';
 function Services() {
   return (
     <>
-      
+      <br></br>
       <HeroSection {...homeObjOne} />
       <HeroSection {...homeObjThree} />
       <Pricing />

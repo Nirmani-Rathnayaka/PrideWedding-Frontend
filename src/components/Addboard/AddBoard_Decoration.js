@@ -89,14 +89,13 @@ export default function AddBoard_Decoration() {
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
                     <h1 className="display-4">Decoration Advertisements</h1>
-                </div>
-            </div>
-        </div>
-        <div >
-        <div class="flex-parent jc-center">
-                      <Link to="/table3">
+                    <Link to="/table3">
                         <button  class="magenta">SEARCH</button>
                       </Link>
+                </div>
+            </div>
+        <div class="flex-parent jc-center">
+
                  </div> 
         </div>
         <div >

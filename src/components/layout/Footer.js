@@ -60,7 +60,6 @@ function Footer() {
             <Link
               class='social-icon-link facebook'
               to='/contact-info'
-             
               aria-label='Facebook'
             >
               <i class='fab fa-facebook-f' />

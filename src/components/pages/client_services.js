@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-
 import { Link } from 'react-router-dom';
-//import './selection.css';
 import Wedding from "./video/pride_wedding-c.mp4";
 import './clientservices.css';
-
 import img1 from './images/plan.jpg';
 
 
@@ -14,7 +11,7 @@ export default class Employee extends Component {
             
 <form>
   <div>
-
+  <br></br>
   <video autoPlay loop muted
             style={{
                 
@@ -53,7 +50,7 @@ export default class Employee extends Component {
               </form> 
               <img src={img1} alt="img1" />      
               </div>            
-              </form> 
+        </form> 
      
         );
     }

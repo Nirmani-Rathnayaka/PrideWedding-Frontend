@@ -86,15 +86,11 @@ export default function AddBoard_Entertainer() {
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
                     <h1 className="display-4">Entertainment Advertisements</h1>
-                </div>
-            </div>
-        </div>
-        <div >
-        <div class="flex-parent jc-center">
-                      <Link to="/table6">
+                    <Link to="/table6">
                         <button  class="magenta">SEARCH</button>
                       </Link>
-                 </div> 
+                </div>
+            </div>
         </div>
         <div >
             <table>

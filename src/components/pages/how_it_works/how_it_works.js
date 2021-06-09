@@ -6,6 +6,7 @@ import { homeObjOne,  homeObjThree } from './Data';
 function SignUp() {
   return (
     <>
+    <br></br>
       <HeroSection {...homeObjOne} />
       <HeroSection {...homeObjThree} />
     </>

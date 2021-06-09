@@ -26,6 +26,7 @@ import  {VendorLogins}  from '../../authorization/authorization';
 
         return (
           <Fragment>
+            <br></br>
             <form onSubmit={e => onSubmit(e)} >
             <h3 className="testClass">Vendor Log in</h3>
 

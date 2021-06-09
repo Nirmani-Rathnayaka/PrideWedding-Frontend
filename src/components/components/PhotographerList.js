@@ -75,6 +75,7 @@ export default function PhotographerList() {
             <div className="col-md-12">
                 <div className="jumbotron jumbotron-fluid py-4">
                     <div className="container text-center">
+                    <br></br>
                         <h1 className="display-4">Publish Photography Advertisements</h1>
                     </div>
                 </div>

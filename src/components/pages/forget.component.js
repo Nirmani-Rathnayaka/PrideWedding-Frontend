@@ -8,6 +8,7 @@ export default class Forget extends Component {
         return (
          
             <form>
+                <br></br>
                 <h3>Forgot Password</h3>
 
                 <div className="form-group">

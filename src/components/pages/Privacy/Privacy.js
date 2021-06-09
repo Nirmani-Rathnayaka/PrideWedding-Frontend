@@ -6,6 +6,7 @@ import { homeObjOne } from './Data';
 function Home() {
   return (
     <>
+    <br></br>
       <HeroSection {...homeObjOne} />
 
     </>

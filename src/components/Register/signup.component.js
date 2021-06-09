@@ -27,16 +27,16 @@ const Newsteller = (props) => {
 
   return (
     <Fragment>
-
+      <br></br>
       <form  onSubmit={e => onSubmit(e)}>
         
      
          <h3 className="form_text">NewsTeller Registration</h3>
-
+ 
 
         <div className="form-group">
         <label>First Name</label>
-          <input className="Form-control"
+          <input className="form-control"
             type="text"
             placeholder="First Name"
             name="FirstName"
@@ -47,7 +47,7 @@ const Newsteller = (props) => {
         </div>
         <div className="form-group">
         <label>Last Name</label>
-          <input className="Form-control"
+          <input className="form-control"
             type="text"
             placeholder="Last Name"
             name="LastName"
@@ -62,7 +62,7 @@ const Newsteller = (props) => {
 
         <div className="form-group">
         <label>Email</label>
-          <input className="Form-control"
+          <input className="form-control"
             type="email"
             placeholder="Email"
             name="Email"
@@ -71,10 +71,15 @@ const Newsteller = (props) => {
             onChange={e => onChange(e)}
           />
           <small className="font_size"></small>
+         
+
         </div>
 
         <input type="submit" className="btn btn-dark btn-lg btn-block" value="Subscribe" />
-       
+        <div class="flex-parent jc-center">
+        <span>The provided Email will recieve our updates and services</span>
+        </div> 
+      
 
 
 

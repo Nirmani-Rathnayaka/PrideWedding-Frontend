@@ -92,16 +92,13 @@ export default function AddBoard_Photography() {
             <div className="jumbotron jumbotron-fluid py-4">
                 <div className="container text-center">
                     <h1 className="display-4">Photography Advertisements</h1>
+                    <Link to="/table4">
+                        <button  class="magenta">SEARCH</button>
+                      </Link>
                 </div>
             </div>
         </div>
-        <div >
-        <div class="flex-parent jc-center">
-                      <Link to="/table4">
-                        <button  class="magenta">SEARCH</button>
-                      </Link>
-                 </div> 
-        </div>
+
         <div >
             <table>
                 <tbody>

@@ -12,6 +12,7 @@ export default function Table(){
   <React.StrictMode>
 
     <div> 
+    
     <div  className="testClass">
     DISCOVER YOUR WEDDING HOTELS
     </div>
