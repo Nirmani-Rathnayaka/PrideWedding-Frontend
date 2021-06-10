@@ -27,10 +27,12 @@ body {
 
 .atable{
   border-collapse: collapse;
-  width: 300px;
+  width: 1000px;
   overflow-x: scroll;
   display: block;
+  table-layout: fixed
 }
+
 .atbody {
   overflow-y: scroll;
   overflow-x: hidden;

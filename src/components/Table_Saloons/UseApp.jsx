@@ -10,7 +10,7 @@ export default function UseApp() {
   const [searchColumns,setSearchColumns] = useState(["companyName","locatedDistrict"]);
 
   useEffect(()=>{
-    fetch("http://localhost:5000/api/SaloonVendors")
+    fetch("https://prideweddingapi.azurewebsites.net/api/SaloonVendors")
     .then(response=>response.json())
     .then((json) => setData(json))
 
@@ -51,8 +51,10 @@ export default function UseApp() {
     </div>
     
 
-      
+      <dev>
       <Datatable data={search(data)}/> 
+      </dev>
+     
     
 
 
