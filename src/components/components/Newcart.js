@@ -206,6 +206,12 @@ export default function Newcart(props) {
                         <div className="form-group text-center">
                             <button type="submit" className="btn btn-light">Submit</button>
                         </div>
+                        <div>
+                        <h4>Need to update your cartitem?</h4>
+                        <Link to="contact-form">
+                          <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Contact Us</button>
+                        </Link>
+                        </div>
                     </div>
                 </div>
             </form>
