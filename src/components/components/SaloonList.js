@@ -10,7 +10,7 @@ export default function SaloonList() {
         refreshSaloonList();
     }, [])
 
-    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/SaloonVendors/') => {
+    const prideweddingAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/SaloonVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -20,7 +20,7 @@ export default function SaloonList() {
     }
 
     function refreshSaloonList() {
-        employeeAPI().fetchAll()
+        prideweddingAPI().fetchAll()
             .then(res => {
                 setSaloonList(res.data)
             })
@@ -29,14 +29,14 @@ export default function SaloonList() {
 
     const addOrEdit = (formData, onSuccess) => {
         if (formData.get('companyID') == "0")
-            employeeAPI().create(formData)
+            prideweddingAPI().create(formData)
                 .then(res => {
                     onSuccess();
                     refreshSaloonList();
                 })
                 .catch(err => console.log(err))
         else
-            employeeAPI().update(formData.get('companyID'), formData)
+            prideweddingAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
                     refreshSaloonList();
@@ -52,7 +52,7 @@ export default function SaloonList() {
     const onDelete = (e, id) => {
         e.stopPropagation();
         if (window.confirm('Are you sure to delete this record?'))
-            employeeAPI().delete(id)
+            prideweddingAPI().delete(id)
                 .then(res => refreshSaloonList())
                 .catch(err => console.log(err))
     }
@@ -62,9 +62,7 @@ export default function SaloonList() {
             <img src={data.imageSrc} className="card-img-top-responsive" width="170" height="170" />
             <div className="card-body ">
                 <h5>{data.companyName}</h5>
-                <button className="btn btn-light delete-button" onClick={e => onDelete(e, parseInt(data.companyID))}>
-                    <i className="far fa-trash-alt"></i>
-                </button>
+              
             </div>
         </div>
     )
@@ -92,10 +90,10 @@ export default function SaloonList() {
                     <tbody>
                         {
                             //tr > 3 td
-                            [...Array(Math.ceil(saloonList.length / 3))].map((e, i) =>
+                            [...Array(Math.ceil(saloonList.length / 2))].map((e, i) =>
                                 <tr key={i}>
-                                    <td>{imageCard(saloonList[3 * i])}</td>
-                                    <td>{saloonList[3 * i + 1] ? imageCard(saloonList[3 * i + 1]) : null}</td>
+                                    <td>{imageCard(saloonList[2 * i])}</td>
+                                    <td>{saloonList[2 * i + 1] ? imageCard(saloonList[2 * i + 1]) : null}</td>
                                    
                                 </tr>
                             )

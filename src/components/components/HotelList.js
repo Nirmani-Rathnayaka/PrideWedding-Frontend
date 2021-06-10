@@ -10,7 +10,7 @@ export default function HotelList() {
         refreshHotelList();
     }, [])
 
-    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/HotelVendors/') => {
+    const prideweddingAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/HotelVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -20,7 +20,7 @@ export default function HotelList() {
     }
 
     function refreshHotelList() {
-        employeeAPI().fetchAll()
+        prideweddingAPI().fetchAll()
             .then(res => {
                 setHotelList(res.data)
             })
@@ -29,14 +29,14 @@ export default function HotelList() {
 
     const addOrEdit = (formData, onSuccess) => {
         if (formData.get('companyID') == "0")
-            employeeAPI().create(formData)
+            prideweddingAPI().create(formData)
                 .then(res => {
                     onSuccess();
                     refreshHotelList();
                 })
                 .catch(err => console.log(err))
         else
-            employeeAPI().update(formData.get('companyID'), formData)
+            prideweddingAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
                     refreshHotelList();
@@ -52,7 +52,7 @@ export default function HotelList() {
     const onDelete = (e, id) => {
         e.stopPropagation();
         if (window.confirm('Are you sure to delete this record?'))
-            employeeAPI().delete(id)
+            prideweddingAPI().delete(id)
                 .then(res => refreshHotelList())
                 .catch(err => console.log(err))
     }
@@ -62,9 +62,7 @@ export default function HotelList() {
             <img src={data.imageSrc} className="card-img-top-responsive" width="170" height="170" />
             <div className="card-body ">
                 <h5>{data.companyName}</h5>
-                <button className="btn btn-light delete-button" onClick={e => onDelete(e, parseInt(data.companyID))}>
-                    <i className="far fa-trash-alt"></i>
-                </button>
+               
             </div>
         </div>
     )
@@ -92,10 +90,10 @@ export default function HotelList() {
                     <tbody>
                         {
                             //tr > 3 td
-                            [...Array(Math.ceil(hotelList.length / 3))].map((e, i) =>
+                            [...Array(Math.ceil(hotelList.length / 2))].map((e, i) =>
                                 <tr key={i}>
-                                    <td>{imageCard(hotelList[3 * i])}</td>
-                                    <td>{hotelList[3 * i + 1] ? imageCard(hotelList[3 * i + 1]) : null}</td>
+                                    <td>{imageCard(hotelList[2 * i])}</td>
+                                    <td>{hotelList[2 * i + 1] ? imageCard(hotelList[2 * i + 1]) : null}</td>
                                    
                                 </tr>
                             )

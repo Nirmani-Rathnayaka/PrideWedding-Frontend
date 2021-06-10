@@ -81,6 +81,16 @@ import Services from "./components/pages/Services/Services";
 import Terms from './components/pages/Terms/Terms';
 import Privacy from "./components/pages/Privacy/Privacy";
 
+import PrideWeddingSaloon from "./PrideWedding_Management/Group18_Admin_Management/PrideWedding-Saloon";
+import PrideWeddingHotel from "./PrideWedding_Management/Group18_Admin_Management/PrideWedding-Hotel";
+import PrideWeddingDecoration from "./PrideWedding_Management/Group18_Admin_Management/PrideWedding-Decoration";
+import PrideWeddingPhotography from "./PrideWedding_Management/Group18_Admin_Management/PrideWedding-Photography";
+import PrideWeddingJwellery from "./PrideWedding_Management/Group18_Admin_Management/PrideWedding-Jwellery";
+import PrideWeddingEntertainment from "./PrideWedding_Management/Group18_Admin_Management/PrideWedding-Entertainment";
+import PrideWeddingCart from "./PrideWedding_Management/Group18_Admin_Management/PrideWedding-Cart";
+import Management from "./PrideWedding_Management/Management";
+
+
 
 
 //import react from 'react';
@@ -172,6 +182,16 @@ function App() {
 
             <Route path="/Client-Registration" component={ ClientRegister}/>
             <Route path="/Vendor-Registration" component={ VendorRegister}/>
+
+            <Route path="/EE5201GroupNumber18-prideWeddingCart" component={PrideWeddingCart}/>
+            <Route path="/EE5201GroupNumber18-prideweddingEntertainment" component={PrideWeddingEntertainment} />
+            <Route path="/EE5201GroupNumber18-prideweddingJwellery" component={PrideWeddingJwellery} />
+            <Route path="/EE5201GroupNumber18-prideweddingPhotography" component={PrideWeddingPhotography} />
+            <Route path="/EE5201GroupNumber18-prideweddingDecoration" component={PrideWeddingDecoration} /> 
+            <Route path="/EE5201GroupNumber18-prideweddingHotel" component={PrideWeddingHotel} />
+            <Route path="/EE5201GroupNumber18-prideweddingSaloon" component={PrideWeddingSaloon} />
+            <Route path="/EE5201GroupNumber18-prideweddingManagement" component={Management} />
+
 
             
           </Switch>

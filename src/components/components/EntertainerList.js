@@ -10,7 +10,7 @@ export default function EntertainerList() {
         refreshEntertainerList();
     }, [])
 
-    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/EntertainmentVendors/') => {
+    const prideweddingAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/EntertainmentVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -20,7 +20,7 @@ export default function EntertainerList() {
     }
 
     function refreshEntertainerList() {
-        employeeAPI().fetchAll()
+        prideweddingAPI().fetchAll()
             .then(res => {
                 setEntertainerList(res.data)
             })
@@ -29,14 +29,14 @@ export default function EntertainerList() {
 
     const addOrEdit = (formData, onSuccess) => {
         if (formData.get('companyID') == "0")
-            employeeAPI().create(formData)
+            prideweddingAPI().create(formData)
                 .then(res => {
                     onSuccess();
                     refreshEntertainerList();
                 })
                 .catch(err => console.log(err))
         else
-            employeeAPI().update(formData.get('companyID'), formData)
+            prideweddingAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
                     refreshEntertainerList();
@@ -52,7 +52,7 @@ export default function EntertainerList() {
     const onDelete = (e, id) => {
         e.stopPropagation();
         if (window.confirm('Are you sure to delete this record?'))
-            employeeAPI().delete(id)
+            prideweddingAPI().delete(id)
                 .then(res => refreshEntertainerList())
                 .catch(err => console.log(err))
     }
@@ -62,9 +62,7 @@ export default function EntertainerList() {
             <img src={data.imageSrc} className="card-img-top-responsive" width="170" height="170" />
             <div className="card-body ">
                 <h5>{data.companyName}</h5>
-                <button className="btn btn-light delete-button" onClick={e => onDelete(e, parseInt(data.companyID))}>
-                    <i className="far fa-trash-alt"></i>
-                </button>
+               
             </div>
         </div>
     )
@@ -92,10 +90,10 @@ export default function EntertainerList() {
                     <tbody>
                         {
                             //tr > 3 td
-                            [...Array(Math.ceil(entertainerList.length / 3))].map((e, i) =>
+                            [...Array(Math.ceil(entertainerList.length / 2))].map((e, i) =>
                                 <tr key={i}>
-                                    <td>{imageCard(entertainerList[3 * i])}</td>
-                                    <td>{entertainerList[3 * i + 1] ? imageCard(entertainerList[3 * i + 1]) : null}</td>
+                                    <td>{imageCard(entertainerList[2 * i])}</td>
+                                    <td>{entertainerList[2 * i + 1] ? imageCard(entertainerList[2 * i + 1]) : null}</td>
                                    
                                 </tr>
                             )

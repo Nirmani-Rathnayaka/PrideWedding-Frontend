@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-const defaultImageSrc = '/img/add2.gif'
+const defaultImageSrc = '/img/newadd.gif'
 
 const initialFieldValues = {
     companyID: 0,
@@ -212,11 +212,17 @@ export default function Jweller(props) {
                         <div className="form-group text-center">
                             <button type="submit" className="btn btn-light">Submit</button>
                         </div>
-                        <div class="flex-parent jc-center">
+                        <div >
                       <Link to="cart_upload">
-                        <button  class="magenta">Upload to cart</button>
+                        <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" >Upload to cart</button>
                       </Link>
-                 </div> 
+                        </div>
+                      <div>
+                        <h4>Need to update your advertisment?</h4>
+                        <Link to="contact-form">
+                          <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Contact Us</button>
+                        </Link>
+                        </div>
                     </div>
                 </div>
             </form>
