@@ -62,7 +62,7 @@ export default function AddBoard_Photography() {
 
             <h2><span class="badge badge-danger">{data.companyName}</span></h2>
  
-                <span>{data.locatedDistrict} Distric</span> <br />
+                <span>{data.locatedDistrict} District</span> <br />
                 <span>{data.locatedProvince
                 
                 

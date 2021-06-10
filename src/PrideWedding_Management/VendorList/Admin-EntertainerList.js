@@ -61,7 +61,11 @@ export default function EntertainerList() {
         <div className="card"onClick={() => { showRecordDetails(data) }}>
             <img src={data.imageSrc} className="card-img-top-responsive" width="170" height="170" />
             <div className="card-body ">
-                <h5>{data.companyName}</h5>
+            <h5>{data.companyCategory}</h5>
+                <h6>{data.companyName}</h6>
+                <span> District-{data.locatedDistrict}</span> <br />
+                <span>{data.telephoneNumber}</span> <br />
+        
                 <button className="btn btn-light delete-button" onClick={e => onDelete(e, parseInt(data.companyID))}>
                     <i className="far fa-trash-alt"></i>
                 </button>
