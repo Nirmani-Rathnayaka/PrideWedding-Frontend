@@ -45,6 +45,7 @@ export default class Employee extends Component {
                   <Link to="/contact-form">
                   < button type="submit" className="btn btn-dark btn-lg btn-block">Contact Us </button>
                   </Link>
+                  <br></br>
               </div>
               </div> 
              
