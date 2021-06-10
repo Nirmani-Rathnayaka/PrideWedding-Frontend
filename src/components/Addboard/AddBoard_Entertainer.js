@@ -60,7 +60,7 @@ export default function AddBoard_Entertainer() {
 
             <h2><span class="badge badge-danger">{data.companyName}</span></h2>
  
-                <span>{data.locatedDistrict} Distric</span> <br />
+                <span>{data.locatedDistrict} District</span> <br />
                 <span>{data.locatedProvince} Province</span> <br />
                 <span className="center">Min Package - {data.min_package}$</span> <br />
                 <span>Max Package -{data.max_package}$</span> <br />
