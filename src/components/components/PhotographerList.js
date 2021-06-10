@@ -10,7 +10,7 @@ export default function PhotographerList() {
         refreshPhotographerList();
     }, [])
 
-    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/PhotographyVendors/') => {
+    const prideweddingAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/PhotographyVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -20,7 +20,7 @@ export default function PhotographerList() {
     }
 
     function refreshPhotographerList() {
-        employeeAPI().fetchAll()
+        prideweddingAPI().fetchAll()
             .then(res => {
                 setPhotographerList(res.data)
             })
@@ -29,14 +29,14 @@ export default function PhotographerList() {
 
     const addOrEdit = (formData, onSuccess) => {
         if (formData.get('companyID') == "0")
-            employeeAPI().create(formData)
+            prideweddingAPI().create(formData)
                 .then(res => {
                     onSuccess();
                     refreshPhotographerList();
                 })
                 .catch(err => console.log(err))
         else
-            employeeAPI().update(formData.get('companyID'), formData)
+            prideweddingAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
                     refreshPhotographerList();
@@ -52,7 +52,7 @@ export default function PhotographerList() {
     const onDelete = (e, id) => {
         e.stopPropagation();
         if (window.confirm('Are you sure to delete this record?'))
-            employeeAPI().delete(id)
+            prideweddingAPI().delete(id)
                 .then(res => refreshPhotographerList())
                 .catch(err => console.log(err))
     }
@@ -62,9 +62,7 @@ export default function PhotographerList() {
             <img src={data.imageSrc} className="card-img-top-responsive" width="170" height="170" />
             <div className="card-body ">
                 <h5>{data.companyName}</h5>
-                <button className="btn btn-light delete-button" onClick={e => onDelete(e, parseInt(data.employeeID))}>
-                    <i className="far fa-trash-alt"></i>
-                </button>
+               
             </div>
         </div>
     )
@@ -92,11 +90,11 @@ export default function PhotographerList() {
                     <tbody>
                         {
                             //tr > 3 td
-                            [...Array(Math.ceil(photographerList.length / 3))].map((e, i) =>
+                            [...Array(Math.ceil(photographerList.length / 2))].map((e, i) =>
                                 <tr key={i}>
-                                    <td>{imageCard(photographerList[3 * i])}</td>
-                                    <td>{photographerList[3 * i + 1] ? imageCard(photographerList[3 * i + 1]) : null}</td>
-                                    <td>{photographerList[3 * i + 2] ? imageCard(photographerList[3 * i + 2]) : null}</td>
+                                    <td>{imageCard(photographerList[2 * i])}</td>
+                                    <td>{photographerList[2 * i + 1] ? imageCard(photographerList[2 * i + 1]) : null}</td>
+                                  
                                 </tr>
                             )
                         }

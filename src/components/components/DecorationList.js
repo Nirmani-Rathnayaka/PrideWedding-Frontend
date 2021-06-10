@@ -10,7 +10,7 @@ export default function DecorationList() {
         refreshDecorationList();
     }, [])
 
-    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/DecorationVendors/') => {
+    const prideweddingAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/DecorationVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -20,7 +20,7 @@ export default function DecorationList() {
     }
 
     function refreshDecorationList() {
-        employeeAPI().fetchAll()
+        prideweddingAPI().fetchAll()
             .then(res => {
                 setDecorationList(res.data)
             })
@@ -29,14 +29,14 @@ export default function DecorationList() {
 
     const addOrEdit = (formData, onSuccess) => {
         if (formData.get('companyID') == "0")
-            employeeAPI().create(formData)
+            prideweddingAPI().create(formData)
                 .then(res => {
                     onSuccess();
                     refreshDecorationList();
                 })
                 .catch(err => console.log(err))
         else
-            employeeAPI().update(formData.get('companyID'), formData)
+            prideweddingAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
                     refreshDecorationList();
@@ -52,7 +52,7 @@ export default function DecorationList() {
     const onDelete = (e, id) => {
         e.stopPropagation();
         if (window.confirm('Are you sure to delete this record?'))
-            employeeAPI().delete(id)
+            prideweddingAPI().delete(id)
                 .then(res => refreshDecorationList())
                 .catch(err => console.log(err))
     }
@@ -62,9 +62,7 @@ export default function DecorationList() {
             <img src={data.imageSrc} className="card-img-top-responsive" width="170" height="170" />
             <div className="card-body ">
                 <h5>{data.companyName}</h5>
-                <button className="btn btn-light delete-button" onClick={e => onDelete(e, parseInt(data.companyID))}>
-                    <i className="far fa-trash-alt"></i>
-                </button>
+                
             </div>
         </div>
     )
@@ -91,10 +89,10 @@ export default function DecorationList() {
                     <tbody>
                         {
                             //tr > 3 td
-                            [...Array(Math.ceil(decorationList.length / 3))].map((e, i) =>
+                            [...Array(Math.ceil(decorationList.length / 2))].map((e, i) =>
                                 <tr key={i}>
-                                    <td>{imageCard(decorationList[3 * i])}</td>
-                                    <td>{decorationList[3 * i + 1] ? imageCard(decorationList[3 * i + 1]) : null}</td>
+                                    <td>{imageCard(decorationList[2 * i])}</td>
+                                    <td>{decorationList[2 * i + 1] ? imageCard(decorationList[2 * i + 1]) : null}</td>
                                    
                                 </tr>
                             )

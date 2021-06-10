@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react'
-import Jweller from './Jweller'
+
 import axios from "axios";
 
-export default function JwellerList() {
-    const [jwellerList, setJwellerList] = useState([])
+export default function EntertainerList() {
+    const [entertainerList, setEntertainerList] = useState([])
     const [recordForEdit, setRecordForEdit] = useState(null)
 
     useEffect(() => {
-        refreshJwellerList();
+        refreshEntertainerList();
     }, [])
 
-    const prideweddingAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/JwelVendors/') => {
+    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/EntertainmentVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -19,27 +19,27 @@ export default function JwellerList() {
         }
     }
 
-    function refreshJwellerList() {
-        prideweddingAPI().fetchAll()
+    function refreshEntertainerList() {
+        employeeAPI().fetchAll()
             .then(res => {
-                setJwellerList(res.data)
+                setEntertainerList(res.data)
             })
             .catch(err => console.log(err))
     }
 
     const addOrEdit = (formData, onSuccess) => {
         if (formData.get('companyID') == "0")
-            prideweddingAPI().create(formData)
+            employeeAPI().create(formData)
                 .then(res => {
                     onSuccess();
-                    refreshJwellerList();
+                    refreshEntertainerList();
                 })
                 .catch(err => console.log(err))
         else
-            prideweddingAPI().update(formData.get('companyID'), formData)
+            employeeAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
-                    refreshJwellerList();
+                    refreshEntertainerList();
                 })
                 .catch(err => console.log(err))
 
@@ -52,8 +52,8 @@ export default function JwellerList() {
     const onDelete = (e, id) => {
         e.stopPropagation();
         if (window.confirm('Are you sure to delete this record?'))
-            prideweddingAPI().delete(id)
-                .then(res => refreshJwellerList())
+            employeeAPI().delete(id)
+                .then(res => refreshEntertainerList())
                 .catch(err => console.log(err))
     }
 
@@ -62,7 +62,9 @@ export default function JwellerList() {
             <img src={data.imageSrc} className="card-img-top-responsive" width="170" height="170" />
             <div className="card-body ">
                 <h5>{data.companyName}</h5>
-             
+                <button className="btn btn-light delete-button" onClick={e => onDelete(e, parseInt(data.companyID))}>
+                    <i className="far fa-trash-alt"></i>
+                </button>
             </div>
         </div>
     )
@@ -74,27 +76,23 @@ export default function JwellerList() {
                 <div className="jumbotron jumbotron-fluid py-4">
                     <div className="container text-center">
                     <br></br>
-                        <h1 className="display-4">Publish Jewellery Advertisements</h1>
+                        <h1 className="display-4">Entertainment Vendors</h1>
                     </div>
                 </div>
             </div>
-            <div className="col-md-6">
-                <Jweller
-                    addOrEdit={addOrEdit}
-                    recordForEdit={recordForEdit}
-                />
-            </div>
-            <div className="col-md-6">
-            <h1 className="lead text-center">Available Advertisements</h1>
+          
+            <div>
+            <h1 className="lead">Available Advertisements</h1>
                 <table>
                     <tbody>
                         {
                             //tr > 3 td
-                            [...Array(Math.ceil(jwellerList.length / 2))].map((e, i) =>
+                            [...Array(Math.ceil(entertainerList.length / 4))].map((e, i) =>
                                 <tr key={i}>
-                                    <td>{imageCard(jwellerList[2 * i])}</td>
-                                    <td>{jwellerList[2 * i + 1] ? imageCard(jwellerList[2 * i + 1]) : null}</td>
-                                  
+                                    <td>{imageCard(entertainerList[4 * i])}</td>
+                                    <td>{entertainerList[4 * i + 1] ? imageCard(entertainerList[4 * i + 1]) : null}</td>
+                                    <td>{entertainerList[4 * i + 2] ? imageCard(entertainerList[4 * i + 2]) : null}</td>
+                                    <td>{entertainerList[4 * i + 3] ? imageCard(entertainerList[4 * i + 3]) : null}</td>
                                 </tr>
                             )
                         }

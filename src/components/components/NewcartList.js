@@ -11,7 +11,7 @@ export default function NewcartList() {
         refreshCartList();
     }, [])
 
-    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net//api/AddingCarts/') => {
+    const prideweddingAPI = (url = 'https://prideweddingapi.azurewebsites.net//api/AddingCarts/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -21,7 +21,7 @@ export default function NewcartList() {
     }
 
     function refreshCartList() {
-        employeeAPI().fetchAll()
+        prideweddingAPI().fetchAll()
             .then(res => {
                 setCartList(res.data)
             })
@@ -30,14 +30,14 @@ export default function NewcartList() {
 
     const addOrEdit = (formData, onSuccess) => {
         if (formData.get('companyID') == "0")
-            employeeAPI().create(formData)
+            prideweddingAPI().create(formData)
                 .then(res => {
                     onSuccess();
                     refreshCartList();
                 })
                 .catch(err => console.log(err))
         else
-            employeeAPI().update(formData.get('companyID'), formData)
+            prideweddingAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
                     refreshCartList();
@@ -53,7 +53,7 @@ export default function NewcartList() {
     const onDelete = (e, id) => {
         e.stopPropagation();
         if (window.confirm('Are you sure to delete this record?'))
-            employeeAPI().delete(id)
+            prideweddingAPI().delete(id)
                 .then(res => refreshCartList())
                 .catch(err => console.log(err))
     }
@@ -63,9 +63,7 @@ export default function NewcartList() {
             <img src={data.imageSrc} className="card-img-top-responsive" width="170" height="170" />
             <div className="card-body ">
                 <h5>{data.companyName}</h5>
-                <button className="btn btn-light delete-button" onClick={e => onDelete(e, parseInt(data.companyID))}>
-                    <i className="far fa-trash-alt"></i>
-                </button>
+              
             </div>
         </div>
     )
@@ -93,10 +91,10 @@ export default function NewcartList() {
                     <tbody>
                         {
                             //tr > 3 td
-                            [...Array(Math.ceil(cartList.length / 3))].map((e, i) =>
+                            [...Array(Math.ceil(cartList.length / 2))].map((e, i) =>
                                 <tr key={i}>
-                                    <td>{imageCard(cartList[3 * i])}</td>
-                                    <td>{cartList[3 * i + 1] ? imageCard(cartList[3 * i + 1]) : null}</td>
+                                    <td>{imageCard(cartList[2 * i])}</td>
+                                    <td>{cartList[2 * i + 1] ? imageCard(cartList[2 * i + 1]) : null}</td>
                                    
                                 </tr>
                             )
