@@ -3,7 +3,7 @@ import Newcart from './Newcart'
 import axios from "axios";
 import  './Default.css';
 
-export default function NewcartList() {
+export default function CartList() {
     const [cartList, setCartList] = useState([])
     const [recordForEdit, setRecordForEdit] = useState(null)
 

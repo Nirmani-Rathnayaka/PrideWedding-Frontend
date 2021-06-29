@@ -10,7 +10,7 @@ export default function JwellerList() {
         refreshJwellerList();
     }, [])
 
-    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/JwelVendors/') => {
+    const adminAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/JwelVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -20,7 +20,7 @@ export default function JwellerList() {
     }
 
     function refreshJwellerList() {
-        employeeAPI().fetchAll()
+        adminAPI().fetchAll()
             .then(res => {
                 setJwellerList(res.data)
             })
@@ -29,14 +29,14 @@ export default function JwellerList() {
 
     const addOrEdit = (formData, onSuccess) => {
         if (formData.get('companyID') == "0")
-            employeeAPI().create(formData)
+            adminAPI().create(formData)
                 .then(res => {
                     onSuccess();
                     refreshJwellerList();
                 })
                 .catch(err => console.log(err))
         else
-            employeeAPI().update(formData.get('companyID'), formData)
+            adminAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
                     refreshJwellerList();
@@ -52,7 +52,7 @@ export default function JwellerList() {
     const onDelete = (e, id) => {
         e.stopPropagation();
         if (window.confirm('Are you sure to delete this record?'))
-            employeeAPI().delete(id)
+            adminAPI().delete(id)
                 .then(res => refreshJwellerList())
                 .catch(err => console.log(err))
     }

@@ -10,7 +10,7 @@ export default function EntertainerList() {
         refreshEntertainerList();
     }, [])
 
-    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/EntertainmentVendors/') => {
+    const adminAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/EntertainmentVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -20,7 +20,7 @@ export default function EntertainerList() {
     }
 
     function refreshEntertainerList() {
-        employeeAPI().fetchAll()
+        adminAPI().fetchAll()
             .then(res => {
                 setEntertainerList(res.data)
             })
@@ -29,14 +29,14 @@ export default function EntertainerList() {
 
     const addOrEdit = (formData, onSuccess) => {
         if (formData.get('companyID') == "0")
-            employeeAPI().create(formData)
+            adminAPI().create(formData)
                 .then(res => {
                     onSuccess();
                     refreshEntertainerList();
                 })
                 .catch(err => console.log(err))
         else
-            employeeAPI().update(formData.get('companyID'), formData)
+            adminAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
                     refreshEntertainerList();
@@ -52,7 +52,7 @@ export default function EntertainerList() {
     const onDelete = (e, id) => {
         e.stopPropagation();
         if (window.confirm('Are you sure to delete this record?'))
-            employeeAPI().delete(id)
+            adminAPI().delete(id)
                 .then(res => refreshEntertainerList())
                 .catch(err => console.log(err))
     }

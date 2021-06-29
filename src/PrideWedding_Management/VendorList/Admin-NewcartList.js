@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import axios from "axios";
 import  './Default.css';
 
-export default function NewcartList() {
+export default function CartList() {
     const [cartList, setCartList] = useState([])
     const [recordForEdit, setRecordForEdit] = useState(null)
 
@@ -11,7 +11,7 @@ export default function NewcartList() {
         refreshCartList();
     }, [])
 
-    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net//api/AddingCarts/') => {
+    const adminAPI = (url = 'https://prideweddingapi.azurewebsites.net//api/AddingCarts/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -21,7 +21,7 @@ export default function NewcartList() {
     }
 
     function refreshCartList() {
-        employeeAPI().fetchAll()
+        adminAPI().fetchAll()
             .then(res => {
                 setCartList(res.data)
             })
@@ -30,14 +30,14 @@ export default function NewcartList() {
 
     const addOrEdit = (formData, onSuccess) => {
         if (formData.get('companyID') == "0")
-            employeeAPI().create(formData)
+            adminAPI().create(formData)
                 .then(res => {
                     onSuccess();
                     refreshCartList();
                 })
                 .catch(err => console.log(err))
         else
-            employeeAPI().update(formData.get('companyID'), formData)
+            adminAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
                     refreshCartList();
@@ -53,7 +53,7 @@ export default function NewcartList() {
     const onDelete = (e, id) => {
         e.stopPropagation();
         if (window.confirm('Are you sure to delete this record?'))
-            employeeAPI().delete(id)
+            adminAPI().delete(id)
                 .then(res => refreshCartList())
                 .catch(err => console.log(err))
     }

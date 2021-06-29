@@ -133,7 +133,7 @@ export default function Newcart(props) {
 
                         
                         <div className="form-group">
-                            <select className="form-control" placeholder="Located District" name="locatedDistrict"
+                            <select className={"form-control" + applyErrorClass('locatedDistrict')}  placeholder="Located District" name="locatedDistrict"
                                 value={values.locatedDistrict}
                                 onChange={handleInputChange} >
   
@@ -166,7 +166,7 @@ export default function Newcart(props) {
         
                         </div>
                         <div className="form-group">
-                            <select className="form-control" placeholder="Located Province" name="locatedProvince"
+                            <select className={"form-control" + applyErrorClass('locatedProvince')} placeholder="Located Province" name="locatedProvince"
                                 value={values.locatedProvince}
                                 onChange={handleInputChange} >
                                 <option>Central</option>
@@ -183,21 +183,19 @@ export default function Newcart(props) {
                         </div>
 
                         <div className="form-group">
-                            <input className="form-control" placeholder=" Discount Package($)" name="discount_package"
+                            <input className={"form-control" + applyErrorClass('discount_package')} placeholder=" Discount Package($)" name="discount_package"
                                 value={values.discount_package}
                                 onChange={handleInputChange} />
                         </div>
 
-                       
-                      
 
                         <div className="form-group">
-                            <input className="form-control" placeholder=" TelephoneNumber" name="telephoneNumber"
+                            <input className={"form-control" + applyErrorClass('telephoneNumber')} placeholder=" TelephoneNumber" name="telephoneNumber"
                                 value={values.telephoneNumber}
                                 onChange={handleInputChange} />
                         </div>
 						 <div className="form-group">
-                            <input className="form-control" placeholder="Web-URL" name="companyWebsite"
+                            <input className={"form-control" + applyErrorClass('companyWebsite')} placeholder="Web-URL" name="companyWebsite"
                                 value={values.companyWebsite}
                                 onChange={handleInputChange} />
                         </div>
