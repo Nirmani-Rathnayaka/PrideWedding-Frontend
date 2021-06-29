@@ -74,7 +74,7 @@ export default function SaloonList() {
                 <div className="jumbotron jumbotron-fluid py-4">
                     <div className="container text-center">
                     <br></br>
-                        <h1 className="display-4">Publish Saloon Addvertisements</h1>
+                        <h1 className="display-4">Publish Saloon Advertisements</h1>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@ export default function SaloonList() {
                 />
             </div>
             <div className="col-md-6">
-            <h1 className="lead">Available Addvertisements</h1>
+            <h1 className="lead">Available Advertisements</h1>
                 <table>
                     <tbody>
                         {

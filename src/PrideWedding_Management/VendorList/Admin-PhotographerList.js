@@ -10,7 +10,7 @@ export default function PhotographerList() {
         refreshPhotographerList();
     }, [])
 
-    const employeeAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/PhotographyVendors/') => {
+    const adminAPI = (url = 'https://prideweddingapi.azurewebsites.net/api/PhotographyVendors/') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),
@@ -20,7 +20,7 @@ export default function PhotographerList() {
     }
 
     function refreshPhotographerList() {
-        employeeAPI().fetchAll()
+        adminAPI().fetchAll()
             .then(res => {
                 setPhotographerList(res.data)
             })
@@ -29,14 +29,14 @@ export default function PhotographerList() {
 
     const addOrEdit = (formData, onSuccess) => {
         if (formData.get('companyID') == "0")
-            employeeAPI().create(formData)
+            adminAPI().create(formData)
                 .then(res => {
                     onSuccess();
                     refreshPhotographerList();
                 })
                 .catch(err => console.log(err))
         else
-            employeeAPI().update(formData.get('companyID'), formData)
+            adminAPI().update(formData.get('companyID'), formData)
                 .then(res => {
                     onSuccess();
                     refreshPhotographerList();
@@ -52,7 +52,7 @@ export default function PhotographerList() {
     const onDelete = (e, id) => {
         e.stopPropagation();
         if (window.confirm('Are you sure to delete this record?'))
-            employeeAPI().delete(id)
+            adminAPI().delete(id)
                 .then(res => refreshPhotographerList())
                 .catch(err => console.log(err))
     }
@@ -66,7 +66,7 @@ export default function PhotographerList() {
                 <span> District-{data.locatedDistrict}</span> <br />
                 <span>{data.telephoneNumber}</span> <br />
         
-                <button className="btn btn-light delete-button" onClick={e => onDelete(e, parseInt(data.employeeID))}>
+                <button className="btn btn-light delete-button" onClick={e => onDelete(e, parseInt(data.companyID))}>
                     <i className="far fa-trash-alt"></i>
                 </button>
             </div>
@@ -80,13 +80,13 @@ export default function PhotographerList() {
                 <div className="jumbotron jumbotron-fluid py-4">
                     <div className="container text-center">
                     <br></br>
-                        <h1 className="display-4">Photography Vendors</h1>
+                        <h1 className="display-4">Hotel Vendors</h1>
                     </div>
                 </div>
             </div>
-           
-            <div >
-            <h1 className="lead">Available Advertisements </h1>
+          
+            <div>
+            <h1 className="lead">Available Advertisements</h1>
                 <table>
                     <tbody>
                         {

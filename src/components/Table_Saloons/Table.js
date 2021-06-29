@@ -15,6 +15,7 @@ export default function Table(){
     <div  className="testClass">
     DISCOVER YOUR WEDDING SALOONS
     </div>
+    <div>Here you can search details of saloons by company name location and packages</div>
    
       <div>
         <UseApp />

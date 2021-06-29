@@ -7,7 +7,7 @@ require("isomorphic-fetch");
 export default function UseApp() {
   const [data,setData] = useState([])
   const [q,setQ]  = useState("")
-  const [searchColumns,setSearchColumns] = useState(["companyName","locatedDistrict"]);
+  const [searchColumns,setSearchColumns] = useState(["companyID","companyName"]);
 
   useEffect(()=>{
     fetch("https://prideweddingapi.azurewebsites.net/api/SaloonVendors")
@@ -16,10 +16,9 @@ export default function UseApp() {
 
   },[])
 
-  function search(rows){
-   
-    return rows.filter((row)=>
-    searchColumns.some(
+  function search(rows) {
+    return rows.filter((row) =>
+     searchColumns.some(
       (column)=> 
        row[column].toString().toLowerCase().indexOf(q.toLowerCase()) > -1
        )
@@ -31,9 +30,9 @@ export default function UseApp() {
 
   return(
   <>
-   <div>Here you can search details of saloons by company name location and packages</div>
   
-    <div><input placeholder="Search" type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off" type="text" value={q} on onChange={(e)=>setQ(e.target.value)}/>
+  
+    <div><input placeholder="Search"  class="btn-check" name="options-outlined" id="danger-outlined"  type="text" value={q}  onChange={(e) => setQ(e.target.value)}/>
      {
       columns && columns.map(column => <lable class="custom-control custom-checkbox">
         <input type="checkbox" checked={searchColumns.includes(column)}
@@ -41,9 +40,11 @@ export default function UseApp() {
            const checked =searchColumns.includes(column)
            setSearchColumns(prev=>checked
             ? prev.filter(sc => sc !== column)
-            :[...prev,column])
+            :[...prev,column]
+            );
           }
-        }/>
+        }
+        />
         {column}
       </lable>)
     }
@@ -51,11 +52,10 @@ export default function UseApp() {
     </div>
     
 
-      <dev>
+    <div >
+      
       <Datatable data={search(data)}/> 
-      </dev>
-     
-    
+    </div>
 
 
   </>

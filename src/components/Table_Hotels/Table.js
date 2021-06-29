@@ -16,6 +16,7 @@ export default function Table(){
     <div  className="testClass">
     DISCOVER YOUR WEDDING HOTELS
     </div>
+    <div>Here you can search details of hotels by company name location and packages</div>
    
       <div>
         <UseApp />

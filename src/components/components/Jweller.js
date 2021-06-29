@@ -9,7 +9,6 @@ const initialFieldValues = {
     locatedDistrict: '',
     locatedProvince:'',
     min_package:'',
-    
     max_package:'',
     telephoneNumber:'',
 	companyWebsite:'',
@@ -102,6 +101,7 @@ export default function Jweller(props) {
         <>
           <div className="container text-center">
           <br></br>
+          
                 <p className="lead">Your Advertisement</p>
            
             <form autoComplete="off" noValidate onSubmit={handleFormSubmit}>
@@ -134,7 +134,7 @@ export default function Jweller(props) {
 
                         
                         <div className="form-group">
-                            <select className="form-control" placeholder="Located District" name="locatedDistrict"
+                            <select className={"form-control" + applyErrorClass('locatedDistrict')}  placeholder="Located District" name="locatedDistrict"
                                 value={values.locatedDistrict}
                                 onChange={handleInputChange} >
   
@@ -167,7 +167,7 @@ export default function Jweller(props) {
         
                         </div>
                         <div className="form-group">
-                            <select className="form-control" placeholder="Located Province" name="locatedProvince"
+                            <select className={"form-control" + applyErrorClass('locatedProvince')}  placeholder="Located Province" name="locatedProvince"
                                 value={values.locatedProvince}
                                 onChange={handleInputChange} >
                                 <option>Central</option>
@@ -182,26 +182,25 @@ export default function Jweller(props) {
 
                                 </select>
                         </div>
+
                         <div className="form-group">
-                            <input className="form-control" placeholder=" Min Package($)" name="min_package"
+                            <input className={"form-control" + applyErrorClass('min_package')}  placeholder=" Min Package($)" name="min_package"
                                 value={values.min_package}
                                 onChange={handleInputChange} />
                         </div>
 
-                      
+                       
                         <div className="form-group">
-                            <input className="form-control" placeholder=" Max Package($)" name="max_package"
+                            <input className={"form-control" + applyErrorClass('max_package')}  placeholder=" Max Package($)" name="max_package"
                                 value={values.max_package}
                                 onChange={handleInputChange} />
                         </div>
 
                         <div className="form-group">
-                            <input className="form-control" placeholder=" TelephoneNumber" name="telephoneNumber"
+                            <input className={"form-control" + applyErrorClass('telephoneNumber')}  placeholder=" TelephoneNumber" name="telephoneNumber"
                                 value={values.telephoneNumber}
                                 onChange={handleInputChange} />
                         </div>
-						
-						
 						 <div className="form-group">
                             <input className="form-control" placeholder="Web-URL" name="companyWebsite"
                                 value={values.companyWebsite}
@@ -218,7 +217,7 @@ export default function Jweller(props) {
                       </Link>
                         </div>
                       <div>
-                        <h4>Need to update your advertisment?</h4>
+                        <h4>Need to update your advertisement?</h4>
                         <Link to="contact-form">
                           <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Contact Us</button>
                         </Link>
