@@ -31,6 +31,7 @@ function Footer() {
             <Link to='/how-it-works'>How it works</Link>
             <Link to='/aboutus'>About us</Link>
             <Link to='/services'>Our services</Link>
+            <Link to='/testimonials'>Testimonials</Link>
             <Link to='/terms'>Terms and conditions</Link>
             <Link to='/privacy'>Privacy</Link>
 

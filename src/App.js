@@ -76,10 +76,11 @@ import Forget from "./components/pages/forget.component";
 import How_it_works from "./components/pages/how_it_works/how_it_works";
 import Navbar from "./components/layout/NavMenu";
 import Footer from "./components/layout/Footer"
-import Testimonials from "./components/pages/Testimonials";
+import Testimonials from "./components/pages/Testimonials/Testimonials";
 import Services from "./components/pages/Services/Services";
 import Terms from './components/pages/Terms/Terms';
 import Privacy from "./components/pages/Privacy/Privacy";
+import Gallery from "./components/pages/Gallery/GalleryReact";
 
 import PrideWeddingSaloon from "./PrideWedding_Management/Group18_Admin_Management/PrideWedding-Saloon";
 import PrideWeddingHotel from "./PrideWedding_Management/Group18_Admin_Management/PrideWedding-Hotel";
@@ -179,6 +180,7 @@ function App() {
             <Route path="/services" component={Services}/>
             <Route path="/terms" component={Terms}/>
             <Route path="/privacy" component={Privacy}/>
+            <Route path="/gallery" component={Gallery}/>
 
             <Route path="/Client-Registration" component={ ClientRegister}/>
             <Route path="/Vendor-Registration" component={ VendorRegister}/>
