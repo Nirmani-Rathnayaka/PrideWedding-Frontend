@@ -8,7 +8,7 @@ export default function ContactUs() {
     function sendEmail(e) {
       e.preventDefault();
   
-      emailjs.sendForm('service_nd3a7mu', 'template_footflz', e.target, 'user_WPljFuEY31Ra1G1e6uLlO')
+      emailjs.sendForm('service_nd3a7mu', 'template_nu1jeqg', e.target, 'user_WPljFuEY31Ra1G1e6uLlO')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
@@ -28,16 +28,16 @@ export default function ContactUs() {
      </div>
      <div className="form-group">
         <input type="email" className="form-control" placeholder="Email" name="email" />
-     </div>
+     </div>   
      <h4>Your CartItems Details</h4>
-     
      <div className="form-group">
-        <input type="subject" className="form-control" placeholder="Your Request" name="subject" />
-        
-
+        <input type="date" className="form-control" placeholder="Proposed Wedding Date" name="date" />
      </div>
      <div className="form-group">
-        <textarea className="form-control" id="" cols="30" rows="8" placeholder="Enter your proposed wedding dates and selected cart items " name="message" />
+        <input type="cartitems" className="form-control" placeholder="Selected Cart Items" name="cartitems" />
+     </div>
+     <div className="form-group">
+        <textarea className="form-control" id="" cols="30" rows="5" placeholder="Additional Information " name="message" />
         <input type="submit" className="btn btn-info" value="Send Message" />
       </div>  
       </form>
