@@ -43,14 +43,6 @@ const urls = [
 const getProducts = async (): Promise<CartItemType[]> =>
     await (await fetch('https://prideweddingapi.azurewebsites.net/api/AddingCarts')).json();
 
-
-
-
-
-
-
-
-
 const App2 = () => {
 
   const [cartOpen, setCartOpen] = useState(false);
